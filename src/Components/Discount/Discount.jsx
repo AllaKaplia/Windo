@@ -1,19 +1,23 @@
-import { Form, Formik } from 'formik';
-import * as yup from 'yup';
+import { Form, Formik, Field } from 'formik';
+// import * as yup from 'yup';
 import { iconSize } from '../../constants/iconSize';
 import { PiNumberCircleOneLight, PiNumberCircleTwoLight, PiNumberCircleThreeLight } from 'react-icons/pi';
 import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FonBox, FormDiscount, InputDiscount, LabelInput, MainBoxDiscount, NamesInputs, Selector, SelectorBox, TextareaDiscount, TextQuestion, TitleDiscount, WindowText } from './Discount.styled';
 
-const schema = yup.object().shape({
-    name: yup
-      .string()
-      .matches(/^([a-zA-Zа-яА-ЯґҐєЄіІїЇ' -]*[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+[' -]*){1,}$/, 'Name is invalid')
-      .required('Name is required'),
-    number: yup
-      .string()
-      .matches(/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/, 'Phone number is invalid')
-      .required('Phone number is required'),
-});
+// const schema = yup.object().shape({
+//     name: yup
+//       .string()
+//       .matches(/^([a-zA-Zа-яА-ЯґҐєЄіІїЇ' -]*[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+[' -]*){1,}$/, 'Name is invalid')
+//       .required('Name is required'),
+//     phone: yup
+//       .string()
+//       .matches(/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/, 'Phone number is invalid')
+//       .required('Phone number is required'),
+//     textareaValue: yup
+//       .string()
+//       .max(200, 'Additional information should not exceed 200 characters')
+// });
+
 const initialValues = {
     name: '',
     phone: '',
@@ -50,7 +54,7 @@ const Discount = () => {
                     <PiNumberCircleThreeLight size={iconSize.md} />
                     <Selector name="dropdown" id='dropdown' placeholder='Знижка до 70%'>
                         <option value="" label="Знижка до 70%" />
-                        <option value="" disabled>Ми прорахуємо та повідомимо вартість Вашої конструкції</option>
+                        <option value="discount" disabled>Ми прорахуємо та повідомимо вартість Вашої конструкції</option>
                     </Selector>
                 </SelectorBox>
             </BoxMobile>
@@ -78,7 +82,7 @@ const Discount = () => {
                 </BoxNumberText>
             </AllQuestionsBox>
             <FonBox>
-                <Formik initialValues={initialValues} onSubmit={handleFormSubmit} validationSchema={schema}>
+                <Formik initialValues={initialValues} onSubmit={handleFormSubmit} >
                     <FormDiscount>
                         <Form autoComplete='off'>
                             <LabelInput>
@@ -91,7 +95,11 @@ const Discount = () => {
                             </LabelInput>
                             <WindowText>
                                 <NamesInputs htmlFor="textareaValue">Додаткова інформація</NamesInputs>
-                                <TextareaDiscount id="textareaValue" name="textareaValue" placeholder="Хочу отримати знижку! Зателефонуйте о 12:00"/>
+                                <Field name="textareaValue">
+                                    {({ field }) => (
+                                        <TextareaDiscount {...field} id="textareaValue" placeholder="Хочу отримати знижку! Зателефонуйте о 12:00" />
+                                    )}
+                                </Field>
                             </WindowText>
                             <BtnDiscount type='submit'>Отримати знижку</BtnDiscount>
                         </Form>
