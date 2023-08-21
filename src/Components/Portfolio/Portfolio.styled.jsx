@@ -64,10 +64,6 @@ export const BtnPortfolio = styled.button`
     letter-spacing: 0.21px;
     text-align: center;
     border-color: transparent;
-
-    &:hover, &:focus {
-        background-image: linear-gradient(to left, #DF5306, #FC9850);
-    }
     
     &.active  {
         background-color: var(--brand-orange);
