@@ -15,13 +15,13 @@ import Streamline76 from '../../img/salamander/64ba65cbe3fee0b8d4008c90_cream1 1
 import BluEvolution82 from '../../img/salamander/64ba660f106fa4f36fe11260_okno3_1 1.png';
 import BluEvolution92 from '../../img/salamander/64ba66590c73018fbbc45e20_okno4p 1.png';
 import { BoxAnchor, BoxAssortment, BtnAssortment, ContainerButtons, NameProduct, TitleAssortment } from './Assortment.styled';
-// import NextButton from '../NextButton/NextButton';
-
 
 
 
 const Assortment = () => {
     const [activeCategory, setActiveCategory] = useState('Rehau');
+    const [activeIndex, setActiveIndex] = useState(0);
+
 
     const categories = [
       {
@@ -53,9 +53,11 @@ const Assortment = () => {
       }
     ];
 
-  const handleCategoryClick = (category, activeIndex) => {
+  const handleCategoryClick = (category, index) => {
     setActiveCategory(category);
+    setActiveIndex(index);
   };
+
 
   const settings = {
     appendDots: dots => (
@@ -114,7 +116,7 @@ const Assortment = () => {
           key={category.title} 
           type='button'
           className={category.title === activeCategory ? "active" : ""}
-          onClick={() => handleCategoryClick(category.title)}>
+          onClick={() => handleCategoryClick(category.title, activeIndex)}>
             {category.title}
           </BtnAssortment>
          ))}
