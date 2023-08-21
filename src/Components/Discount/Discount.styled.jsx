@@ -206,15 +206,13 @@ export const Selector = styled.select`
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
-    
-    
+    line-height: 1.5;    
 `;
 
 export const SelectorBox = styled.div`
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 27px;
     margin-bottom: 27px;
 `;
@@ -228,7 +226,7 @@ export const BoxMobile = styled.div`
 
 export const FonBox = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 `;
 
