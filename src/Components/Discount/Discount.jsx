@@ -1,27 +1,28 @@
 import { useEffect, useState } from 'react';
 import { Form, Formik, Field } from 'formik';
-// import * as yup from 'yup';
+import * as yup from 'yup';
 import { iconSize } from '../../constants/iconSize';
 import { PiNumberCircleOneLight, PiNumberCircleTwoLight, PiNumberCircleThreeLight } from 'react-icons/pi';
-import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FeedbackBox, FonBox, FormDiscount, ImageFeedback, InputDiscount, LabelInput, MainBoxDiscount, NamesInputs, Selector, SelectorBox, TextareaDiscount, TextFeedback, TextQuestion, TitleDiscount, TitleFeedback, WindowText } from './Discount.styled';
+import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FeedbackBox, FonBox, FormDiscount, ImageFeedback, InputDiscount, LabelInput, MainBoxDiscount, MessageErr, NamesInputs, Selector, SelectorBox, TextareaDiscount, TextFeedback, TextQuestion, TitleDiscount, TitleFeedback, WindowText } from './Discount.styled';
 
 import Logo from '../../img/Logo-Windo.png';
 import FeedbackModal from 'Components/FeedbackModal';
 
 
-// const schema = yup.object().shape({
-//     name: yup
-//       .string()
-//       .matches(/^([a-zA-Zа-яА-ЯґҐєЄіІїЇ' -]*[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+[' -]*){1,}$/, 'Name is invalid')
-//       .required('Name is required'),
-//     phone: yup
-//       .string()
-//       .matches(/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/, 'Phone number is invalid')
-//       .required('Phone number is required'),
-//     textareaValue: yup
-//       .string()
-//       .max(200, 'Additional information should not exceed 200 characters')
-// });
+const schema = yup.object().shape({
+    name: yup
+      .string()
+      .matches(/^([a-zA-Zа-яА-ЯґҐєЄіІїЇ' -]*[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+[' -]*){1,}$/, 'Name is invalid')
+      .required('Name is required'),
+    phone: yup
+      .string()
+      .matches(/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/, 'Phone number is invalid')
+      .required('Phone number is required'),
+    textareaValue: yup
+      .string()
+      .required('Additional information is required')
+      .max(200, 'Additional information should not exceed 200 characters')
+});
 
 const initialValues = {
     name: '',
@@ -102,16 +103,18 @@ const Discount = () => {
                 </BoxNumberText>
             </AllQuestionsBox>
             <FonBox>
-                <Formik initialValues={initialValues} onSubmit={handleFormSubmit} >
+                <Formik initialValues={initialValues} onSubmit={handleFormSubmit} validationSchema={schema}>
                     <FormDiscount>
                         <Form autoComplete='off'>
                             <LabelInput>
                                 <NamesInputs>Ім’я</NamesInputs>
                                 <InputDiscount type="text" name='name' placeholder="Введіть ім’я"/>
+                                <MessageErr name="name" component="div" />
                             </LabelInput>
                             <LabelInput>
                                 <NamesInputs>Номер телефону</NamesInputs>
                                 <InputDiscount type="text" name='phone' placeholder="Введіть номер"/>
+                                <MessageErr name="phone" component="div" />
                             </LabelInput>
                             <WindowText>
                                 <NamesInputs htmlFor="textareaValue">Додаткова інформація</NamesInputs>
@@ -120,6 +123,7 @@ const Discount = () => {
                                         <TextareaDiscount {...field} id="textareaValue" placeholder="Хочу отримати знижку! Зателефонуйте о 12:00" />
                                     )}
                                 </Field>
+                                <MessageErr name="textareaValue" component="div" />
                             </WindowText>
                             <BtnDiscount type='submit'>Отримати знижку</BtnDiscount>
                         </Form>
