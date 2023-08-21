@@ -53,7 +53,7 @@ export const BtnAssortment = styled.button`
     padding-bottom: 11px;
     color: var(--text-black);
 
-    &:hover, &:focus, &:active {
+    &.active {
         border-bottom: 3px solid orange;
         font-family: Inter;
         font-size: 20px;
