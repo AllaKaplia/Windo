@@ -1,8 +1,13 @@
+import { useEffect, useState } from 'react';
 import { Form, Formik, Field } from 'formik';
 // import * as yup from 'yup';
 import { iconSize } from '../../constants/iconSize';
 import { PiNumberCircleOneLight, PiNumberCircleTwoLight, PiNumberCircleThreeLight } from 'react-icons/pi';
-import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FonBox, FormDiscount, InputDiscount, LabelInput, MainBoxDiscount, NamesInputs, Selector, SelectorBox, TextareaDiscount, TextQuestion, TitleDiscount, WindowText } from './Discount.styled';
+import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FeedbackBox, FonBox, FormDiscount, ImageFeedback, InputDiscount, LabelInput, MainBoxDiscount, NamesInputs, Selector, SelectorBox, TextareaDiscount, TextFeedback, TextQuestion, TitleDiscount, TitleFeedback, WindowText } from './Discount.styled';
+
+import Logo from '../../img/Logo-Windo.png';
+import FeedbackModal from 'Components/FeedbackModal';
+
 
 // const schema = yup.object().shape({
 //     name: yup
@@ -25,10 +30,25 @@ const initialValues = {
 }
 
 const Discount = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false); 
+
     const handleFormSubmit = (values, { resetForm }) => {
         console.log(values);
         resetForm();
+        setIsModalOpen(true);
     }
+
+    useEffect(() => {
+        if (isModalOpen) {
+            const timer = setTimeout(() => {
+                setIsModalOpen(false);
+            }, 3000);
+
+            return () => {
+                clearTimeout(timer);
+            };
+        }
+    }, [isModalOpen]);
 
     return (
         <MainBoxDiscount>
@@ -106,6 +126,13 @@ const Discount = () => {
                     </FormDiscount>
                 </Formik>
             </FonBox>
+            <FeedbackModal isOpen={isModalOpen} contentLabel="Get a discount">
+                <FeedbackBox>
+                    <TitleFeedback>Ми скоро зв’яжемось з Вами!</TitleFeedback>
+                    <ImageFeedback src={Logo} alt="logo" />
+                    <TextFeedback>Дякуємо, що обрали нас!</TextFeedback>
+                </FeedbackBox>
+            </FeedbackModal>
         </MainBoxDiscount>
     )
 };
