@@ -228,6 +228,10 @@ export const FonBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: 768px) {
+        justify-content: flex-end;
+    }
 `;
 
 export const NamesInputs = styled.span`
