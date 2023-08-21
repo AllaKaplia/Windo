@@ -40,21 +40,21 @@ const Portfolio = () => {
   }
   
   function SamplePrevArrow(props) {
-      const { className, style, onClick } = props;
-      const arrowStyles = {
-        display: "block",
-        background: "var(--brand-gray)",
-        width: "40px",
-        height: "40px",
-        borderRadius: "50%",
-        zIndex: "1",
-        transition: "background-color 0.3s",
-        ":before": {
-          content: "none",
-        },
-        ":hover": {
-          backgroundColor: "linear-gradient(to left, #DF5306, #FC9850)",
-        },
+    const { className, style, onClick } = props;
+    const arrowStyles = {
+      display: "block",
+      background: "var(--brand-gray)",
+      width: "40px",
+      height: "40px",
+      borderRadius: "50%",
+      zIndex: "1",
+      transition: "background-color 0.3s",
+      ":before": {
+        content: "none",
+      },
+      ":hover": {
+        backgroundColor: "linear-gradient(to left, #DF5306, #FC9850)",
+      },
     };
       return (
       <div
