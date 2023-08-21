@@ -102,16 +102,16 @@ export const ContainerBtnText = styled.div`
 `;
 
 export const BoxHeroText = styled.div`
-    max-width: 343px;
+    width: 337px;
 
     @media (min-width: 768px) {
         margin-bottom: 24px;
-        max-width: 329px;
+        width: 329px;
     }
 
     @media (min-width: 1280px) {
         margin-bottom: 40px;
-        max-width: 690px;
+        width: 690px;
     }
 `;
 
@@ -131,7 +131,7 @@ export const HeroText = styled.p`
 
 export const ButtonHero = styled.button`
     padding: 16px 32px;
-    width: 343px;
+    width: 328px;
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
@@ -189,7 +189,7 @@ export const ImgHeroDesktop = styled.div`
         display: block;
         position: absolute;
         top: 1.4%;
-        left: 58%;
+        left: 53%;
     }
 `;
 
