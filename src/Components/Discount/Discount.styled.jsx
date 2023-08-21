@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import serviceMobile from '../../img/discount/service-maintenance-mobile.png';
 import serviceTablet from '../../img/discount/service-maintenance-tablet.png';
 import serviceDesktop from '../../img/discount/service-maintenance-desktop.png';
-import { Field } from 'formik';
+import { Field, ErrorMessage } from 'formik';
+
 
 export const MainBoxDiscount = styled.div`
     padding: 0 16px 60px;
@@ -415,4 +416,14 @@ export const TextFeedback = styled.p`
         line-height: 1.33:
         letter-spacing: -0.24px;
     }
+`;
+
+export const MessageErr = styled(ErrorMessage)`
+    margin-bottom: 6px;
+    color: var(--error-color);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.21px;
 `;
