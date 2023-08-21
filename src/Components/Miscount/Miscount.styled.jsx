@@ -267,8 +267,8 @@ export const AskSizeMore = styled(Field)`
     margin-bottom: 16px;
     width: 343px;
     appearance: none;
-
-    padding: 10px 16px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
 
     @media (min-width: 768px) {
         width: 688px;
