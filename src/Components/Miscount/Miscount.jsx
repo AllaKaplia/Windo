@@ -27,16 +27,41 @@ const initialValue = {
     textareaValue: '',
 }
 
+const initialCheckboxStates = {
+    toggle1: false,
+    toggle2: false,
+};
+
+const initialCheckboxColor = {
+    color1: false,
+    color2: false,
+};
+
 const Miscount = () => {
     const [selectedImage, setSelectedImage] = useState(windowPhoto2);
-    const [isChecked, setIsChecked] = useState(false);
+    const [checkboxStates, setCheckboxStates] = useState(initialCheckboxStates);
+    const [checkboxColor, setCheckboxColor] = useState(initialCheckboxColor)
 
     const handleButtonClick = (image) => {
         setSelectedImage(image);
     };
 
-    const handleFormSubmit = (value, { resetForm }) => {
-        console.log(value);
+    const handleCheckboxClick = (name) => {
+        setCheckboxStates((prevState) => ({
+            ...prevState,
+            [name]: !prevState[name],
+        }));
+    };
+
+    const handleCheckboxColorClick = (name) => {
+        setCheckboxColor((prevState) => ({
+            ...prevState,
+            [name]: !prevState[name],
+        }));
+    };
+
+    const handleFormSubmit = (values, { resetForm }) => {
+        console.log(values);
         resetForm();
     }
 
@@ -87,7 +112,7 @@ const Miscount = () => {
                                 <BsCheck
                                     style={{
                                     color: 'white',
-                                    backgroundColor: isChecked ? 'var(--brand-orange)' : 'transparent',
+                                    backgroundColor: checkboxStates.toggle1 ? 'var(--brand-orange)' : 'transparent',
                                     position: 'absolute',
                                     left: '-2px',
                                     borderRadius: '6px',
@@ -95,14 +120,14 @@ const Miscount = () => {
                                     transition: 'background-color 0.3s',
                                     }}
                                 />
-                                    <Checkbox type="checkbox" name="toggle" value="Однокамерний (два скла)" onClick={() => setIsChecked(!isChecked)}/>
+                                    <Checkbox type="checkbox" name="toggle1" checked={checkboxStates.toggle1}  value="Однокамерний (два скла)" onClick={() => handleCheckboxClick('toggle1')} />
                                     <CheckboxText>Однокамерний (два скла)</CheckboxText>
                                 </LabelCheckbox>
                                 <LabelCheckbox>
                                     <BsCheck
                                         style={{
                                         color: 'white',
-                                        backgroundColor: isChecked ? 'var(--brand-orange)' : 'transparent',
+                                        backgroundColor: checkboxStates.toggle2 ? 'var(--brand-orange)' : 'transparent',
                                         position: 'absolute',
                                         left: '-2px',
                                         borderRadius: '6px',
@@ -110,7 +135,7 @@ const Miscount = () => {
                                         transition: 'background-color 0.3s',
                                         }}
                                     />
-                                    <Checkbox type="checkbox" name="toggle" value="Двокамерний (три скла)" onClick={() => setIsChecked(!isChecked)}/>
+                                        <Checkbox type="checkbox" name="toggle2" checked={checkboxStates.toggle2}  value="Двокамерний (три скла)" onClick={() => handleCheckboxClick('toggle2')} />
                                     <CheckboxText>Двокамерний (три скла)</CheckboxText>
                                 </LabelCheckbox>
                                 </CheckboxGroup>
@@ -122,7 +147,7 @@ const Miscount = () => {
                                     <BsCheck
                                         style={{
                                         color: 'white',
-                                        backgroundColor: isChecked ? 'var(--brand-orange)' : 'transparent',
+                                        backgroundColor: checkboxColor.color1 ? 'var(--brand-orange)' : 'transparent',
                                         position: 'absolute',
                                         left: '-2px',
                                         borderRadius: '6px',
@@ -130,14 +155,14 @@ const Miscount = () => {
                                         transition: 'background-color 0.3s',
                                         }}
                                     />
-                                    <Checkbox type="checkbox" name="toggle" value="Білий" onClick={() => setIsChecked(!isChecked)}/>
+                                        <Checkbox type="checkbox" name="color1" checked={checkboxColor.color1}  value="Білий" onClick={() => handleCheckboxColorClick('color1')} />
                                     <CheckboxText>Білий</CheckboxText>
                                 </LabelCheckbox>
                                 <LabelCheckbox>
                                 <BsCheck
                                     style={{
                                     color: 'white',
-                                    backgroundColor: isChecked ? 'var(--brand-orange)' : 'transparent',
+                                    backgroundColor: checkboxColor.color2 ? 'var(--brand-orange)' : 'transparent',
                                     position: 'absolute',
                                     left: '-2px',
                                     borderRadius: '6px',
@@ -145,7 +170,7 @@ const Miscount = () => {
                                     transition: 'background-color 0.3s',
                                     }}
                                 />
-                                    <Checkbox type="checkbox" name="toggle" value="Ламінація" onClick={() => setIsChecked(!isChecked)}/>
+                                        <Checkbox type="checkbox" name="color2" checked={checkboxColor.color2} value="Ламінація" onClick={() => handleCheckboxColorClick('color2')} />
                                     <CheckboxText>Ламінація</CheckboxText>
                                 </LabelCheckbox>
                             </CheckboxGroup>
@@ -168,10 +193,10 @@ const Miscount = () => {
                             }}/>
                             <AskSizeMore as="select" id="dropdownValue" name="dropdownValue">
                                 <option value="" label="Додаткові опції" />
-                                <option value="option1">Склопакет з аргоном</option>
-                                <option value="option2">Москітна сітка</option>
-                                <option value="option3">Підвіконня</option>
-                                <option value="option3">Ручка з замком</option>
+                                <option value="Склопакет з аргоном">Склопакет з аргоном</option>
+                                <option value="Москітна сітка">Москітна сітка</option>
+                                <option value="Підвіконня">Підвіконня</option>
+                                <option value="Ручка з замком">Ручка з замком</option>
                             </AskSizeMore>
                         </AdditionalList>
                         <BoxTextarea>
