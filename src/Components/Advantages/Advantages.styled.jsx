@@ -15,7 +15,7 @@ export const ListAdvantages = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 26px;
 
     @media (min-width: 768px){
         gap: 9px;
