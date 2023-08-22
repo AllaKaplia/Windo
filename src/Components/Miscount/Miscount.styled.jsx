@@ -136,17 +136,19 @@ export const SchemaImage = styled.img`
 `;
 
 export const SchemaImages = styled.img`
-    @media (min-width: 688px) {
-        height: 102px;
-    }
+    height: 102px;
 
     @media (min-width: 1280px){
         width: 85px;
     }
 `;
 
+export const SchemaImg = styled.img`
+
+`;
+
 export const SchemaImagesSmall = styled.img`
-    height: 67px;
+    height: 83px;
 
     @media (min-width: 768px) {
         height: 102px;
@@ -177,6 +179,7 @@ export const MainImageWindow = styled.img`
     width: 343px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 31px;
 
     @media (min-width: 768px) {
         width: 687px;
@@ -198,6 +201,9 @@ export const TitleCheckbox = styled.div`
 `;
 
 export const CheckboxGroup = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin-bottom: 20px;
 `;
 
@@ -215,6 +221,8 @@ export const CheckboxText = styled.span`
     font-weight: 400;
     line-height: 1.5;
     color: var(--text-black);
+    padding-top: 8px;
+    padding-bottom: 8px;
 `;
 
 export const Checkbox = styled(Field)`
