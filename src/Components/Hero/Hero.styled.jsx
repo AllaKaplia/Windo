@@ -253,7 +253,7 @@ export const LabelText = styled.span`
 `;
 
 export const Input = styled(Field)`
-    width: 200px;
+    width: 240px;
     height: 5px;
     padding: 16px 10px;
     border: 1px solid #4e4e4e38;
@@ -288,7 +288,7 @@ export const MessageErr = styled(ErrorMessage)`
 export const ButtonSubmit = styled.button`
     margin-top: 24px;
     margin-bottom: 26px;
-    width: 250px;
+    width: 260px;
     padding: 8px 32px;
     background-color: var(--brand-orange);
     border-radius: 3px;
