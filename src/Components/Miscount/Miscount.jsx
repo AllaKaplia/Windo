@@ -74,24 +74,24 @@ const Miscount = () => {
                 </ButtonWindow>
                 <ButtonWindowTwo type='button' onClick={() => handleButtonClick(windowPhoto3)}>
                     <BoxImageSchema>
-                        <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema71" width={59} />
-                        <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema72" width={59} />
+                        <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema71"/>
+                        <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema72" />
                     </BoxImageSchema>
                     <NameSchema>Двостулкове вікно</NameSchema>
                 </ButtonWindowTwo>
                 <ButtonWindowTree type='button' onClick={() => handleButtonClick(windowPhoto1)}>
                     <BoxImageSchema>
-                        <SchemaImages src={dvostulkoveSchema71} alt="trystulkowe73" width={46} />
-                        <SchemaImages src={dvostulkoveSchema71} alt="trystulkowe74" width={46} />
-                        <SchemaImages src={dvostulkoveSchema71} alt="trystulkowe73" width={46} />
+                        <SchemaImagesSmall src={dvostulkoveSchema71} alt="trystulkowe73" width={46} />
+                        <SchemaImagesSmall src={dvostulkoveSchema71} alt="trystulkowe74" width={46} />
+                        <SchemaImagesSmall src={dvostulkoveSchema71} alt="trystulkowe73" width={46} />
                     </BoxImageSchema>
                     <NameSchema>Трьохстулкове вікно</NameSchema>
                 </ButtonWindowTree>
                 <ButtonWindowFor type='button' onClick={() => handleButtonClick(windowPhoto4)}>
                     <BoxImageSchema>
                         <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija91" width={28} />
-                        <SchemaImages src={dvostulkoveSchema71} alt="balcon Lodgija78" width={40} />
-                        <SchemaImages src={dvostulkoveSchema71} alt="balcon Lodgija76" width={40} />
+                        <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija78" width={40} />
+                        <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija76" width={40} />
                         <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija92" width={28} />
                     </BoxImageSchema>
                     <NameSchema>Балкон / лоджія</NameSchema>
