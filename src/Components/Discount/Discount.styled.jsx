@@ -90,7 +90,7 @@ export const BoxNumberTextFirst = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 6px;
+    gap: 16px;
     color: var(--brand-orange);
 `;
 
@@ -184,7 +184,7 @@ export const AnswerText = styled.p`
     line-height: 1.42;
     letter-spacing: 0.21px;
     margin-bottom: 27px;
-    margin-left: 40px;
+    margin-left: 48px;
 
     @media (min-width: 768px){
         margin-left: 0;
@@ -212,13 +212,15 @@ export const Selector = styled.select`
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;    
+    line-height: 1.5;
+    color: var(--text-black);
 `;
 
 export const SelectorBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     margin-top: 27px;
     margin-bottom: 27px;
 `;
@@ -424,7 +426,7 @@ export const TextFeedback = styled.p`
 `;
 
 export const MessageErr = styled(ErrorMessage)`
-    margin-bottom: 6px;
+    margin-bottom: 16px;
     color: var(--error-color);
     font-family: Inter;
     font-size: 14px;
