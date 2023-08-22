@@ -184,6 +184,11 @@ export const AnswerText = styled.p`
     line-height: 1.42;
     letter-spacing: 0.21px;
     margin-bottom: 27px;
+    margin-left: 40px;
+
+    @media (min-width: 768px){
+        margin-left: 0;
+    }
 `;
 
 export const AnswerTextDesktop = styled.p`
