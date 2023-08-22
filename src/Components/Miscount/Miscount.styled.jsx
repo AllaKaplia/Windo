@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Field } from 'formik';
+import { Field, ErrorMessage, Form } from 'formik';
 
 export const BoxMiscount = styled.div`
     padding: 0 16px 60px;
@@ -146,7 +146,7 @@ export const SchemaImages = styled.img`
 `;
 
 export const SchemaImagesSmall = styled.img`
-    height: 82px;
+    height: 67px;
 
     @media (min-width: 768px) {
         height: 102px;
@@ -376,4 +376,167 @@ export const WindowFormBox = styled.div`
     @media (min-width: 1440px) {
         gap: 135px;
     }
+`;
+
+/*--------------------------- Modal Menu ----------------------------*/
+
+export const ContainerForForm = styled.div`
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const CloseButton = styled.button`
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    border: none;
+    background-color: transparent;
+    color: var(--brand-orange);
+`;
+
+export const TitleModal = styled.h1`
+    margin-bottom: 16px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-black);
+    text-align: center;
+
+    @media (min-width: 768px) {
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+`;
+
+export const LabelModal = styled.label`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+`;
+
+export const LabelText = styled.span`
+    margin-bottom: 8px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-black);
+
+    @media (min-width: 768px) {
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -1px;
+    }
+`;
+
+export const Input = styled(Field)`
+    width: 200px;
+    height: 5px;
+    padding: 16px 10px;
+    border: 1px solid #4e4e4e38;
+    color: var(--brand-gray);
+
+    &:hover, &:focus {
+        color: var(--brand-orange);
+        border: 1px solid var(--brand-orange);
+    }
+
+    @media (min-width: 450px) {
+        width: 300px;
+        padding: 20px 15px;
+        font-size: 17px;
+    }
+
+    @media (min-width: 768px) {
+        width: 513px;
+    }
+`;
+
+export const MessageErr = styled(ErrorMessage)`
+    margin-bottom: 6px;
+    color: var(--error-color);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.21px;
+`;
+
+export const ButtonSubmit = styled.button`
+    margin-top: 24px;
+    margin-bottom: 26px;
+    width: 250px;
+    padding: 8px 32px;
+    background-color: var(--brand-orange);
+    border-radius: 3px;
+    border: transparent;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-white);
+    background-image: none;
+    transition: background-image 0.3s ease-in-out;
+
+
+    @media (min-width: 450px) {
+        width: 321px;
+    }
+`;
+
+export const AllElementForm = styled(Form)`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const ContainerForm = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: 830px) {
+        flex-direction: column;
+    }
+`;
+
+export const TextSocialForm = styled.p`
+    margin-right: 4px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.21px;
+    color: var(--text-black);
+
+    @media (min-width: 768px) {
+        font-size: 25px;
+    }
+`;
+
+export const SocialForm = styled.a`
+    color: var(--brand-orange);
+`;
+
+export const BoxSocialForm = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 16px;
+`;
+
+export const BigFormBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
 `;
