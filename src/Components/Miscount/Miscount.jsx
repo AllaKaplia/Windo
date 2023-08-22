@@ -1,21 +1,25 @@
 import { useState } from 'react';
 import { Form, Formik } from 'formik';
 import dvostulkoveSchema71 from '../../img/miscount/dvostulkove-71.png';
-import dvostulkoveSchema72 from '../../img/miscount/dvostulkove-72.png';
-import balconLodgija76 from '../../img/miscount/balcon-lodgija-76.png';
-import balconLodgija78 from '../../img/miscount/balcon-lodgija-78.png';
-import balconLodgija92 from '../../img/miscount/dvostulkove-71.png';
-import trystulkowe73 from '../../img/miscount/trystulkove-73.png';
-import trystulkowe74 from '../../img/miscount/trystulkove-74.png';
-import trystulkowe75 from '../../img/miscount/trystulkove-75.png';
+// import dvostulkoveSchema72 from '../../img/miscount/dvostulkove-72.png';
+// import balconLodgija76 from '../../img/miscount/balcon-lodgija-76.png';
+// import balconLodgija78 from '../../img/miscount/balcon-lodgija-78.png';
+// import balconLodgija92 from '../../img/miscount/dvostulkove-71.png';
+// import trystulkowe73 from '../../img/miscount/trystulkove-73.png';
+// import trystulkowe74 from '../../img/miscount/trystulkove-74.png';
+// import trystulkowe75 from '../../img/miscount/trystulkove-75.png';
 import windowPhoto1 from '../../img/miscount/3стулкове вікно.png';
 import windowPhoto2 from '../../img/miscount/глухе вікно.png';
 import windowPhoto3 from '../../img/miscount/двостулкове вікно.png';
 import windowPhoto4 from '../../img/miscount/лоджія.png';
-import { AdditionalList, AskSize, AskSizeMore, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxTextarea, BtnSubmitMiscount, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, LabelCheckbox, MainImageWindow, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, Textarea, TitleCheckbox, TitleMiscount, WindowFormBox } from './Miscount.styled';
 import { BsCheck } from 'react-icons/bs';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import { FaTelegram, FaViber } from 'react-icons/fa';
+import { TfiClose } from 'react-icons/tfi';
 import { iconSize } from '../../constants/iconSize';
+import ModalMenu from "../ModalMenu/ModalMenu";
+import FeedbackModal from '../FeedbackModal/FeedbackModal';
+import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextSocialForm, TitleCheckbox, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
 
 
 const initialValue = {
@@ -78,24 +82,24 @@ const Miscount = () => {
                 <ButtonWindowTwo type='button' onClick={() => handleButtonClick(windowPhoto3)}>
                     <BoxImageSchema>
                         <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema71" width={59} />
-                        <SchemaImages src={dvostulkoveSchema72} alt="Dvostulkove Schema72" width={59} />
+                        <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema72" width={59} />
                     </BoxImageSchema>
                     <NameSchema>Двостулкове вікно</NameSchema>
                 </ButtonWindowTwo>
                 <ButtonWindowTree type='button' onClick={() => handleButtonClick(windowPhoto1)}>
                     <BoxImageSchema>
-                        <SchemaImages src={trystulkowe73} alt="trystulkowe73" width={45} />
-                        <SchemaImages src={trystulkowe74} alt="trystulkowe74" width={46} />
-                        <SchemaImages src={trystulkowe75} alt="trystulkowe73" width={45} />
+                        <SchemaImages src={dvostulkoveSchema71} alt="trystulkowe73" width={46} />
+                        <SchemaImages src={dvostulkoveSchema71} alt="trystulkowe74" width={46} />
+                        <SchemaImages src={dvostulkoveSchema71} alt="trystulkowe73" width={46} />
                     </BoxImageSchema>
                     <NameSchema>Трьохстулкове вікно</NameSchema>
                 </ButtonWindowTree>
                 <ButtonWindowFor type='button' onClick={() => handleButtonClick(windowPhoto4)}>
                     <BoxImageSchema>
-                        <SchemaImagesSmall src={balconLodgija92} alt="balcon Lodgija91" width={28} />
-                        <SchemaImages src={balconLodgija78} alt="balcon Lodgija78" width={40} />
-                        <SchemaImages src={balconLodgija76} alt="balcon Lodgija76" width={39} />
-                        <SchemaImagesSmall src={balconLodgija92} alt="balcon Lodgija92" width={29} />
+                        <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija91" width={28} />
+                        <SchemaImages src={dvostulkoveSchema71} alt="balcon Lodgija78" width={40} />
+                        <SchemaImages src={dvostulkoveSchema71} alt="balcon Lodgija76" width={40} />
+                        <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija92" width={28} />
                     </BoxImageSchema>
                     <NameSchema>Балкон / лоджія</NameSchema>
                 </ButtonWindowFor>
@@ -209,6 +213,41 @@ const Miscount = () => {
                     </Form>
                 </Formik>
             </WindowFormBox>
+            <ModalMenu>
+            <CloseButton  type="button">
+                    <TfiClose size={iconSize.sm} />
+                </CloseButton>
+                <BigFormBox>
+                    <TitleModal>Відправити на прорахунок</TitleModal>
+                    <Formik initialValues={initialValue} >
+                        <Form autoComplete="off">
+                            <ContainerForForm>
+                                <ContainerForm>
+                                    <LabelModal>
+                                        <LabelText>Ім‘я</LabelText>
+                                        <Input type="text" name="name" placeholder="Введіть ім‘я" required/>
+                                        <MessageErr name="name" component="div" />
+                                    </LabelModal>
+                                    <LabelModal>
+                                        <LabelText>Номер телефону</LabelText>
+                                        <Input type="tel" name="number" placeholder="Введіть номер" required/>
+                                        <MessageErr name="number" component="div" />
+                                    </LabelModal>
+                                    <ButtonSubmit type="submit">Відправити</ButtonSubmit>
+                                </ContainerForm>
+                                <BoxSocialForm>
+                                    <TextSocialForm>Або напишіть нам:</TextSocialForm>
+                                    <SocialForm href="https://viber.click/+0677721077" target="_blank"><FaViber size={iconSize.md}/></SocialForm>
+                                    <SocialForm href="https://web.telegram.org/k/#@Windocomua" target="_blank"><FaTelegram size={iconSize.md} /></SocialForm>
+                                </BoxSocialForm>
+                            </ContainerForForm>
+                        </Form>
+                    </Formik>
+                </BigFormBox>
+            </ModalMenu>
+            <FeedbackModal>
+
+            </FeedbackModal>
         </BoxMiscount>
     )
 };
