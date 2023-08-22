@@ -12,7 +12,8 @@ import { TfiClose } from 'react-icons/tfi';
 import { iconSize } from '../../constants/iconSize';
 import ModalMenu from "../ModalMenu/ModalMenu";
 import FeedbackModal from '../FeedbackModal/FeedbackModal';
-import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextSocialForm, TitleCheckbox, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
+import Logo from '../../img/Logo-Windo.png';
+import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, FeedbackBox, ImageFeedback, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextFeedback, TextSocialForm, TitleCheckbox, TitleFeedback, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
 
 
 const initialValue = {
@@ -239,7 +240,11 @@ const Miscount = () => {
                 </BigFormBox>
             </ModalMenu>
             <FeedbackModal>
-
+                <FeedbackBox>
+                    <TitleFeedback>Ми скоро зв’яжемось з Вами!</TitleFeedback>
+                    <ImageFeedback src={Logo} alt="logo" />
+                    <TextFeedback>Дякуємо, що обрали нас!</TextFeedback>
+                </FeedbackBox>
             </FeedbackModal>
         </BoxMiscount>
     )
