@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Form, Formik, Field } from 'formik';
+import emailjs from 'emailjs-com';
 import * as yup from 'yup';
 import { iconSize } from '../../constants/iconSize';
 import { PiNumberCircleOneLight, PiNumberCircleTwoLight, PiNumberCircleThreeLight } from 'react-icons/pi';
@@ -7,6 +8,7 @@ import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, B
 
 import Logo from '../../img/Logo-Windo.png';
 import FeedbackModal from 'Components/FeedbackModal';
+import { toast } from 'react-toastify';
 
 
 const schema = yup.object().shape({
@@ -33,11 +35,26 @@ const initialValues = {
 const Discount = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); 
 
-    const handleFormSubmit = (values, { resetForm }) => {
-        console.log(values);
-        resetForm();
-        setIsModalOpen(true);
+    const handleFormSubmit = async (values, { resetForm }) => {
+        try {
+            console.log(values);
+
+            const response = await emailjs.send(
+                'service_owrokv4',
+                'template_la9pz9i',
+                values,
+                'QbX91yU4e96RK4zwv'
+            );
+
+            console.log('Email sent:', JSON.stringify(response));
+            
+            resetForm();
+            setIsModalOpen(true);
+        } catch (error) {
+            toast.error('Error sending email:', error);
+        }
     }
+
 
     useEffect(() => {
         if (isModalOpen) {
