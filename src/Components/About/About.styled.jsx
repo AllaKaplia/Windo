@@ -176,7 +176,7 @@ export const DetailsDescription = styled.p`
 `;
 
 export const BoxLinkAbout = styled.div`
-    width: 270px;
+    width: 308px;
     padding: 8px 16px;
     border: 1px solid var(--brand-orange);
     border-radius: 3px;
