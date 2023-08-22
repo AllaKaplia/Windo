@@ -81,7 +81,8 @@ const Assortment = () => {
   {
     breakpoint: 1024,
     settings: {
-      slidesToShow: 2,
+      centerMode: true,
+      centerPadding: "0",
       slidesToScroll: 1,
       infinite: true,
       dots: true
@@ -126,7 +127,7 @@ const Assortment = () => {
           .find((category) => category.title === activeCategory)
           .images.map((image, index) => (
         <div key={index}>
-            <img src={image.image} alt={image.alt} width={275} height={475}/>
+            <img src={image.image} alt={image.alt} width={275} height={475} margin={0}/>
             <NameProduct>{image.title}</NameProduct>
         </div>))}
       </Slider>
