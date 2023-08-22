@@ -188,8 +188,8 @@ export const ImgHeroDesktop = styled.div`
     @media (min-width: 1280px) {
         display: block;
         position: absolute;
-        top: 1.4%;
-        left: 53%;
+        top: 1.7%;
+        left: 58%;
     }
 `;
 
