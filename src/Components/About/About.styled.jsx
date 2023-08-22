@@ -78,7 +78,7 @@ export const ImageMobile = styled.img`
 `;
 
 export const DetailsAboutBox = styled.div`
-    width: 270px;
+    width: 310px;
     height: 116px;
     padding: 8px 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.65);
