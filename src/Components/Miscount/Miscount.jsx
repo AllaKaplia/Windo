@@ -1,13 +1,6 @@
 import { useState } from 'react';
 import { Form, Formik } from 'formik';
 import dvostulkoveSchema71 from '../../img/miscount/dvostulkove-71.png';
-// import dvostulkoveSchema72 from '../../img/miscount/dvostulkove-72.png';
-// import balconLodgija76 from '../../img/miscount/balcon-lodgija-76.png';
-// import balconLodgija78 from '../../img/miscount/balcon-lodgija-78.png';
-// import balconLodgija92 from '../../img/miscount/dvostulkove-71.png';
-// import trystulkowe73 from '../../img/miscount/trystulkove-73.png';
-// import trystulkowe74 from '../../img/miscount/trystulkove-74.png';
-// import trystulkowe75 from '../../img/miscount/trystulkove-75.png';
 import windowPhoto1 from '../../img/miscount/3стулкове вікно.png';
 import windowPhoto2 from '../../img/miscount/глухе вікно.png';
 import windowPhoto3 from '../../img/miscount/двостулкове вікно.png';
