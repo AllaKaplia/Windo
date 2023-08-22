@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const BoxAbout = styled.div`
     padding: 60px 16px;
+    margin-bottom: 32px;
 
     @media (min-width: 768px) {
         padding: 80px 40px; 
