@@ -60,25 +60,14 @@ const Assortment = () => {
 
 
   const settings = {
-    appendDots: dots => (
-      <div
-      style={{
-      backgroundColor: "var(--text-white)",
-      border: "none",
-      padding: "10px"
-    }}>
-      <ul style={{ margin: "0px", opacity: ".75", color: "var(--brand-orange)" }}> {dots} </ul>
-    </div>
-    ),
-  infinite: false,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  initialSlide: 0,
-  // prevArrow: <NextButton />,
-  // nextArrow: <NextButton />,
-  responsive: [
-  {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+    {
     breakpoint: 1024,
     settings: {
       centerMode: true,
