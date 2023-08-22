@@ -12,6 +12,7 @@ import backgroundTablet from '../../img/frame-background-tablet.jpg';
 import backgroundDesktop from '../../img/frame-background-desktop.jpg';
 import FeedbackModal from '../FeedbackModal/FeedbackModal';
 import Logo from '../../img/Logo-Windo.png';
+import { toast } from "react-toastify";
 
 
 const schema = yup.object().shape({
@@ -58,11 +59,10 @@ const Hero = () => {
         try {
           console.log(values);
       
-          const formElement = document.querySelector('Form');
-          const response = await emailjs.sendForm(
+          const response = await emailjs.send(
             'service_q5k4yhe',
             'template_u5527g8',
-            formElement,
+            values,
             'xIE7PdFcVSv6LE-4F'
           );
       
@@ -74,7 +74,7 @@ const Hero = () => {
       
         openFeedbackModal();
         } catch (error) {
-          console.error('Error sending email:', error);
+          toast.error('Error sending email:', error);
         }
     };
 
