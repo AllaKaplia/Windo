@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const ContainerPortfolio = styled.div`
     padding: 0 16px 60px;
     text-align: center;
+    padding-top: 10px;
     
     @media (min-width: 768px) {
         padding: 0 80px 40px;
@@ -67,7 +68,7 @@ export const BtnPortfolio = styled.button`
     
     &.active  {
         background-color: var(--brand-orange);
-        color: var(--text-black);
+        color: var(--text-white);
     }
 `;
 
