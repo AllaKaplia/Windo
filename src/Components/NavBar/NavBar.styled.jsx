@@ -26,6 +26,10 @@ export const Navigation = styled.header`
     @media (min-width: 1280px) {
         justify-content: center;
         align-items: center;
+        padding: 0px 45px;
+    }
+
+    @media (min-width: 1440px) {
         padding: 0 80px;
     }
 `;
@@ -127,7 +131,7 @@ export const DesktopList = styled.ul`
     gap: 8px;
 
     @media (min-width: 1280px) {
-        gap: 7px;
+        gap: 12px;
         margin-right: 20px;
     }
 
@@ -240,6 +244,10 @@ export const Logo = styled.img`
     
     @media (min-width: 1280px) {
         width: 193px;
+        margin-right: 30px;
+    }
+
+    @media (min-width: 1440px) {
         margin-right: 60px;
-    };
+    }
 `;
