@@ -548,3 +548,67 @@ export const BigFormBox = styled.div`
     align-items: center;
     margin-top: 45px;
 `;
+
+/*------------------------- Feedback Modal ---------------------------*/
+
+export const FeedbackBox = styled.div`
+    width: 343px;
+    height: 201px;
+    background-color: white;
+    padding: 16px 16px;
+    margin-top: 139px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+        width: 700px;
+        height: 371px;
+
+    }
+`;
+
+export const TitleFeedback = styled.h2`
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-black);
+    margin-bottom: 46px;
+
+    @media (min-width: 768px) {
+        font-family: Montserrat;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.22;
+        margin-bottom: 75px;
+    }
+`;
+
+export const ImageFeedback = styled.img`
+    width: 102px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 46px;
+
+    @media (min-width: 768px) {
+        width: 203px;
+        margin-bottom: 75px;
+    }
+`;
+
+export const TextFeedback = styled.p`
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42
+    letter-spacing: 0.21px;
+    color: var(--brand-gray);
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.33:
+        letter-spacing: -0.24px;
+    }
+`;
