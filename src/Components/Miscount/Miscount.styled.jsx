@@ -146,7 +146,7 @@ export const SchemaImages = styled.img`
 `;
 
 export const SchemaImagesSmall = styled.img`
-    height: 83px;
+    height: 82px;
 
     @media (min-width: 768px) {
         height: 102px;
@@ -247,7 +247,7 @@ export const AskSize = styled(Field)`
     letter-spacing: 0.21px;
     color: var(--brand-gray);
     margin-bottom: 16px;
-    width: 130px;
+    width: 132px;
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 
@@ -265,7 +265,7 @@ export const AskSizeMore = styled(Field)`
     letter-spacing: 0.21px;
     color: var(--brand-gray);
     margin-bottom: 16px;
-    width: 343px;
+    width: 350px;
     appearance: none;
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
@@ -293,7 +293,7 @@ export const AdditionalList = styled.label`
 export const Textarea = styled(Field)`
     resize: none;
     padding: 10px 16px;
-    width: 305px;
+    width: 316px;
     margin-bottom: 20px;
     font-family: Inter;
     font-size: 14px;
@@ -321,7 +321,7 @@ export const BtnSubmitMiscount = styled.button`
     background-color: var(--brand-orange);
     border: 1px solid var(--brand-orange);
     border-radius: 3px;
-    width: 340px;
+    width: 351px;
     color: var(--text-white);
     font-family: Inter;
     font-size: 20px;
