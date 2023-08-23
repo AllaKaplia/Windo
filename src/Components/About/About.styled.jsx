@@ -17,6 +17,10 @@ export const BoxAbout = styled.div`
 export const BoxAnchor = styled.div`
     text-align: center;
     margin-bottom: 32px;
+
+    @media (min-width: 1280px) {
+        margin-bottom: 40px; 
+    }
 `;
 
 export const TitleAbout = styled.a`
@@ -50,9 +54,13 @@ export const DescriptionText = styled.p`
         margin-bottom: 12px;
     }
     
+    @media (min-width: 1280px) {
+        margin-bottom: 19px;
+    }
+    
     @media (min-width: 1440px) {
         margin-bottom: 32px;
-    }   
+    } 
 `;
 
 export const DescriptionTextTablet = styled.p`
@@ -63,9 +71,13 @@ export const DescriptionTextTablet = styled.p`
     line-height: 1.5;
     color: var(--text-black);
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1280px) {
         margin-bottom: 32px;
         font-size: 20px;
+    }
+
+    @media (min-width: 1440px) {
+        margin-bottom: 56px;
     }
 `;
 
@@ -82,14 +94,14 @@ export const DetailsAboutBox = styled.div`
     width: 310px;
     height: 116px;
     padding: 8px 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.65);
+    border-top: 1px solid #c4c4c4;
     text-align: center;
 
     @media (min-width: 768px) {
         width: 180px;
         padding: 8px 10px;
         border-top: none;
-        border-left: 1px solid rgba(0, 0, 0, 0.65);
+        border-top: 1px solid #c4c4c4;
     }
 
     @media (min-width: 1280px) {
