@@ -52,12 +52,12 @@ export const TitleDiscount = styled.a`
         &::before {
             content: '';
             height: 0.5px;
-            background-color: var(--text-black);
+            background-color: #c4c4c4;
             display: block;
             position: absolute;
             top: 82px;
-            left: -340px;
-            width: 1126px;
+            left: -307px;
+            width: 1099px;
         }
     }
     
@@ -65,7 +65,7 @@ export const TitleDiscount = styled.a`
         &::before {
             content: '';
             height: 0.5px;
-            background-color: var(--text-black);
+            background-color: #c4c4c4;
             display: block;
             position: absolute;
             top: 82px;
