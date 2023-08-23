@@ -69,8 +69,8 @@ export const TitleDiscount = styled.a`
             display: block;
             position: absolute;
             top: 82px;
-            left: -441px;
-            width: 1280px;
+            left: -388px;
+            width: 1153px;
         }
     }
 
