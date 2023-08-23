@@ -113,7 +113,7 @@ export const ButtonWindowTree = styled.button`
 `;
 
 export const ButtonWindowFor = styled.button`
-    width: 145px;
+    width: 140px;
     background-color: transparent;
     border: none;
 
@@ -238,7 +238,7 @@ export const CheckboxContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
 
     @media (min-width: 768px) {
         justify-content: flex-start;
@@ -273,7 +273,7 @@ export const AskSizeMore = styled(Field)`
     letter-spacing: 0.21px;
     color: var(--brand-gray);
     margin-bottom: 16px;
-    width: 350px;
+    width: 345px;
     appearance: none;
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
@@ -301,7 +301,7 @@ export const AdditionalList = styled.label`
 export const Textarea = styled(Field)`
     resize: none;
     padding: 10px 16px;
-    width: 316px;
+    width: 315px;
     margin-bottom: 20px;
     font-family: Inter;
     font-size: 14px;
