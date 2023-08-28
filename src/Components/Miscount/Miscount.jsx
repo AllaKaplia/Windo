@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Form, Formik } from 'formik';
+import emailjs from 'emailjs-com';
 import dvostulkoveSchema71 from '../../img/miscount/dvostulkove-71.png';
 import windowPhoto1 from '../../img/miscount/3стулкове вікно.png';
 import windowPhoto2 from '../../img/miscount/глухе вікно.png';
@@ -14,6 +15,7 @@ import ModalMenu from "../ModalMenu/ModalMenu";
 import FeedbackModal from '../FeedbackModal/FeedbackModal';
 import Logo from '../../img/Logo-Windo.png';
 import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, FeedbackBox, ImageFeedback, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextFeedback, TextSocialForm, TitleCheckbox, TitleFeedback, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
+import { toast } from 'react-toastify';
 
 
 const initialValue = {
@@ -38,7 +40,10 @@ const initialCheckboxColor = {
 const Miscount = () => {
     const [selectedImage, setSelectedImage] = useState(windowPhoto2);
     const [checkboxStates, setCheckboxStates] = useState(initialCheckboxStates);
-    const [checkboxColor, setCheckboxColor] = useState(initialCheckboxColor)
+    const [checkboxColor, setCheckboxColor] = useState(initialCheckboxColor);
+    const [isModalOpen, setIsModalOpen] = useState(false); 
+    const [showFirstForm, setShowFirstForm] = useState(true);
+    const [firstFormValues, setFirstFormValues] = useState({});
 
     const handleButtonClick = (image) => {
         setSelectedImage(image);
@@ -58,10 +63,54 @@ const Miscount = () => {
         }));
     };
 
-    const handleFormSubmit = (values, { resetForm }) => {
-        console.log(values);
-        resetForm();
-    }
+    const handleFirstFormSubmit = (values) => {
+        if (Object.keys(values).length !== 0) {
+            setFirstFormValues(values);
+            setShowFirstForm(false);
+        }
+    };
+    
+    const handleSecondFormSubmit = async (values, { resetForm }) => {
+        const allFormData = {
+          ...firstFormValues,
+          ...values,
+        };
+    
+        if(!showFirstForm) {
+            try {
+                console.log(values);
+              
+                const response = await emailjs.send(
+                  'service_q5k4yhe',
+                  'template_u5527g8',
+                  allFormData,
+                  'xIE7PdFcVSv6LE-4F'
+                );
+        
+                console.log('Email sent:', JSON.stringify(response));
+        
+                setIsModalOpen(true);
+               } catch (error) {
+                toast.error('Error sending email:', error);
+               }
+            
+               resetForm(); 
+            
+                console.log('All Form Data:', allFormData);
+        }
+    };
+
+    useEffect(() => {
+        if (isModalOpen) {
+            const timer = setTimeout(() => {
+                setIsModalOpen(false);
+            }, 3000);
+
+            return () => {
+                clearTimeout(timer);
+            };
+        }
+    }, [isModalOpen]);
 
     return(
         <BoxMiscount>
@@ -100,7 +149,7 @@ const Miscount = () => {
             </BoxButtonWindow>
             <WindowFormBox>
                 <MainImageWindow src={selectedImage} alt="window Photo2" />
-                <Formik initialValues={initialValue} onSubmit={handleFormSubmit}>
+                <Formik initialValues={initialValue} onSubmit={handleFirstFormSubmit}>
                     <Form autoComplete='none'>
                         <BoxCheckboxes>
                             <div>
@@ -213,7 +262,7 @@ const Miscount = () => {
                 </CloseButton>
                 <BigFormBox>
                     <TitleModal>Відправити на прорахунок</TitleModal>
-                    <Formik initialValues={initialValue} >
+                    <Formik initialValues={initialValue} onSubmit={handleSecondFormSubmit} >
                         <Form autoComplete="off">
                             <ContainerForForm>
                                 <ContainerForm>
@@ -239,7 +288,7 @@ const Miscount = () => {
                     </Formik>
                 </BigFormBox>
             </ModalMenu>
-            <FeedbackModal>
+            <FeedbackModal isOpen={isModalOpen} contentLabel="Get a miscount">
                 <FeedbackBox>
                     <TitleFeedback>Ми скоро зв’яжемось з Вами!</TitleFeedback>
                     <ImageFeedback src={Logo} alt="logo" />
