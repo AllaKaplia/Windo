@@ -99,3 +99,20 @@ export const ActiveDotButton = styled.button`
         z-index: 2;
     }
 `;
+
+export const BoxImagesSlider = styled.div`
+    .slick-slider {
+        text-align: center;
+    }
+    
+    .slick-slide img {
+        display: inline-block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    // .slick-dots li.slick-active button:before {
+    //     color: var(--brand-orange);
+    // }
+`;
