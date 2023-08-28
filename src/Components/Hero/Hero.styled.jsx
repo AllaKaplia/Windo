@@ -231,13 +231,6 @@ export const ImgHeroTablet = styled.div`
 export const ImgHeroDesktop = styled.div`
     display: none;
 
-    // @media (min-width: 1024px) {
-    //     display: block;
-    //     position: absolute;
-    //     top: 1.4%;
-    //     left: 59%;
-    // }
-
     @media (min-width: 1280px) {
         display: block;
         position: absolute;
