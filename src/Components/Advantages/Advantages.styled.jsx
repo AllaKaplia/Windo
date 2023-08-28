@@ -20,6 +20,10 @@ export const ListAdvantages = styled.ul`
     @media (min-width: 768px){
         gap: 9px;
     }
+
+    @media (min-width 1280px) {
+        gap: 28px;
+    }
 `;
 
 export const ItemAdvantages = styled.li`
