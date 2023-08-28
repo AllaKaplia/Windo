@@ -72,12 +72,13 @@ export const HeroBrandText = styled.h2`
     font-size: 15px;
     line-height: 1.5;
 
-    @media (min-width: 375px) {
-        font-size: 20px;
+    @media (min-width: 280px) {
+        margin-bottom: 250px;
     }
 
     @media (min-width: 375px) {
         margin-bottom: 264px;
+        font-size: 20px;
     }
 
     @media (min-width: 768px) {
@@ -99,10 +100,26 @@ export const HeroBrandText = styled.h2`
 export const ContainerBtnText = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 280px) {
+        align-items: center;
+    }
+
+    @media (min-width: 688px) {
+        align-items: flex-start;
+    }
 `;
 
 export const BoxHeroText = styled.div`
-    width: 337px;
+    width: 240px;
+
+    @media (min-width: 375px) {
+        width: 337px;
+    }
+    
+    @media (min-width: 414px) {
+        width: 385px;
+    }
 
     @media (min-width: 768px) {
         margin-bottom: 24px;
@@ -123,6 +140,10 @@ export const HeroText = styled.p`
     line-height: 1.5;
     color: var(--grin-text);
 
+    @media (min-width: 414px) {
+        font-size: 13px;
+    }
+
     @media (min-width: 768px) {
         font-size: 17px;
         color: var(--text-black);
@@ -131,7 +152,7 @@ export const HeroText = styled.p`
 
 export const ButtonHero = styled.button`
     padding: 16px 32px;
-    width: 328px;
+    width: 240px;
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
@@ -147,10 +168,19 @@ export const ButtonHero = styled.button`
         background-image: linear-gradient(to left, #DF5306, #FC9850);
     }
 
+    @media (min-width: 375px) {
+        width: 328px;
+    }
+
+    @media (min-width: 414px) {
+        width: 385px;
+    }
+
     @media (min-width: 688px) {
         border-radius: 3px;
         font-size: 18px;
         width: 224px;
+        margin-bottom: 36px;
     }
 
     @media (min-width: 1280px) {
@@ -173,8 +203,15 @@ export const ImgHeroTablet = styled.div`
     @media (min-width: 768px) {
         display: block;
         position: absolute;
-        top: 1.8%;
-        left: 53%;
+        top: 2.2%;
+        left: 52%;
+    }
+
+    @media (min-width: 900px) {
+        display: block;
+        position: absolute;
+        top: 2.1%;
+        left: 59%;
     }
 
     @media (min-width: 1280px) {
@@ -191,6 +228,10 @@ export const ImgHeroDesktop = styled.div`
         top: 1.4%;
         left: 59%;
     }
+`;
+
+export const ImageHero = styled.img`
+    
 `;
 
 export const ContainerForForm = styled.div`
