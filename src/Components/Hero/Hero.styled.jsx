@@ -8,19 +8,19 @@ export const ContainerHero = styled.div`
     background-image: url(${backgroundMobile});
     background-repeat: no-repeat;
     background-position: 50% 100%;
-    padding: 16px;
+    padding: 24px 16px;
 
     @media (min-width: 688px) {
         background-image: none;
-        padding: 40px;
+        padding: 0 40px;
     }
     
     @media (min-width: 1280px) {
-        padding: 95px 80px;
+        padding: 0 80px;
     }
 
     @media (min-width: 1440px) {
-        padding: 128px 80px;
+        padding: 0 80px;
     }    
 `;
 
@@ -76,7 +76,7 @@ export const HeroBrandText = styled.h2`
         margin-bottom: 250px;
     }
 
-    @media (min-width: 375px) {
+    @media (min-width: 360px) {
         margin-bottom: 264px;
         font-size: 20px;
     }
@@ -113,7 +113,7 @@ export const ContainerBtnText = styled.div`
 export const BoxHeroText = styled.div`
     width: 240px;
 
-    @media (min-width: 375px) {
+    @media (min-width: 360px) {
         width: 337px;
     }
     
@@ -168,7 +168,7 @@ export const ButtonHero = styled.button`
         background-image: linear-gradient(to left, #DF5306, #FC9850);
     }
 
-    @media (min-width: 375px) {
+    @media (min-width: 360px) {
         width: 328px;
     }
 
@@ -180,7 +180,6 @@ export const ButtonHero = styled.button`
         border-radius: 3px;
         font-size: 18px;
         width: 224px;
-        margin-bottom: 36px;
     }
 
     @media (min-width: 1280px) {
@@ -194,24 +193,34 @@ export const BoxContext = styled.div`
 
     @media (min-width: 688px) {
         display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 `;
 
 export const ImgHeroTablet = styled.div`
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: 688px) {
         display: block;
         position: absolute;
-        top: 2.2%;
+        top: 1.7%;
         left: 52%;
     }
 
+    @media (min-width: 800px) {
+        top: 1.7%;
+        left: 55%;
+    }
+
     @media (min-width: 900px) {
-        display: block;
-        position: absolute;
-        top: 2.1%;
+        top: 1.8%;
         left: 59%;
+    }
+
+    @media (min-width: 1024px) {
+        top: 1.7%;
+        left: 62%;
     }
 
     @media (min-width: 1280px) {
@@ -222,11 +231,18 @@ export const ImgHeroTablet = styled.div`
 export const ImgHeroDesktop = styled.div`
     display: none;
 
+    // @media (min-width: 1024px) {
+    //     display: block;
+    //     position: absolute;
+    //     top: 1.4%;
+    //     left: 59%;
+    // }
+
     @media (min-width: 1280px) {
         display: block;
         position: absolute;
-        top: 1.4%;
-        left: 59%;
+        top: 37px;
+        left: 64%;
     }
 `;
 
