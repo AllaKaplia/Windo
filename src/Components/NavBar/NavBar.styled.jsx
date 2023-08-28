@@ -8,17 +8,22 @@ export const Navigation = styled.header`
     z-index: 1100;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 16px 12px;
-    gap: 207px;
+    gap: 100px;
     color: var(--text-black);
     background-color: var(--text-white);
     border-bottom: 0.5px solid var(--grin-text);
-    // box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    // 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 
+    @media (min-width: 325px) {
+        gap: 0px;
+    }
+
+    @media (min-width: 640px) {
+        justify-content: space-between;
+    }
 
     @media (min-width: 688px){
-        justify-content: space-evenly;
         gap: 0;
         padding: 17px 40px;
     }
@@ -44,7 +49,11 @@ export const BurgerMenu = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 5px;
+
+    @media (min-width: 325px) {
+        gap: 12px;
+    }
 `;
 
 export const BurgerBtn = styled.button`
@@ -129,6 +138,10 @@ export const DesktopList = styled.ul`
     align-items: center;
     justify-content: center;
     gap: 8px;
+
+    @media (min-width: 800px) {
+        gap: 15px;
+    }
 
     @media (min-width: 1280px) {
         gap: 12px;
