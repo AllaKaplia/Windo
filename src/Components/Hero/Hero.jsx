@@ -104,7 +104,7 @@ const Hero = () => {
                     <img src={backgroundMobile} alt="Background Mobile" />
                 </div> */}
                 <ImgHeroTablet>
-                    <img src={backgroundTablet} alt="Background Tablet" width={364} />
+                    <img src={backgroundTablet} alt="Background Tablet" width={375} />
                 </ImgHeroTablet>
                 <ImgHeroDesktop>
                     <img src={backgroundDesktop} alt="Background Desktop" width={614} />
