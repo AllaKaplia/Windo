@@ -17,12 +17,24 @@ export const ListAdvantages = styled.ul`
     justify-content: center;
     gap: 26px;
 
+    @media (min-width: 540px) {
+        gap: 25px;
+    }
+
     @media (min-width: 768px){
         gap: 9px;
     }
 
-    @media (min-width 1280px) {
-        gap: 28px;
+    @media (min-width: 800px) {
+        gap: 24px;
+    }
+
+    @media (min-width: 1024px) {
+        gap: 35px;
+    }
+
+    @media (min-width: 1280px) {
+        gap: 10px;
     }
 `;
 
@@ -36,14 +48,19 @@ export const ItemAdvantages = styled.li`
 export const TitleAdvantages = styled.h3`
     width: 163px;
     font-family: Inter;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 1.42;
     letter-spacing: 0.21px;
 
     @media (min-width: 768px) {
         width: 106px;
-        font-size: 13px;
+        font-size: 14px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 120px;
+        font-size: 16px;
     }
 
     @media (min-width: 1280px) {
