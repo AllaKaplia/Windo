@@ -130,7 +130,7 @@ export const DesktopBox = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 65px;       
+        gap: 0px;       
     }
 
     @media (min-width: 1154px) {
