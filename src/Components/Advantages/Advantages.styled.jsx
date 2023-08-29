@@ -29,7 +29,7 @@ export const ListAdvantages = styled.ul`
         gap: 24px;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 912px) {
         gap: 35px;
     }
 
