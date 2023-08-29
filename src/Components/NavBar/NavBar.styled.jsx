@@ -118,7 +118,7 @@ export const TabletPhone = styled.a`
         margin-left: 16px;
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
         display: none;
     }
 `;
@@ -129,7 +129,21 @@ export const DesktopBox = styled.div`
     @media (min-width: 768px) {
         display: flex;
         align-items: center;
-        justify-content: center;       
+        justify-content: center;
+        gap: 65px;       
+    }
+
+    @media (min-width: 1154px) {
+        gap: 25px;
+    }
+
+    @media (min-width: 1280px) {
+        gap: 8px;
+    }
+
+    
+    @media (min-width: 1154px) {
+        gap: 0;
     }
 `;
 
@@ -173,7 +187,7 @@ export const DesktopLink = styled.a`
 export const DesktopSocial = styled.ul`
     display: none;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1154px) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -196,7 +210,7 @@ export const DesktopTel = styled.a`
 export const DesktopPhone = styled.a`
     display: none;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
         display: flex;
         align-items: center;
         justify-content: center;
