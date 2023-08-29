@@ -121,6 +121,10 @@ export const BoxHeroText = styled.div`
         width: 385px;
     }
 
+    @media (min-width: 640px) {
+        width: 435px;
+    }
+
     @media (min-width: 768px) {
         margin-bottom: 24px;
         width: 329px;
@@ -144,8 +148,12 @@ export const HeroText = styled.p`
     line-height: 1.5;
     color: var(--grin-text);
 
-    @media (min-width: 414px) {
-        font-size: 13px;
+    @media (min-width: 412px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 640px) {
+        font-size: 17px;
     }
 
     @media (min-width: 768px) {
@@ -178,6 +186,10 @@ export const ButtonHero = styled.button`
 
     @media (min-width: 414px) {
         width: 385px;
+    }
+
+    @media (min-width: 640px) {
+        width: 445px;
     }
 
     @media (min-width: 688px) {
