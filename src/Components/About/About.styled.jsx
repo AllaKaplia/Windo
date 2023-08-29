@@ -45,13 +45,33 @@ export const TitleAbout = styled.a`
 export const DescriptionText = styled.p`
     margin-bottom: 24px;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
     color: var(--text-black);
 
+    @media (min-width: 375px) {
+        font-size: 19px;
+    }
+
+    @media (min-width: 540px) {
+        font-size: 20px;
+    }
+
     @media (min-width: 768px) {
-        margin-bottom: 12px;
+        margin-bottom: 17px;
+    }
+
+    @media (min-width: 820px) {
+        font-size: 20px;
+    }
+
+    @media (min-width: 912px) {
+        font-size: 22px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-bottom: 33px;
     }
     
     @media (min-width: 1280px) {
@@ -71,6 +91,18 @@ export const DescriptionTextTablet = styled.p`
     line-height: 1.5;
     color: var(--text-black);
 
+    @media (min-width: 640px) {
+        font-size: 18px; 
+    }
+
+    @media (min-width: 912px) {
+        font-size: 20px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 22px;
+    }
+
     @media (min-width: 1280px) {
         margin-bottom: 32px;
         font-size: 20px;
@@ -82,8 +114,9 @@ export const DescriptionTextTablet = styled.p`
 `;
 
 export const ImageMobile = styled.img`
-    width: 343px;
     margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-width: 768px) {
         display: none;
@@ -91,17 +124,21 @@ export const ImageMobile = styled.img`
 `;
 
 export const DetailsAboutBox = styled.div`
-    width: 310px;
+    width: 245px;
     height: 116px;
     padding: 8px 20px;
     border-top: 1px solid #c4c4c4;
     text-align: center;
 
+    @media (min-width: 375px) {
+        width: 310px;
+    }
+
     @media (min-width: 768px) {
         width: 180px;
         padding: 8px 10px;
         border-top: none;
-        border-top: 1px solid #c4c4c4;
+        border-left: 1px solid #c4c4c4;
     }
 
     @media (min-width: 1280px) {
@@ -121,11 +158,15 @@ export const WordBack = styled.span`
 
 export const AllDetailsBox = styled.div`
     margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 
     @media (min-width: 768px){
-        display: flex;
-        justify-content: center;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 24px;
     }
 
@@ -189,7 +230,7 @@ export const DetailsDescription = styled.p`
 `;
 
 export const BoxLinkAbout = styled.div`
-    width: 308px;
+    width: 215px;
     padding: 8px 16px;
     border: 1px solid var(--brand-orange);
     border-radius: 3px;
@@ -197,6 +238,18 @@ export const BoxLinkAbout = styled.div`
     &:hover, &:focus {
         color: var(--text-white);
         background-image: linear-gradient(to left, #DF5306, #FC9850);
+    }
+
+    @media (min-width: 375px) {
+        width:  308px;
+    }
+
+    @media (min-width: 412px) {
+        width: 343px;
+    }
+
+    @media (min-width: 540px) {
+        width: 470px;
     }
 `;
 
@@ -224,7 +277,7 @@ export const ImageTablet = styled.img`
 
     @media (min-width: 768px){
         display: block;
-        width: 332px;
+        width: 300px;
         border-radius: 12px;
     }
 
