@@ -126,6 +126,10 @@ export const BoxHeroText = styled.div`
         width: 329px;
     }
 
+    @media (min-width: 1024px) {
+        width: 440px;
+    }
+
     @media (min-width: 1280px) {
         margin-bottom: 40px;
         width: 690px;
@@ -209,8 +213,8 @@ export const ImgHeroTablet = styled.div`
     }
 
     @media (min-width: 800px) {
-        top: 1.7%;
-        left: 55%;
+        top: 2%;
+        left: 53%;
     }
 
     @media (min-width: 900px) {
@@ -219,8 +223,8 @@ export const ImgHeroTablet = styled.div`
     }
 
     @media (min-width: 1024px) {
-        top: 1.7%;
-        left: 62%;
+        top: 0.8%;
+        left: 63%;
     }
 
     @media (min-width: 1280px) {
@@ -254,10 +258,6 @@ export const ImgHeroDesktop = styled.div`
         top: 18px;
         left: 67%;
     }
-`;
-
-export const ImageHero = styled.img`
-    
 `;
 
 export const ContainerForForm = styled.div`
