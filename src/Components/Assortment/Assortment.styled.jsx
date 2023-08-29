@@ -82,37 +82,13 @@ export const NameProduct = styled.h3`
     color: var(--text-black);
 `;
 
-export const ActiveDotButton = styled.button`
-    &:before {
-        font-family: 'slick';
-        font-size: 6px;
-        line-height: 20px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 20px;
-        content: '•';
-        text-align: center;
-        opacity: 0.75;
-        color: var(--brand-orange);
-        z-index: 2;
-    }
-`;
-
 export const BoxImagesSlider = styled.div`
     .slick-slider {
         text-align: center;
     }
     
     .slick-slide img {
-        display: inline-block;
+        display: block;
         margin: 0 auto;
-        max-width: 100%;
-        height: auto;
     }
-
-    // .slick-dots li.slick-active button:before {
-    //     color: var(--brand-orange);
-    // }
 `;
