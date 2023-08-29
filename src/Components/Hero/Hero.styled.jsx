@@ -237,6 +237,23 @@ export const ImgHeroDesktop = styled.div`
         top: 37px;
         left: 64%;
     }
+
+    @media (min-width: 1300px) {
+        top: 22px;
+    }
+
+    @media (min-width: 1350px) {
+        top: 7px;
+    }
+
+    @media (min-width: 1350px) {
+        top: 0px;
+    }
+
+    @media (min-width: 1440px) {
+        top: 18px;
+        left: 67%;
+    }
 `;
 
 export const ImageHero = styled.img`
