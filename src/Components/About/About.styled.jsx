@@ -4,12 +4,12 @@ export const BoxAbout = styled.div`
     padding: 60px 16px;
 
     @media (min-width: 768px) {
-        padding: 80px 40px; 
+        padding: 60px 40px; 
     }
 
     @media (min-width: 1280px) {
         padding-left: 80px;
-        padding-: 80px;
+        padding-right: 80px;
     }
 
 `;
@@ -36,7 +36,7 @@ export const TitleAbout = styled.a`
         font-family: Montserrat;
         font-size: 40px;
         font-weight: 400;
-        line-height: 1.3;
+        line-height: 1.33;
         letter-spacing: -1px;
     }
 
@@ -59,6 +59,7 @@ export const DescriptionText = styled.p`
     }
 
     @media (min-width: 768px) {
+        font-size: 19px;
         margin-bottom: 17px;
     }
 
@@ -71,11 +72,13 @@ export const DescriptionText = styled.p`
     }
 
     @media (min-width: 1024px) {
+        font-size: 25px;
         margin-bottom: 33px;
     }
     
     @media (min-width: 1280px) {
-        margin-bottom: 19px;
+        font-size: 20px;
+        margin-bottom: 13px;
     }
     
     @media (min-width: 1440px) {
@@ -103,8 +106,13 @@ export const DescriptionTextTablet = styled.p`
         font-size: 22px;
     }
 
+    @media (min-width: 1154px) {
+        font-size: 25px;
+        margin-bottom: 33px;
+    }
+
     @media (min-width: 1280px) {
-        margin-bottom: 32px;
+        margin-bottom: 18px;
         font-size: 20px;
     }
 
@@ -130,6 +138,10 @@ export const DetailsAboutBox = styled.div`
     border-top: 1px solid #c4c4c4;
     text-align: center;
 
+    @media (min-width: 360px) {
+        width: 285px;
+    }
+
     @media (min-width: 375px) {
         width: 310px;
     }
@@ -143,6 +155,12 @@ export const DetailsAboutBox = styled.div`
 
     @media (min-width: 1280px) {
         width: 200px;
+    }
+`;
+
+export const ContainerText = styled.div`
+    @media (min width: 768px) {
+        width: 370px;
     }
 `;
 
@@ -210,7 +228,7 @@ export const DetailText = styled.p`
 export const DetailsDescription = styled.p`
     font-family: Inter;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.5;
     color: var(--text-black);
 
@@ -240,6 +258,10 @@ export const BoxLinkAbout = styled.div`
         background-image: linear-gradient(to left, #DF5306, #FC9850);
     }
 
+    @media (min-width: 360px) {
+        width: 290px;
+    }
+
     @media (min-width: 375px) {
         width:  308px;
     }
@@ -250,6 +272,18 @@ export const BoxLinkAbout = styled.div`
 
     @media (min-width: 540px) {
         width: 470px;
+    }
+
+    @media (min-width: 640px) {
+        width: 565px;
+    }
+
+    @media (min-width: 768px) {
+        width: 340px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 620px;
     }
 `;
 
@@ -279,6 +313,10 @@ export const ImageTablet = styled.img`
         display: block;
         width: 300px;
         border-radius: 12px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 350px;        ;
     }
 
     @media (min-width: 1280px){
@@ -325,9 +363,14 @@ export const ImageDesktop = styled.img`
 
     @media (min-width: 1280px) {
         display: block;
-        width: 518px;
+        width: 470px;
         border-radius: 12px;
     }
+
+    @media (min-width: 1440px) {
+        width: 518px;
+    }
+
 `;
 
 export const BoxDescriptionDesk = styled.div`
@@ -337,6 +380,10 @@ export const BoxDescriptionDesk = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 1440px) {
         margin-bottom: 32px;
     }
 `;
