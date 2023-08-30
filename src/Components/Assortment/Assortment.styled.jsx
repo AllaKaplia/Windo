@@ -17,14 +17,24 @@ export const TitleAssortment = styled.a`
     font-family: Inter;
     font-size: 24px;
     font-weight: 400;
-    line-height: 1/33;
+    line-height: 1.33;
     letter-spacing: -0.24px;
     color: var(--text-black);
 
+    @media (min-width: 360px) {
+        font-size: 25px;
+    }
+
+    @media (min-width: 768px) {
+        font-family: Montserrat;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 40px;
+    }
+
     @media (min-width: 1280px) {
         font-family: Montserrat;
-        font-size: 40px;
-        font-weight: 400;
         line-height: 1.3;
         letter-spacing: -1px;
     }
@@ -39,8 +49,12 @@ export const ContainerButtons = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 2px;
     margin-bottom: 24px;
+
+    @media (min-width: 375px) {
+        gap: 32px;
+    }
 `;
 
 export const BtnAssortment = styled.button`
@@ -80,15 +94,58 @@ export const NameProduct = styled.h3`
     line-height: 1.5; 
     text-align: center;
     color: var(--text-black);
+
+    @media (min-width: 640px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
 `;
 
 export const BoxImagesSlider = styled.div`
-    .slick-slider {
+    &.slick-slider {
         text-align: center;
     }
-    
-    .slick-slide img {
-        display: block;
-        margin: 0 auto;
+`;
+
+export const ImagesSlickSlide = styled.img`
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+
+    @media (min-width: 360px) {
+        width: 290px;
     }
+
+    @media (min-width: 375px) {
+        width: 343px;
+    }
+
+    @media (min-width: 640px) {
+        width: 170px;
+    }
+
+    @media (min-width: 800px) {
+        width: 190px;
+    }
+
+    @media (min-width: 912px) {
+        width: 215px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 210px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 260px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 302px;
+    }
+
 `;
