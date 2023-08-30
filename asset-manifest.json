@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Windo/static/css/main.f5e3ce15.css",
-    "main.js": "/Windo/static/js/main.74696de6.js",
+    "main.js": "/Windo/static/js/main.84a835da.js",
     "static/media/our-company-desktop.jpg": "/Windo/static/media/our-company-desktop.9f46d571ea3d64d8b487.jpg",
     "static/media/portfolio-2.png": "/Windo/static/media/portfolio-2.c51aa3bb9f1c74550207.png",
     "static/media/portfolio-6-1.png": "/Windo/static/media/portfolio-6-1.342036cecd84708cb930.png",
@@ -43,10 +43,10 @@
     "static/media/slick.woff": "/Windo/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Windo/index.html",
     "main.f5e3ce15.css.map": "/Windo/static/css/main.f5e3ce15.css.map",
-    "main.74696de6.js.map": "/Windo/static/js/main.74696de6.js.map"
+    "main.84a835da.js.map": "/Windo/static/js/main.84a835da.js.map"
   },
   "entrypoints": [
     "static/css/main.f5e3ce15.css",
-    "static/js/main.74696de6.js"
+    "static/js/main.84a835da.js"
   ]
 }
