@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Select from 'react-select';
 import { Form, Formik } from 'formik';
 import emailjs from 'emailjs-com';
 import dvostulkoveSchema71 from '../../img/miscount/dvostulkove-71.png';
@@ -37,6 +38,13 @@ const initialCheckboxColor = {
     color2: false,
 };
 
+const options = [
+    { value: 'Склопакет з аргоном', label: 'Склопакет з аргоном' },
+    { value: 'Москітна сітка', label: 'Москітна сітка' },
+    { value: 'Підвіконня', label: 'Підвіконня' },
+    { value: 'Ручка з замком', label: 'Ручка з замком' }
+];
+
 const Miscount = () => {
     const [selectedImage, setSelectedImage] = useState(windowPhoto2);
     const [checkboxStates, setCheckboxStates] = useState(initialCheckboxStates);
@@ -66,6 +74,8 @@ const Miscount = () => {
     const handleFirstFormSubmit = (values) => {
         if (Object.keys(values).length !== 0) {
             setFirstFormValues(values);
+
+            console.log(values);
             setShowFirstForm(false);
         }
     };
@@ -79,24 +89,24 @@ const Miscount = () => {
         if(!showFirstForm) {
             try {
                 console.log(values);
-              
-                const response = await emailjs.send(
-                  'service_q5k4yhe',
-                  'template_u5527g8',
-                  allFormData,
-                  'xIE7PdFcVSv6LE-4F'
-                );
         
+                const response = await emailjs.send(
+                    'service_q5k4yhe',
+                    'template_u5527g8',
+                    allFormData,
+                    'xIE7PdFcVSv6LE-4F'
+                );
+              
                 console.log('Email sent:', JSON.stringify(response));
         
                 setIsModalOpen(true);
-               } catch (error) {
+            } catch (error) {
                 toast.error('Error sending email:', error);
-               }
+            }
             
-               resetForm(); 
+            resetForm(); 
             
-                console.log('All Form Data:', allFormData);
+            console.log('All Form Data:', allFormData);
         }
     };
 
@@ -238,12 +248,24 @@ const Miscount = () => {
                                     top: '-1px',
                                     color: 'var(--brand-gray)'
                             }}/>
-                            <AskSizeMore as="select" id="dropdownValue" name="dropdownValue">
-                                <option value="" label="Додаткові опції" />
-                                <option value="Склопакет з аргоном">Склопакет з аргоном</option>
-                                <option value="Москітна сітка">Москітна сітка</option>
-                                <option value="Підвіконня">Підвіконня</option>
-                                <option value="Ручка з замком">Ручка з замком</option>
+                            <AskSizeMore name="dropdownValue">
+                                {({ field, form }) => (
+                                    <Select
+                                        isMulti
+                                        options={options}
+                                        name={field.name}
+                                        id="dropdownValue"
+                                        {...field}
+                                        value={options.filter(option => field.value.includes(option.value))}
+                                        onChange={selectedOptions =>
+                                            form.setFieldValue(
+                                                'dropdownValue',
+                                                selectedOptions.map(option => option.value)
+                                            )
+                                        }
+                                        placeholder={field.value.length > 0 ? '' : 'Додаткові опції'}
+                                    />
+                                )}
                             </AskSizeMore>
                         </AdditionalList>
                         <BoxTextarea>
