@@ -133,7 +133,7 @@ export const DesktopBox = styled.div`
         gap: 0px;       
     }
 
-    @media (min-width: 1154px) {
+    @media (min-width: 1024px) {
         gap: 25px;
     }
 
