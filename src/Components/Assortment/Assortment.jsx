@@ -14,7 +14,7 @@ import BluEvolution73 from '../../img/salamander/1449152373-removebg-preview 2.p
 import Streamline76 from '../../img/salamander/64ba65cbe3fee0b8d4008c90_cream1 1.png';
 import BluEvolution82 from '../../img/salamander/64ba660f106fa4f36fe11260_okno3_1 1.png';
 import BluEvolution92 from '../../img/salamander/64ba66590c73018fbbc45e20_okno4p 1.png';
-import { BoxAnchor, BoxAssortment, BoxImagesSlider, BtnAssortment, ContainerButtons, NameProduct, TitleAssortment } from './Assortment.styled';
+import { BoxAnchor, BoxAssortment, BoxImagesSlider, BtnAssortment, ContainerButtons, ImagesSlickSlide, NameProduct, TitleAssortment } from './Assortment.styled';
 
 
 
@@ -61,9 +61,10 @@ const Assortment = () => {
 
   const settings = {
     dots: true,
-    infinite: false,
     speed: 500,
     slidesToShow: 4,
+    focusOnSelect: true,
+    infinite: true,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -72,6 +73,7 @@ const Assortment = () => {
     settings: {
       centerMode: true,
       centerPadding: "0",
+      slidesToShow: 3,
       slidesToScroll: 1,
       infinite: true,
       dots: true
@@ -116,7 +118,7 @@ const Assortment = () => {
           .find((category) => category.title === activeCategory)
           .images.map((image, index) => (
           <BoxImagesSlider key={index}>
-            <img src={image.image} alt={image.alt} width={275} height={475} margin={0}/>
+            <ImagesSlickSlide src={image.image} alt={image.alt} width={170} height={475}/>
             <NameProduct>{image.title}</NameProduct>
           </BoxImagesSlider>
         ))}
