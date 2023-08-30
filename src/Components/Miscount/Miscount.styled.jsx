@@ -43,6 +43,10 @@ export const BoxButtonWindow = styled.div`
     gap: 35px 16px;
     margin-bottom: 35px;
 
+    @media (min-width: 640px) {
+        gap: 15px 10px;
+    }
+
     @media (min-width: 768px) {
         gap: 9px;
         margin-bottom: 33px;
@@ -133,6 +137,16 @@ export const SchemaImage = styled.img`
     width: 77px;
     height: 102px;
 
+    @media (min-width: 640px) {
+        height: 83px;
+        width: 60px;
+    }
+
+    @media (min-width: 768px) {
+        height: 102px;
+        width: 77px;
+    }
+
 `;
 
 export const SchemaImages = styled.img`
@@ -141,10 +155,6 @@ export const SchemaImages = styled.img`
     @media (min-width: 1280px){
         width: 85px;
     }
-`;
-
-export const SchemaImg = styled.img`
-
 `;
 
 export const SchemaImagesSmall = styled.img`
@@ -258,6 +268,10 @@ export const AskSize = styled(Field)`
     width: 132px;
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+
+    @media (min-width: 640px) {
+        width: 265px;
+    }
 
     @media (min-width: 768px) {
         width: 296px;
