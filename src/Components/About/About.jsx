@@ -3,7 +3,7 @@ import aboutTablet from '../../img/img-our-company/our-company-tablet.jpg';
 import aboutDesktop from '../../img/img-our-company/our-company-desktop.jpg';
 import { RxExternalLink } from 'react-icons/rx';
 import { iconSize } from '../../constants/iconSize';
-import { AllDetailsBox, BoxAbout, BoxAnchor, BoxDescriptionDesk, BoxLinkAbout, BoxTabletDesktop, ContainerBack, ContainerCompany, DescriptionText, DescriptionTextTablet, DetailsAboutBox, DetailsDescription, DetailText, DetailTitle, ImageDesktop, ImageMobile, ImageTablet, InfoBoxMobil, LinkAbout, LinkAboutText, TitleAbout, WordBack } from './About.styled';
+import { AllDetailsBox, BoxAbout, BoxAnchor, BoxDescriptionDesk, BoxLinkAbout, BoxTabletDesktop, ContainerBack, ContainerCompany, ContainerText, DescriptionText, DescriptionTextTablet, DetailsAboutBox, DetailsDescription, DetailText, DetailTitle, ImageDesktop, ImageMobile, ImageTablet, InfoBoxMobil, LinkAbout, LinkAboutText, TitleAbout, WordBack } from './About.styled';
 
 const About = () => {
     return (
@@ -12,8 +12,10 @@ const About = () => {
             <BoxTabletDesktop>
                 <ContainerCompany>
                     <div>
-                        <DescriptionText>Ми - група експертів, які можуть вирішити технічні завдання будь-якої складності.</DescriptionText>
-                        <DescriptionText>В нашій команді працюють професійні менеджери, спеціалісти із замірювання конструкцій, досвідчені технологи та сертифіковані монтажні бригади</DescriptionText>
+                        <ContainerText>
+                            <DescriptionText>Ми - група експертів, які можуть вирішити технічні завдання будь-якої складності.</DescriptionText>
+                            <DescriptionText>В нашій команді працюють професійні менеджери, спеціалісти із замірювання конструкцій, досвідчені технологи та сертифіковані монтажні бригади</DescriptionText>
+                        </ContainerText>
                         <BoxDescriptionDesk>
                             <DetailsAboutBox>
                                 <DetailTitle>Компанія на ринку</DetailTitle>
