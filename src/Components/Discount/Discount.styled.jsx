@@ -292,6 +292,10 @@ export const FonBox = styled.div`
     @media (min-width: 1280px) {
         width: 1140px;
     }
+
+    @media (min-width: 1440px) {
+        width: 1240px;
+    }
 `;
 
 export const NamesInputs = styled.span`
