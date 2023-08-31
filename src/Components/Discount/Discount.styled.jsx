@@ -261,6 +261,10 @@ export const FonBox = styled.div`
         width: 395px;
     }
 
+    @media (min-width: 540px) {
+        width: 435px;
+    }
+
     @media (min-width: 768px) {
         justify-content: flex-end;
         width: 697px;
@@ -272,6 +276,14 @@ export const FonBox = styled.div`
 
     @media (min-width: 912px) {
         width: 791px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 858px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 1140px;
     }
 `;
 
