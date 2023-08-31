@@ -281,11 +281,31 @@ export const ContainerForForm = styled.div`
 
 export const CloseButton = styled.button`
     position: absolute;
-    right: 10px;
-    top: 50px;
+    right: 0px;
+    top: 40px;
     border: none;
     background-color: transparent;
     color: var(--brand-orange);
+
+    @media (min-width: 320px) {
+        right: 10px;
+        top: 50px;
+    }
+
+    @media (min-width: 540px) {
+        top: 50px;
+        right: 15px;
+    }
+
+    @media (min-width: 640px) {
+        top: 55px;
+        right: 15px;
+    }
+
+    @media (min-width: 1024px) {
+        right: 30px;
+        top: 90px;
+    }
 `;
 
 export const TitleModal = styled.h1`
@@ -332,7 +352,7 @@ export const LabelText = styled.span`
 `;
 
 export const Input = styled(Field)`
-    width: 240px;
+    width: 140px;
     height: 5px;
     padding: 16px 10px;
     border: 1px solid #4e4e4e38;
@@ -341,6 +361,10 @@ export const Input = styled(Field)`
     &:hover, &:focus {
         color: var(--brand-orange);
         border: 1px solid var(--brand-orange);
+    }
+
+    @media (min-width: 360px) {
+        width: 240px;
     }
 
     @media (min-width: 450px) {
@@ -367,7 +391,7 @@ export const MessageErr = styled(ErrorMessage)`
 export const ButtonSubmit = styled.button`
     margin-top: 24px;
     margin-bottom: 26px;
-    width: 260px;
+    width: 160px;
     padding: 8px 32px;
     background-color: var(--brand-orange);
     border-radius: 3px;
@@ -379,6 +403,10 @@ export const ButtonSubmit = styled.button`
     color: var(--text-white);
     background-image: none;
     transition: background-image 0.3s ease-in-out;
+
+    @media (min-width: 360px) {
+        width: 260px;
+    }
 
 
     @media (min-width: 450px) {
@@ -423,7 +451,12 @@ export const SocialForm = styled.a`
 export const BoxSocialForm = styled.div`
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 16px;
+
+    @media (min-width: 320px) {
+        flex-direction: started;
+    }
 `;
 
 export const BigFormBox = styled.div`
@@ -431,6 +464,10 @@ export const BigFormBox = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 45px;
+
+    @media (min-width: 1024px){
+        margin-top: 110px;
+    }
 `;
 
 export const FeedbackBox = styled.div`
