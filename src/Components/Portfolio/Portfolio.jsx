@@ -90,6 +90,8 @@ const Portfolio = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
+          nextArrow: false,
+          prevArrow: false,
         },
       },
       {
@@ -99,6 +101,8 @@ const Portfolio = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
+          nextArrow: false,
+          prevArrow: false,
         },
       },
       {
