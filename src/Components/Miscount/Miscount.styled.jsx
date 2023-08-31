@@ -333,6 +333,10 @@ export const AskSize = styled(Field)`
         width: 425px;
     }
 
+    @media (min-width: 1154px) {
+        width: 492px; 
+    }
+
     @media (min-width: 1280px) {
         width: 213px;
     }
@@ -431,6 +435,10 @@ export const Textarea = styled(Field)`
 
     @media (min-width: 1024px) {
         width: 910px;
+    }
+
+    @media (min-width: 1154px) {
+        width: 1040px;
     }
 
     @media (min-width: 1280px) {
