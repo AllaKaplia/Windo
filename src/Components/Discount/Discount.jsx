@@ -40,10 +40,10 @@ const Discount = () => {
             console.log(values);
 
             const response = await emailjs.send(
-                'service_owrokv4',
-                'template_la9pz9i',
+                'service_q5k4yhe',
+                'template_u5527g8',
                 values,
-                'QbX91yU4e96RK4zwv'
+                'xIE7PdFcVSv6LE-4F'
             );
 
             console.log('Email sent:', JSON.stringify(response));
