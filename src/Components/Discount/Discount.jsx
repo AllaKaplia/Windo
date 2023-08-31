@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 import * as yup from 'yup';
 import { iconSize } from '../../constants/iconSize';
 import { PiNumberCircleOneLight, PiNumberCircleTwoLight, PiNumberCircleThreeLight } from 'react-icons/pi';
-import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FeedbackBox, FonBox, FormDiscount, ImageFeedback, InputDiscount, LabelInput, MainBoxDiscount, MessageErr, NamesInputs, Selector, SelectorBox, TextareaDiscount, TextFeedback, TextQuestion, TitleDiscount, TitleFeedback, WindowText } from './Discount.styled';
+import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FeedbackBox, FonBox, FormDiscount, ImageFeedback, InputDiscount, LabelInput, MainBoxDiscount, MessageErr, NamesInputs, TextareaDiscount, TextFeedback, TextQuestion, TitleDiscount, TitleFeedback, WindowText } from './Discount.styled';
 
 import Logo from '../../img/Logo-Windo.png';
 import FeedbackModal from 'Components/FeedbackModal';
@@ -81,20 +81,16 @@ const Discount = () => {
                     </BoxNumberTextFirst>
                     <AnswerText>Заповніть коротку форму і ми зв’яжемось з Вами в зручний для Вас час</AnswerText>
                 </div>
-                <SelectorBox>
+                <BoxNumberTextFirst>
                     <PiNumberCircleTwoLight size={iconSize.md} />
-                    <Selector name="dropdown" placeholder='Домовтесь про замір'>
-                        <option value=""label="Домовтесь про замір"></option>
-                        <option value="option1">Наш менеджер  Вам зателефонує </option>
-                    </Selector>
-                </SelectorBox>
-                <SelectorBox>
+                    <TextQuestion>Домовтесь про замір</TextQuestion>
+                </BoxNumberTextFirst>
+                <AnswerText>Наш менеджер  Вам зателефонує </AnswerText>
+                <BoxNumberTextFirst>
                     <PiNumberCircleThreeLight size={iconSize.md} />
-                    <Selector name="dropdown" id='dropdown' placeholder='Знижка до 70%'>
-                        <option value="" label="Знижка до 70%" />
-                        <option value="discount" disabled>Ми прорахуємо та повідомимо вартість Вашої конструкції</option>
-                    </Selector>
-                </SelectorBox>
+                    <TextQuestion>Знижка до 70%</TextQuestion>
+                </BoxNumberTextFirst>
+                <AnswerText>Ми прорахуємо та повідомимо вартість Вашої конструкції</AnswerText>
             </BoxMobile>
             <AllQuestionsBox>
                 <BoxNumberText>
