@@ -21,15 +21,20 @@ export const MainBoxDiscount = styled.div`
         padding: 0 40px 60px;
     }
 
+    @media (min-width: 768px) {
+        background-position: 44% 82%;
+    }
+
     @media (min-width: 800px) {
         background-image: url(${serviceTablet});
         background-position: 76% 82%;
     }
 
         
-    @media (min-width: 1024px) {
+    @media (min-width: 912px) {
         background-image: url(${serviceDesktop});
         padding: 0 80px 60px;
+        background-position: 50% 87%;
     }
 `;
 
@@ -149,6 +154,7 @@ export const AllQuestionsBox = styled.div`
     @media (min-width: 768px) {
         display: flex;
         gap: 24px;
+        margin-bottom: 80px;
     }
 
     @media (min-width: 1280px){
@@ -241,9 +247,31 @@ export const FonBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 210px;
+
+    @media (min-width: 360px) {
+        width: 328px;
+    }
+
+    @media (min-width: 390px) {
+        width: 360px;
+    }
+
+    @media (min-width: 412px) {
+        width: 395px;
+    }
 
     @media (min-width: 768px) {
         justify-content: flex-end;
+        width: 697px;
+    }
+
+    @media (min-width: 800px) {
+        width: 735px;
+    }
+
+    @media (min-width: 912px) {
+        width: 791px;
     }
 `;
 
@@ -254,7 +282,7 @@ export const NamesInputs = styled.span`
     line-height: 1.5;
     color: var(--text-white);
 
-    @media (min-width: 1280px){
+    @media (min-width: 912px){
         font-family: Inter;
         font-size: 16px;
         font-weight: 400;
@@ -321,19 +349,24 @@ export const TextareaDiscount = styled.textarea`
 `;
 
 export const BtnDiscount = styled.button`
-    padding: 12px 20px;
+    padding: 12px 10px;
     background-color: var(--brand-orange);
     border: 1px solid var(--brand-orange);
     border-radius: 3px;
-    width: 343px;
+    width: 210px;
     color: var(--text-white);
     font-family: Inter;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
-
+    
     &:hover, &:focus {
         background-image: linear-gradient(to left, #DF5306, #FC9850);
+    }
+
+    @media (min-width: 360px) {
+        padding: 12px 20px;
+        width: 343px;
     }
 
     @media (min-width: 768px){
