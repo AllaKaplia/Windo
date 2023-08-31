@@ -39,7 +39,11 @@ function NavBar() {
 
   const toggleModal = () => {
     setShowModal(!showModal);
-    document.body.style.overflow = showModal ? "auto" : "hidden"; 
+    if (!showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
 
   return (
@@ -65,11 +69,11 @@ function NavBar() {
               <a href="/"><Logo src={logo} alt="logo" width="76"/></a>
             </BoxLogo>
             <MobileBox>
-              <ItemLink><MobilLink href="#about">Про нас</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#assortment">Профільні системи</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#miscount">Прорахунок вартості</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#discount">Як отримати знижку?</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#portfolio">Виконані роботи</MobilLink></ItemLink>
+              <ItemLink><MobilLink href="#about" onClick={toggleModal} >Про нас</MobilLink></ItemLink>
+              <ItemLink><MobilLink href="#assortment" onClick={toggleModal} >Профільні системи</MobilLink></ItemLink>
+              <ItemLink><MobilLink href="#miscount" onClick={toggleModal} >Прорахунок вартості</MobilLink></ItemLink>
+              <ItemLink><MobilLink href="#discount" onClick={toggleModal} >Як отримати знижку?</MobilLink></ItemLink>
+              <ItemLink><MobilLink href="#portfolio" onClick={toggleModal} >Виконані роботи</MobilLink></ItemLink>
             </MobileBox>
             <BoxSocial>
               <MobileText>Ми завжди на з’язку:</MobileText>
