@@ -117,7 +117,7 @@ export const DescriptionTextTablet = styled.p`
     }
 
     @media (min-width: 1440px) {
-        margin-bottom: 56px;
+        margin-bottom: 15px;
     }
 `;
 
