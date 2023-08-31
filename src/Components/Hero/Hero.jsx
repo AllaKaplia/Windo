@@ -100,9 +100,6 @@ const Hero = () => {
                         </ButtonHero>
                     </ContainerBtnText>
                 </BoxContext>
-                {/* <div>
-                    <img src={backgroundMobile} alt="Background Mobile" />
-                </div> */}
                 <ImgHeroTablet>
                     <img src={backgroundTablet} alt="Background Tablet" width={375} />
                 </ImgHeroTablet>
