@@ -72,7 +72,10 @@ export const BtnPortfolio = styled.button`
     }
 `;
 
-export const PhotoPortfolio = styled.img`
-    margin-bottom: 16px;
+export const GalleryBox = styled.div`
+    padding: 10px;
+`;
 
+export const PhotoPortfolio = styled.img`
+    width: 510px;
 `;
