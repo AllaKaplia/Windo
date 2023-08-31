@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 import { Field, Form, Formik } from 'formik';
 import emailjs from 'emailjs-com';
 import * as yup from 'yup';
@@ -18,6 +19,8 @@ import FeedbackModal from '../FeedbackModal/FeedbackModal';
 import Logo from '../../img/Logo-Windo.png';
 import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, FeedbackBox, ImageFeedback, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextFeedback, TextSocialForm, TitleCheckbox, TitleFeedback, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
 import { toast } from 'react-toastify';
+import Loader from 'Components/Loader';
+
 
 const schema = yup.object().shape({
     name: yup
@@ -45,6 +48,8 @@ const initialValues = {
     selectedButton: '',
 }
 
+const animatedComponents = makeAnimated();
+
 const initialCheckboxStates = {
     toggle1: false,
     toggle2: false,
@@ -70,6 +75,7 @@ const Miscount = () => {
     const [showNextForm, setShowNextForm] = useState(false);
     const [selectedButton, setSelectedButton] = useState('');
     const [windowFormValues, setWindowFormValues] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleButtonClick = (image, buttonName) => {
         setSelectedImage(image);
@@ -90,14 +96,31 @@ const Miscount = () => {
         }));
     };
 
+    const toggleModal = () => {
+        setShowNextForm(!showNextForm);
+        document.body.style.overflow = showNextForm ? "auto" : "hidden"; 
+    };
+
     const handleFirstFormSubmit = (values, { resetForm }) => {
-        if (Object.keys(values).length !== 0) {
-            values.selectedButton = selectedButton;
-            console.log(values);
-            setWindowFormValues(values);
-            setShowNextForm(true);
-            resetForm();
+        if(
+            values.toggle.length === 0 &&
+            values.color.length === 0 &&
+            values.width === '' &&
+            values.height === '' &&
+            values.dropdownValue.length === 0 &&
+            values.textareaValue === ''
+        ) {
+            toast.warning('Будь ласка, заповніть форму перед відправкою!', {
+                position: "top-center",
+                autoClose: 3000,
+                theme: "colored",
+                });
+            return;
         }
+        values.selectedButton = selectedButton;
+        setWindowFormValues(values);
+        setShowNextForm(true);
+        resetForm();
     };
     
     const handleSecondFormSubmit = async (values, { resetForm }) => {
@@ -109,8 +132,7 @@ const Miscount = () => {
     
         if(showNextForm) {
             try {
-                console.log(allFormData);
-        
+                setIsLoading(true);
                 const response = await emailjs.send(
                     'service_q5k4yhe',
                     'template_qgbj5g3',
@@ -119,16 +141,18 @@ const Miscount = () => {
                 );
               
                 console.log('Email sent:', JSON.stringify(response));
-        
+
+
                 setIsModalOpen(true);
                 setShowNextForm(false);
+                setCheckboxStates(initialCheckboxStates);
+                setCheckboxColor(initialCheckboxColor);
             } catch (error) {
                 toast.error('Error sending email:', error);
             }
             
-            resetForm(); 
-            
-            console.log('All Form Data:', allFormData);
+            setIsLoading(false);
+            resetForm();
         }
     };
 
@@ -273,6 +297,8 @@ const Miscount = () => {
                             <AskSizeMore name="dropdownValue">
                                 {({ field, form }) => (
                                     <Select
+                                        closeMenuOnSelect={false}
+                                        components={animatedComponents}
                                         isMulti
                                         options={options}
                                         name={field.name}
@@ -303,8 +329,8 @@ const Miscount = () => {
                     </Form>
                 </Formik>
             </WindowFormBox>
-            <ModalMenu isOpen={showNextForm}>
-                <CloseButton  type="button">
+            <ModalMenu isOpen={showNextForm} onRequestClose={toggleModal} contentLabel="Get personal data miscount">
+                <CloseButton  type="button" onClick={toggleModal}>
                     <TfiClose size={iconSize.sm} />
                 </CloseButton>
                 <BigFormBox>
@@ -333,6 +359,7 @@ const Miscount = () => {
                             </ContainerForForm>
                         </Form>
                     </Formik>
+                    {isLoading && <Loader />}
                 </BigFormBox>
             </ModalMenu>
             <FeedbackModal isOpen={isModalOpen} contentLabel="Get a miscount">
