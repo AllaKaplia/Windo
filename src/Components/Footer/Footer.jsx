@@ -29,12 +29,10 @@ const Footer = () => {
             <ContainerSoc>
                 <ViberTelegramBox>
                     <IndividualContact>
-                        <FaViber size={iconSize.md}/>
-                        <IndividualLink href="https://viber.click/+0677721077">Viber</IndividualLink>
+                        <IndividualLink href="https://viber.click/+0677721077"><FaViber size={iconSize.md} color={'var(--brand-orange)'} />Viber</IndividualLink>
                     </IndividualContact>
                     <IndividualContact>
-                        <RiTelegramLine size={iconSize.md}/>
-                        <IndividualLink href="https://web.telegram.org/k/#@Windocomua">Telegram</IndividualLink>
+                        <IndividualLink href="https://web.telegram.org/k/#@Windocomua">                        <RiTelegramLine size={iconSize.md} color={'var(--brand-orange)'} />Telegram</IndividualLink>
                     </IndividualContact>
                 </ViberTelegramBox>
                 <SocialFooterContainer>
