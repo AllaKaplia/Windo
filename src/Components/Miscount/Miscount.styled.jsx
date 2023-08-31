@@ -289,6 +289,10 @@ export const AskSize = styled(Field)`
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 
+    @media (min-width: 320px) {
+        width: 105px;
+    }
+
     @media (min-width: 360px) {
         width: 125px;
     }
@@ -392,6 +396,10 @@ export const Textarea = styled(Field)`
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 
+    @media (min-width: 320px) {
+        width: 255px;
+    }
+
     @media (min-width: 360px) {
         width: 295px;
     }
@@ -466,6 +474,10 @@ export const BtnSubmitMiscount = styled.button`
 
     &:hover, &:focus {
         background-image: linear-gradient(to left, #DF5306, #FC9850);
+    }
+
+    @media (min-width: 320px) {
+        width: 290px;
     }
 
     @media (min-width: 360px) {
