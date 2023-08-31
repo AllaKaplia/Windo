@@ -78,13 +78,13 @@ function NavBar() {
             <BoxSocial>
               <MobileText>Ми завжди на з’язку:</MobileText>
               <MobileLists>
-                <li><IconsSocial href="https://viber.click/+0677721077" target="blank"><FaViber size={iconSize.md}/></IconsSocial></li>
-                <li><IconsSocial href="https://web.telegram.org/k/#@Windocomua" target="blank"><RiTelegramLine size={iconSize.md}/></IconsSocial></li>
+                <li><IconsSocial href="https://viber.click/+0677721077" target="blank_"><FaViber size={iconSize.md}/></IconsSocial></li>
+                <li><IconsSocial href="https://web.telegram.org/k/#@Windocomua" target="blank_"><RiTelegramLine size={iconSize.md}/></IconsSocial></li>
               </MobileLists>
               <MobileLists>
-                <li><IconsSocial href="https://www.facebook.com/windo.Kiev/" target="blank"><PiFacebookLogoLight size={iconSize.md}/></IconsSocial></li>
-                <li><IconsSocial href="https://www.youtube.com/channel/UCoWoMR1Hqel9_LpjE7kF6cQ" target="blank"><AiOutlineYoutube size={iconSize.md}/></IconsSocial></li>
-                <li><IconsSocial href="https://www.instagram.com/windo_ua/" target="blank"><AiOutlineInstagram size={iconSize.md}/></IconsSocial></li>
+                <li><IconsSocial href="https://www.facebook.com/windo.Kiev/" target="blank_"><PiFacebookLogoLight size={iconSize.md}/></IconsSocial></li>
+                <li><IconsSocial href="https://www.youtube.com/channel/UCoWoMR1Hqel9_LpjE7kF6cQ" target="blank_"><AiOutlineYoutube size={iconSize.md}/></IconsSocial></li>
+                <li><IconsSocial href="https://www.instagram.com/windo_ua/" target="blank_"><AiOutlineInstagram size={iconSize.md}/></IconsSocial></li>
               </MobileLists>
             </BoxSocial>
             <>
@@ -102,9 +102,9 @@ function NavBar() {
           <li><DesktopLink href="#portfolio">Виконані роботи</DesktopLink></li>
         </DesktopList>
         <DesktopSocial>
-          <li><IconsSocial href="https://www.facebook.com/windo.Kiev/" target="blank"><PiFacebookLogoLight size={iconSize.md}/></IconsSocial></li>
-          <li><IconsSocial href="https://www.youtube.com/channel/UCoWoMR1Hqel9_LpjE7kF6cQ" target="blank"><AiOutlineYoutube size={iconSize.md}/></IconsSocial></li>
-          <li><IconsSocial href="https://www.instagram.com/windo_ua/" target="blank"><AiOutlineInstagram size={iconSize.md}/></IconsSocial></li>
+          <li><IconsSocial href="https://www.facebook.com/windo.Kiev/" target="blank_"><PiFacebookLogoLight size={iconSize.md}/></IconsSocial></li>
+          <li><IconsSocial href="https://www.youtube.com/channel/UCoWoMR1Hqel9_LpjE7kF6cQ" target="blank_"><AiOutlineYoutube size={iconSize.md}/></IconsSocial></li>
+          <li><IconsSocial href="https://www.instagram.com/windo_ua/" target="blank_"><AiOutlineInstagram size={iconSize.md}/></IconsSocial></li>
         </DesktopSocial>
         <div>
           <DesktopPhone href="tel:+380677721077"><MdOutlinePhone size={iconSize.md}/>+380677721077</DesktopPhone>
