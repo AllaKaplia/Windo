@@ -43,6 +43,10 @@ export const BoxButtonWindow = styled.div`
     gap: 35px 16px;
     margin-bottom: 35px;
 
+    @media (min-width: 540px) {
+        gap: 35px 45px;
+    }
+
     @media (min-width: 640px) {
         gap: 15px 10px;
     }
@@ -152,6 +156,14 @@ export const SchemaImage = styled.img`
 export const SchemaImages = styled.img`
     height: 102px;
 
+    @media (min-width: 640px) {
+        height: 83px;
+    }
+
+    @media (min-width: 768px) {
+        height: 102px;
+    }
+
     @media (min-width: 1280px){
         width: 85px;
     }
@@ -254,7 +266,15 @@ export const CheckboxContainer = styled.div`
         justify-content: flex-start;
         gap: 24px;
     }
-`; 
+`;
+
+export const BoxAskSize = styled.div`
+    margin-bottom: 25px;
+
+    @media (min-width: 1280px) {
+        width: 518px;
+    }
+`;
 
 export const AskSize = styled(Field)`
     padding: 10px 16px;
@@ -265,16 +285,56 @@ export const AskSize = styled(Field)`
     letter-spacing: 0.21px;
     color: var(--brand-gray);
     margin-bottom: 16px;
-    width: 132px;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    width: 85px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+
+    @media (min-width: 360px) {
+        width: 125px;
+    }
+
+    @media (min-width: 375px) {
+        width: 132px;
+    }
+    
+    @media (min-width: 390px) {
+        width: 140px;
+    }
+
+    @media (min-width: 412px) {
+        width: 153px;
+    }
+
+    @media (min-width: 540px) {
+        width: 215px;
+    }
 
     @media (min-width: 640px) {
         width: 265px;
     }
 
     @media (min-width: 768px) {
-        width: 296px;
+        width: 300px;
+    }
+
+    @media (min-width: 800px) {
+        width: 315px;
+    }
+
+    @media (min-width: 820px) {
+        width: 325px;
+    }
+
+    @media (min-width: 912px) {
+        width: 370px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 425px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 213px;
     }
 `;
 
@@ -289,8 +349,10 @@ export const AskSizeMore = styled(Field)`
     margin-bottom: 16px;
     width: 345px;
     appearance: none;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+
+    
 
     @media (min-width: 768px) {
         width: 688px;
@@ -300,7 +362,7 @@ export const AskSizeMore = styled(Field)`
 
 export const MoreInfo = styled.label`
     font-family: Inter;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.42;
     letter-spacing: 0.21px;
@@ -315,7 +377,7 @@ export const AdditionalList = styled.label`
 export const Textarea = styled(Field)`
     resize: none;
     padding: 10px 16px;
-    width: 315px;
+    width: 215px;
     margin-bottom: 20px;
     font-family: Inter;
     font-size: 14px;
@@ -323,12 +385,56 @@ export const Textarea = styled(Field)`
     line-height: 1.42;
     letter-spacing: 0.21px;
     color: var(--brand-gray);
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+
+    @media (min-width: 360px) {
+        width: 295px;
+    }
+
+    @media (min-width: 375px) {
+        width: 309px;
+    }
+
+    @media (min-width: 390px) {
+        width: 324px;
+    }
+
+    @media (min-width: 412px) {
+        width: 347px;
+    }
+
+    @media (min-width: 540px) {
+        width: 470px;
+    }
+
+    @media (min-width: 640px) {
+        width: 575px;
+    }
 
     @media (min-width: 768px) {
         width: 661px;
         height: 129px;
+    }
+
+    @media (min-width: 800px) {
+        width: 685px;
+    }
+
+    @media (min-width: 820px) {
+        width: 705px;
+    }
+
+    @media (min-width: 912px) {
+        width: 795px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 910px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 485px;
     }
 `;
 
@@ -343,7 +449,7 @@ export const BtnSubmitMiscount = styled.button`
     background-color: var(--brand-orange);
     border: 1px solid var(--brand-orange);
     border-radius: 3px;
-    width: 351px;
+    width: 250px;
     color: var(--text-white);
     font-family: Inter;
     font-size: 20px;
@@ -352,6 +458,26 @@ export const BtnSubmitMiscount = styled.button`
 
     &:hover, &:focus {
         background-image: linear-gradient(to left, #DF5306, #FC9850);
+    }
+
+    @media (min-width: 360px) {
+        width: 328px;
+    }
+
+    @media (min width: 375px) {
+        width: 351px;
+    }
+
+    @media (min-width: 390px) {
+        width: 355px;
+    }
+
+    @media (min-width: 393px) {
+        width: 361px;
+    }
+
+    @media (min-width: 412px) {
+        width: 380px;
     }
 
     @media (min-width: 768px){
@@ -367,7 +493,7 @@ export const BtnSubmitMiscount = styled.button`
 export const BoxBtnSubmitMiscount = styled.div`
     text-align: start;
 
-    @media (min-width: 768px) {
+    @media (min-width: 540px) {
         text-align: center;
     }
 
@@ -604,6 +730,8 @@ export const ImageFeedback = styled.img`
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 46px;
+
+
 
     @media (min-width: 768px) {
         width: 203px;
