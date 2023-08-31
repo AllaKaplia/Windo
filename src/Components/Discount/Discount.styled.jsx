@@ -249,6 +249,10 @@ export const FonBox = styled.div`
     align-items: center;
     width: 210px;
 
+    @media (min-width: 320px) {
+        width: 290px;
+    }
+
     @media (min-width: 360px) {
         width: 328px;
     }
