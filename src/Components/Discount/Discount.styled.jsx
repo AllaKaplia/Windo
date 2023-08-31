@@ -12,17 +12,22 @@ export const MainBoxDiscount = styled.div`
     background-repeat: no-repeat;
     background-size: initial;
     background-repeat: no-repeat;
-    background-position: 50% 85%;
+    background-position: 50% 88%;
     z-index: -1;
     
-    @media (min-width: 688px) {
+    @media (min-width: 540px) {
         background-image: url(${serviceTablet});
-        background-position: 50% 82%;
+        background-position: 44% 86%;
         padding: 0 40px 60px;
     }
 
+    @media (min-width: 800px) {
+        background-image: url(${serviceTablet});
+        background-position: 76% 82%;
+    }
+
         
-    @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
         background-image: url(${serviceDesktop});
         padding: 0 80px 60px;
     }
