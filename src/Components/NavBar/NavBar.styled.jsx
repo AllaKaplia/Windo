@@ -31,7 +31,7 @@ export const Navigation = styled.header`
     @media (min-width: 1280px) {
         justify-content: center;
         align-items: center;
-        padding: 0px 45px;
+        padding: 20px 45px;
     }
 
     @media (min-width: 1440px) {
@@ -262,11 +262,20 @@ export const ItemLink = styled.li`
 `;
 
 export const Logo = styled.img`
-    width: 76px;
+    width: 108px;
+
+    @media (min-width: 412px) {
+        width: 120px;
+    }
     
     @media (min-width: 768px) {
-        width: 95px;
-        margin-right: 48px;
+        width: 130px;
+        margin-right: 3px;
+    }
+
+    @media (min-width: 912px) {
+        width: 156px;
+        margin-right: 3px;
     }
     
     @media (min-width: 1280px) {
