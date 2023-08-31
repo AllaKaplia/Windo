@@ -2,17 +2,17 @@ import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Portfolio1 from "../../img/portfolio-photo/portfolio-1.png";
-import Portfolio2 from "../../img/portfolio-photo/portfolio-2.png";
-import Portfolio3 from "../../img/portfolio-photo/portfolio-3.png";
-import Portfolio4 from "../../img/portfolio-photo/portfolio-4.png";
-import Portfolio5 from "../../img/portfolio-photo/portfolio-5.png";
-import Portfolio6 from "../../img/portfolio-photo/portfolio-6-1.png";
-import Portfolio7 from "../../img/portfolio-photo/portfolio-7.png";
-import Portfolio8 from "../../img/portfolio-photo/portfolio-8.png";
-import Portfolio9 from "../../img/portfolio-photo/portfolio-9.png";
-import Portfolio10 from "../../img/portfolio-photo/portfolio-10-1.png";
-import { BoxAnchor, BoxButton, BtnPortfolio, ContainerPortfolio, TitlePortfolio } from "./Portfolio.styled";
+import Portfolio1 from "../../img/portfolio-photo/gallery_photo_1.png";
+import Portfolio2 from "../../img/portfolio-photo/gallery_photo_2.png";
+import Portfolio3 from "../../img/portfolio-photo/gallery_photo_3.png";
+import Portfolio4 from "../../img/portfolio-photo/gallery_photo_4.png";
+import Portfolio5 from "../../img/portfolio-photo/gallery_photo_5.png";
+import Portfolio6 from "../../img/portfolio-photo/gallery_photo_6.png";
+import Portfolio7 from "../../img/portfolio-photo/gallery_photo_7.png";
+import Portfolio8 from "../../img/portfolio-photo/gallery_photo_8.png";
+import Portfolio9 from "../../img/portfolio-photo/gallery_photo_9.png";
+import Portfolio10 from "../../img/portfolio-photo/gallery_photo_10.png";
+import { BoxAnchor, BoxButton, BtnPortfolio, ContainerPortfolio, PhotoPortfolio, TitlePortfolio } from "./Portfolio.styled";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 
 import { iconSize } from "../../constants/iconSize";
@@ -141,7 +141,7 @@ const Portfolio = () => {
         .find((category) => category.title === activeCategory)
         .images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Portfolio ${index + 1}`} />
+            <PhotoPortfolio src={image} alt={`Portfolio ${index + 1}`} />
           </div>
         ))}
       </Slider>
