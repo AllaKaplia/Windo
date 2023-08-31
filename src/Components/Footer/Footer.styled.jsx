@@ -128,14 +128,15 @@ export const ViberTelegramBox = styled.div`
 `;
 
 export const IndividualContact = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+ 
     color: var(--brand-orange);
 `;
 
 export const IndividualLink = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
