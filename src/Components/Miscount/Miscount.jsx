@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import Select from 'react-select';
-import { Form, Formik } from 'formik';
+import { Field, Form, Formik } from 'formik';
 import emailjs from 'emailjs-com';
+import * as yup from 'yup';
 import dvostulkoveSchema71 from '../../img/miscount/dvostulkove-71.png';
 import windowPhoto1 from '../../img/miscount/3стулкове вікно.png';
 import windowPhoto2 from '../../img/miscount/глухе вікно.png';
@@ -18,14 +19,30 @@ import Logo from '../../img/Logo-Windo.png';
 import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, FeedbackBox, ImageFeedback, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextFeedback, TextSocialForm, TitleCheckbox, TitleFeedback, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
 import { toast } from 'react-toastify';
 
+const schema = yup.object().shape({
+    name: yup
+      .string()
+      .matches(/^([a-zA-Zа-яА-ЯґҐєЄіІїЇ' -]*[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+[' -]*){1,}$/, 'Name is invalid')
+      .required('Name is required'),
+    number: yup
+      .string()
+      .matches(/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/, 'Phone number is invalid')
+      .required('Phone number is required'),
+});
 
-const initialValue = {
+const startedValues = {
+    name: '',
+    number: '',
+};
+
+const initialValues = {
     toggle: [],
     color: [],
     width: '',
     height: '',
     dropdownValue: '',
     textareaValue: '',
+    selectedButton: '',
 }
 
 const initialCheckboxStates = {
@@ -49,12 +66,14 @@ const Miscount = () => {
     const [selectedImage, setSelectedImage] = useState(windowPhoto2);
     const [checkboxStates, setCheckboxStates] = useState(initialCheckboxStates);
     const [checkboxColor, setCheckboxColor] = useState(initialCheckboxColor);
-    const [isModalOpen, setIsModalOpen] = useState(false); 
-    const [showFirstForm, setShowFirstForm] = useState(true);
-    const [firstFormValues, setFirstFormValues] = useState({});
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [showNextForm, setShowNextForm] = useState(false);
+    const [selectedButton, setSelectedButton] = useState('');
+    const [windowFormValues, setWindowFormValues] = useState({});
 
-    const handleButtonClick = (image) => {
+    const handleButtonClick = (image, buttonName) => {
         setSelectedImage(image);
+        setSelectedButton(buttonName);
     };
 
     const handleCheckboxClick = (name) => {
@@ -71,28 +90,30 @@ const Miscount = () => {
         }));
     };
 
-    const handleFirstFormSubmit = (values) => {
+    const handleFirstFormSubmit = (values, { resetForm }) => {
         if (Object.keys(values).length !== 0) {
-            setFirstFormValues(values);
-
+            values.selectedButton = selectedButton;
             console.log(values);
-            setShowFirstForm(false);
+            setWindowFormValues(values);
+            setShowNextForm(true);
+            resetForm();
         }
     };
     
     const handleSecondFormSubmit = async (values, { resetForm }) => {
         const allFormData = {
-          ...firstFormValues,
-          ...values,
+            ...windowFormValues,
+            ...values,
+            selectedButton: selectedButton,
         };
     
-        if(!showFirstForm) {
+        if(showNextForm) {
             try {
-                console.log(values);
+                console.log(allFormData);
         
                 const response = await emailjs.send(
                     'service_q5k4yhe',
-                    'template_u5527g8',
+                    'template_qgbj5g3',
                     allFormData,
                     'xIE7PdFcVSv6LE-4F'
                 );
@@ -100,6 +121,7 @@ const Miscount = () => {
                 console.log('Email sent:', JSON.stringify(response));
         
                 setIsModalOpen(true);
+                setShowNextForm(false);
             } catch (error) {
                 toast.error('Error sending email:', error);
             }
@@ -114,7 +136,7 @@ const Miscount = () => {
         if (isModalOpen) {
             const timer = setTimeout(() => {
                 setIsModalOpen(false);
-            }, 3000);
+            }, 2000);
 
             return () => {
                 clearTimeout(timer);
@@ -128,18 +150,18 @@ const Miscount = () => {
                 <TitleMiscount name="miscount">Прорахунок вартості</TitleMiscount>
             </BoxAnchor>
             <BoxButtonWindow>
-                <ButtonWindow type='button' onClick={() => handleButtonClick(windowPhoto2)}>
+                <ButtonWindow type='button' onClick={() => handleButtonClick(windowPhoto2, 'Одностулкове')}>
                     <SchemaImage src={dvostulkoveSchema71} alt="Odnostulkove Schema 70" />
                     <NameSchema>Одностулкове</NameSchema>
                 </ButtonWindow>
-                <ButtonWindowTwo type='button' onClick={() => handleButtonClick(windowPhoto3)}>
+                <ButtonWindowTwo type='button' onClick={() => handleButtonClick(windowPhoto3, 'Двостулкове')}>
                     <BoxImageSchema>
                         <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema71"/>
                         <SchemaImages src={dvostulkoveSchema71} alt="Dvostulkove Schema72" />
                     </BoxImageSchema>
                     <NameSchema>Двостулкове вікно</NameSchema>
                 </ButtonWindowTwo>
-                <ButtonWindowTree type='button' onClick={() => handleButtonClick(windowPhoto1)}>
+                <ButtonWindowTree type='button' onClick={() => handleButtonClick(windowPhoto1, 'Трьохстулкове')}>
                     <BoxImageSchema>
                         <SchemaImagesSmall src={dvostulkoveSchema71} alt="trystulkowe73" width={46} />
                         <SchemaImagesSmall src={dvostulkoveSchema71} alt="trystulkowe74" width={46} />
@@ -147,7 +169,7 @@ const Miscount = () => {
                     </BoxImageSchema>
                     <NameSchema>Трьохстулкове вікно</NameSchema>
                 </ButtonWindowTree>
-                <ButtonWindowFor type='button' onClick={() => handleButtonClick(windowPhoto4)}>
+                <ButtonWindowFor type='button' onClick={() => handleButtonClick(windowPhoto4, 'Балкон / лоджія')}>
                     <BoxImageSchema>
                         <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija91" width={28} />
                         <SchemaImagesSmall src={dvostulkoveSchema71} alt="balcon Lodgija78" width={40} />
@@ -159,7 +181,7 @@ const Miscount = () => {
             </BoxButtonWindow>
             <WindowFormBox>
                 <MainImageWindow src={selectedImage} alt="window Photo2" />
-                <Formik initialValues={initialValue} onSubmit={handleFirstFormSubmit}>
+                <Formik initialValues={initialValues} onSubmit={handleFirstFormSubmit}>
                     <Form autoComplete='none'>
                         <BoxCheckboxes>
                             <div>
@@ -272,19 +294,22 @@ const Miscount = () => {
                             <MoreInfo htmlFor="textareaValue">Додаткова інформація</MoreInfo>
                             <Textarea as="textarea" id="textareaValue" name="textareaValue" placeholder="Потрібен профіль Rehau"/>
                         </BoxTextarea>
+                        <Field type="hidden" name="selectedButton">
+                            {({ field }) => <input type="hidden" {...field} />}
+                        </Field>
                     <BoxBtnSubmitMiscount>
                         <BtnSubmitMiscount type="submit">Відправити</BtnSubmitMiscount>
                     </BoxBtnSubmitMiscount>
                     </Form>
                 </Formik>
             </WindowFormBox>
-            <ModalMenu>
-            <CloseButton  type="button">
+            <ModalMenu isOpen={showNextForm}>
+                <CloseButton  type="button">
                     <TfiClose size={iconSize.sm} />
                 </CloseButton>
                 <BigFormBox>
                     <TitleModal>Відправити на прорахунок</TitleModal>
-                    <Formik initialValues={initialValue} onSubmit={handleSecondFormSubmit} >
+                    <Formik initialValues={startedValues} validationSchema={schema} onSubmit={handleSecondFormSubmit} >
                         <Form autoComplete="off">
                             <ContainerForForm>
                                 <ContainerForm>
