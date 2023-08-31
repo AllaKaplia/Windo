@@ -10,14 +10,13 @@ import windowPhoto2 from '../../img/miscount/глухе вікно.png';
 import windowPhoto3 from '../../img/miscount/двостулкове вікно.png';
 import windowPhoto4 from '../../img/miscount/лоджія.png';
 import { BsCheck } from 'react-icons/bs';
-import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaTelegram, FaViber } from 'react-icons/fa';
 import { TfiClose } from 'react-icons/tfi';
 import { iconSize } from '../../constants/iconSize';
 import ModalMenu from "../ModalMenu/ModalMenu";
 import FeedbackModal from '../FeedbackModal/FeedbackModal';
 import Logo from '../../img/Logo-Windo.png';
-import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, FeedbackBox, ImageFeedback, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextFeedback, TextSocialForm, TitleCheckbox, TitleFeedback, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
+import { AdditionalList, AskSize, AskSizeMore, BigFormBox, BoxAnchor, BoxAskSize, BoxBtnSubmitMiscount, BoxButtonWindow, BoxCheckboxes, BoxImageSchema, BoxMiscount, BoxSocialForm, BoxTextarea, BtnSubmitMiscount, ButtonSubmit, ButtonWindow, ButtonWindowFor, ButtonWindowTree, ButtonWindowTwo,  Checkbox,  CheckboxContainer,  CheckboxGroup, CheckboxText, CloseButton, ContainerForForm, ContainerForm, FeedbackBox, ImageFeedback, Input, LabelCheckbox, LabelModal, LabelText, MainImageWindow, MessageErr, MoreInfo, NameSchema, SchemaImage, SchemaImages, SchemaImagesSmall, SocialForm, Textarea, TextFeedback, TextSocialForm, TitleCheckbox, TitleFeedback, TitleMiscount, TitleModal, WindowFormBox } from './Miscount.styled';
 import { toast } from 'react-toastify';
 import Loader from 'Components/Loader';
 
@@ -287,35 +286,35 @@ const Miscount = () => {
                                         <AskSize type="text" name="height" placeholder="Висота (мм)"/>
                                     </label>
                                 </CheckboxContainer>
-                        <AdditionalList htmlFor="dropdownValue">
-                            <MdKeyboardArrowDown size={iconSize.sm} style={{
-                                    position: 'absolute',
-                                    right: '8px',
-                                    top: '-1px',
-                                    color: 'var(--brand-gray)'
-                            }}/>
-                            <AskSizeMore name="dropdownValue">
-                                {({ field, form }) => (
-                                    <Select
-                                        closeMenuOnSelect={false}
-                                        components={animatedComponents}
-                                        isMulti
-                                        options={options}
-                                        name={field.name}
-                                        id="dropdownValue"
-                                        {...field}
-                                        value={options.filter(option => field.value.includes(option.value))}
-                                        onChange={selectedOptions =>
-                                            form.setFieldValue(
-                                                'dropdownValue',
-                                                selectedOptions.map(option => option.value)
-                                            )
-                                        }
-                                        placeholder={field.value.length > 0 ? '' : 'Додаткові опції'}
-                                    />
-                                )}
-                            </AskSizeMore>
-                        </AdditionalList>
+                            <BoxAskSize>
+                                <AdditionalList htmlFor="dropdownValue">
+                                <AskSizeMore name="dropdownValue">
+                                    {({ field, form }) => (
+                                        <Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            isMulti
+                                            classNames={{
+                                                control: (state) =>
+                                                state.isFocused ? 'border-orange-600' : 'border-grey-300',
+                                            }}
+                                            options={options}
+                                            name={field.name}
+                                            id="dropdownValue"
+                                            {...field}
+                                            value={options.filter(option => field.value.includes(option.value))}
+                                            onChange={selectedOptions =>
+                                                form.setFieldValue(
+                                                    'dropdownValue',
+                                                    selectedOptions.map(option => option.value)
+                                                )
+                                            }
+                                            placeholder={field.value.length > 0 ? '' : 'Додаткові опції'}
+                                        />
+                                    )}
+                                </AskSizeMore>
+                                </AdditionalList>
+                            </BoxAskSize>
                         <BoxTextarea>
                             <MoreInfo htmlFor="textareaValue">Додаткова інформація</MoreInfo>
                             <Textarea as="textarea" id="textareaValue" name="textareaValue" placeholder="Потрібен профіль Rehau"/>
