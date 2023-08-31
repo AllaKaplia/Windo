@@ -30,6 +30,9 @@ export const MainBoxDiscount = styled.div`
         background-position: 76% 82%;
     }
 
+    @media (min-width: 820px) {
+        background-position: 77% 86%;
+    }
         
     @media (min-width: 912px) {
         background-image: url(${serviceDesktop});
