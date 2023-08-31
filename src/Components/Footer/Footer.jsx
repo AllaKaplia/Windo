@@ -32,13 +32,13 @@ const Footer = () => {
                         <IndividualLink href="https://viber.click/+0677721077"><FaViber size={iconSize.md} color={'var(--brand-orange)'} />Viber</IndividualLink>
                     </IndividualContact>
                     <IndividualContact>
-                        <IndividualLink href="https://web.telegram.org/k/#@Windocomua">                        <RiTelegramLine size={iconSize.md} color={'var(--brand-orange)'} />Telegram</IndividualLink>
+                        <IndividualLink href="https://web.telegram.org/k/#@Windocomua" target="blank_"><RiTelegramLine size={iconSize.md} color={'var(--brand-orange)'} />Telegram</IndividualLink>
                     </IndividualContact>
                 </ViberTelegramBox>
                 <SocialFooterContainer>
-                    <LinkSocial href="https://www.facebook.com/windo.Kiev/"><RiFacebookCircleLine size={iconSize.md}/></LinkSocial>
-                    <LinkSocial href="https://www.youtube.com/channel/UCoWoMR1Hqel9_LpjE7kF6cQ"><AiOutlineYoutube size={iconSize.md}/></LinkSocial>
-                    <LinkSocial href="https://www.instagram.com/windo_ua/"><AiOutlineInstagram size={iconSize.md}/></LinkSocial>
+                    <LinkSocial href="https://www.facebook.com/windo.Kiev/" target="blank_"><RiFacebookCircleLine size={iconSize.md}/></LinkSocial>
+                    <LinkSocial href="https://www.youtube.com/channel/UCoWoMR1Hqel9_LpjE7kF6cQ" target="blank_"><AiOutlineYoutube size={iconSize.md}/></LinkSocial>
+                    <LinkSocial href="https://www.instagram.com/windo_ua/" target="blank_"><AiOutlineInstagram size={iconSize.md}/></LinkSocial>
                 </SocialFooterContainer>
             </ContainerSoc>
             <EndText>Win.Do © 2023 Всі права захищені</EndText>
