@@ -145,7 +145,7 @@ export const ImagesSlickSlide = styled.img`
     }
 
     @media (min-width: 1440px) {
-        width: 302px;
+        width: 270px;
     }
 
 `;
