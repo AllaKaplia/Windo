@@ -114,14 +114,14 @@ export const ImagesSlickSlide = styled.img`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 220px;
+    width: 180px;
 
     @media (min-width: 360px) {
-        width: 290px;
+        width: 205px;
     }
 
     @media (min-width: 375px) {
-        width: 343px;
+        width: 250px;
     }
 
     @media (min-width: 640px) {
