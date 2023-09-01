@@ -2,6 +2,7 @@ import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ReactPlayer from 'react-player';
 import Portfolio1 from "../../img/portfolio-photo/gallery_photo_1.png";
 import Portfolio2 from "../../img/portfolio-photo/gallery_photo_2.png";
 import Portfolio3 from "../../img/portfolio-photo/gallery_photo_3.png";
@@ -14,7 +15,6 @@ import Portfolio9 from "../../img/portfolio-photo/gallery_photo_9.png";
 import Portfolio10 from "../../img/portfolio-photo/gallery_photo_10.png";
 import { BoxAnchor, BoxButton, BtnPortfolio, ContainerPortfolio, PhotoPortfolio, TitlePortfolio } from "./Portfolio.styled";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-
 import { iconSize } from "../../constants/iconSize";
 
 const Portfolio = () => {
@@ -22,8 +22,25 @@ const Portfolio = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
   const categories = [
-    { title: "Відео", images: [] },
-    { title: "Фото", images: [Portfolio1, Portfolio2, Portfolio3, Portfolio4, Portfolio5, Portfolio6, Portfolio7, Portfolio8, Portfolio9, Portfolio10] },
+    { title: "Відео", videos: [
+      'https://youtube.com/watch?v=GAIdZe_x0LY&si=VhnAqH8BhlA8c5IB',
+      'https://youtube.com/watch?v=unZjDkbDJJ0&si=CLHxaCgi4Gn2zYec',
+      'https://youtube.com/watch?v=oQf8qTCJDtE&si=TK39mX0iReSUQjxu',
+      'https://youtu.be/GpnrlXMRbVk?si=rB75MDI8lXpiWFun',
+      'https://youtu.be/f4WENC27MVg?si=tZhMzjji42MVJHeY'
+    ] },
+    { title: "Фото", images: [
+      Portfolio1, 
+      Portfolio2, 
+      Portfolio3, 
+      Portfolio4, 
+      Portfolio5, 
+      Portfolio6, 
+      Portfolio7, 
+      Portfolio8, 
+      Portfolio9, 
+      Portfolio10
+    ] },
   ];
 
   function SampleNextArrow(props) {
@@ -140,15 +157,23 @@ const Portfolio = () => {
         </BtnPortfolio>
         ))}
       </BoxButton>
-      <Slider {...settings}>
-        {categories
+    <Slider {...settings}>
+      {activeCategory === "Відео"
+          ? categories
+          .find((category) => category.title === activeCategory)
+          .videos.map((video, index) => (
+          <div key={index}>
+            <ReactPlayer url={video} width="100%" height="auto" controls={true} />
+          </div>
+        ))
+          : categories
         .find((category) => category.title === activeCategory)
         .images.map((image, index) => (
-          <div key={index}>
-            <PhotoPortfolio src={image} alt={`Portfolio ${index + 1}`} />
-          </div>
-        ))}
-      </Slider>
+        <div key={index}>
+          <PhotoPortfolio src={image} alt={`Portfolio ${index + 1}`} />
+        </div>
+      ))}
+    </Slider>
   </ContainerPortfolio>
 )};
 
