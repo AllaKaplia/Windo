@@ -333,16 +333,96 @@ export const AskSize = styled(Field)`
         width: 325px;
     }
 
+    @media (min-width: 850px) {
+        width: 340px;
+    }
+
+    @media (min-width: 860px) {
+        width: 345px;
+    }
+
+    @media (min-width: 880px) {
+        width: 356px;
+    }
+
+    @media (min-width: 900px) {
+        width: 365px;
+    }
+
     @media (min-width: 912px) {
         width: 370px;
     }
 
-    @media (min-width: 1024px) {
-        width: 425px;
+    @media (min-width: 930px) {
+        width: 383px;
     }
 
-    @media (min-width: 1154px) {
+    @media (min-width: 950px) {
+        width: 393px;
+    }
+
+    @media (min-width: 970px) {
+        width: 400px;
+    }
+
+    @media (min-width: 990px) {
+        width: 410px;
+    }
+
+    @media (min-width: 1000px) {
+        width: 415px;
+    }
+
+    @media (min-width: 1015px) {
+        width: 422px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 427px;
+    }
+
+    @media (min-width: 1050px) {
+        width: 440px;
+    }
+
+    @media (min-width: 1070px) {
+        width: 450px;
+    }
+
+    @media (min-width: 1090px) {
+        width: 460px;
+    }
+
+    @media (min-width: 1110px) {
+        width: 470px;
+    }
+
+    @media (min-width: 1130px) {
+        width: 482px;
+    }
+
+    @media (min-width: 1150px) {
         width: 492px; 
+    }
+
+    @media (min-width: 1170px) {
+        width: 502px; 
+    }
+
+    @media (min-width: 1180px) {
+        width: 507px; 
+    }
+
+    @media (min-width: 1215px) {
+        width: 523px;
+    }
+
+    @media (min-width: 1240px) {
+        width: 535px;
+    }
+
+    @media (min-width: 1260px) {
+        width: 545px;
     }
 
     @media (min-width: 1280px) {
@@ -453,8 +533,28 @@ export const Textarea = styled(Field)`
         width: 910px;
     }
 
+    @media (min-width: 1035px) {
+        width: 1021px;
+    }
+
     @media (min-width: 1154px) {
         width: 1040px;
+    }
+    
+    @media (min-width: 1180px) {
+        width: 1070px;
+    }
+
+    @media (min-width: 1215px) {
+        width: 1110px;
+    }
+
+    @media (min-width: 1230px) {
+        width: 1130px;
+    }
+
+    @media (min-width: 1260px) {
+        width: 1150px;
     }
 
     @media (min-width: 1280px) {
