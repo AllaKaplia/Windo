@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import logo from '../../img/Logo-Windo.png';
 import ModalMenu from '../ModalMenu/ModalMenu';
 import { iconSize } from '../../constants';
@@ -46,8 +47,6 @@ function NavBar() {
     }
   };
 
-  
-
   return (
     <Navigation>
       <>
@@ -71,11 +70,63 @@ function NavBar() {
               <p><Logo src={logo} alt="logo" width="76"/></p>
             </BoxLogo>
             <MobileBox>
-              <ItemLink><MobilLink href="#about" onClick={toggleModal} >Про нас</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#assortment" onClick={toggleModal} >Профільні системи</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#miscount" onClick={toggleModal} >Прорахунок вартості</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#discount" onClick={toggleModal} >Як отримати знижку?</MobilLink></ItemLink>
-              <ItemLink><MobilLink href="#portfolio" onClick={toggleModal} >Виконані роботи</MobilLink></ItemLink>
+              <ItemLink>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  duration={500}
+                  onClick={toggleModal}
+                >
+                 <MobilLink>Про нас</MobilLink>
+                </Link>
+              </ItemLink>
+              <ItemLink><Link
+                  activeClass="active"
+                  to="assortment"
+                  spy={true}
+                  smooth={true}
+                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  duration={500}
+                  onClick={toggleModal}>
+                  <MobilLink>Профільні системи</MobilLink>
+                  </Link>
+                </ItemLink>
+              <ItemLink><Link
+                  activeClass="active"
+                  to="miscount"
+                  spy={true}
+                  smooth={true}
+                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  duration={500}
+                  onClick={toggleModal}>
+                    <MobilLink>Прорахунок вартості</MobilLink>
+                  </Link>
+              </ItemLink>
+              <ItemLink><Link
+                  activeClass="active"
+                  to="discount"
+                  spy={true}
+                  smooth={true}
+                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  duration={500}
+                  onClick={toggleModal}>
+                    <MobilLink>Як отримати знижку?</MobilLink>
+                  </Link>
+              </ItemLink>
+              <ItemLink><Link
+                  activeClass="active"
+                  to="portfolio"
+                  spy={true}
+                  smooth={true}
+                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  duration={500}
+                  onClick={toggleModal}>
+                  <MobilLink>Виконані роботи</MobilLink>
+                </Link>
+              </ItemLink>
             </MobileBox>
             <BoxSocial>
               <MobileText>Ми завжди на з’язку:</MobileText>
@@ -97,11 +148,71 @@ function NavBar() {
       </MobilBox>
       <DesktopBox>
         <DesktopList>
-          <li><DesktopLink href="#about">Про нас</DesktopLink></li>
-          <li><DesktopLink href="#assortment">Профілі</DesktopLink></li>
-          <li><DesktopLink href="#miscount">Прорахунок</DesktopLink></li>
-          <li><DesktopLink href="#discount">Як отримати знижку?</DesktopLink></li>
-          <li><DesktopLink href="#portfolio">Виконані роботи</DesktopLink></li>
+          <li> 
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70} // Оффсет для коригування позиції прокрутки
+              duration={500}
+              onClick={toggleModal}
+            >
+              <DesktopLink>Про нас</DesktopLink>
+            </Link>
+          </li>
+          <li> 
+            <Link
+              activeClass="active"
+              to="assortment"
+              spy={true}
+              smooth={true}
+              offset={-70} // Оффсет для коригування позиції прокрутки
+              duration={500}
+              onClick={toggleModal}
+            >
+            <DesktopLink>Профілі</DesktopLink>
+            </Link>
+          </li>
+          <li> 
+            <Link
+              activeClass="active"
+              to="miscount"
+              spy={true}
+              smooth={true}
+              offset={-70} // Оффсет для коригування позиції прокрутки
+              duration={500}
+              onClick={toggleModal}
+            >
+              <DesktopLink>Прорахунок</DesktopLink>
+            </Link>
+          </li>
+          <li> 
+            <Link
+              activeClass="active"
+              to="discount"
+              spy={true}
+              smooth={true}
+              offset={-70} // Оффсет для коригування позиції прокрутки
+              duration={500}
+              onClick={toggleModal}
+            >
+              <DesktopLink>Як отримати знижку?</DesktopLink>              
+            </Link>
+          </li>
+          <li> 
+            <Link
+              activeClass="active"
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-70} // Оффсет для коригування позиції прокрутки
+              duration={500}
+              onClick={toggleModal}
+            >
+              <DesktopLink>Виконані роботи</DesktopLink>
+            </Link>
+          </li>
         </DesktopList>
         <DesktopSocial>
           <li><IconsSocial href="https://www.facebook.com/windo.Kiev/" target="blank_"><PiFacebookLogoLight size={iconSize.md}/></IconsSocial></li>
