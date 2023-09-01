@@ -46,10 +46,12 @@ function NavBar() {
     }
   };
 
+  
+
   return (
     <Navigation>
       <>
-        <a href="/"><Logo src={logo} alt="logo"/></a>
+        <p><Logo src={logo} alt="logo"/></p>
       </>
       <MobilBox>
         <BurgerMenu>
@@ -66,7 +68,7 @@ function NavBar() {
           </CloseBtn>
           <div>
             <BoxLogo>
-              <a href="/"><Logo src={logo} alt="logo" width="76"/></a>
+              <p><Logo src={logo} alt="logo" width="76"/></p>
             </BoxLogo>
             <MobileBox>
               <ItemLink><MobilLink href="#about" onClick={toggleModal} >Про нас</MobilLink></ItemLink>
