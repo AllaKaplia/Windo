@@ -124,6 +124,10 @@ export const ContainerTextQuestion1 = styled.div`
     gap: 12px;
     width: 173px;
 
+    @media (min-width: 1180px) {
+        width: 230px; 
+    }
+
     @media (min-width: 1280px){
         width: 270px;
     }
@@ -137,6 +141,10 @@ export const ContainerTextQuestion2 = styled.div`
     gap: 12px;
     width: 173px;
 
+    @media (min-width: 1180px) {
+        width: 230px; 
+    }
+
     @media (min-width: 1280px){
         width: 273px;
     }
@@ -148,6 +156,10 @@ export const ContainerTextQuestion3 = styled.div`
     align-items: flex-start;
     gap: 8px;
     width: 173px;
+
+    @media (min-width: 1180px) {
+        width: 230px; 
+    }
 
     @media (min-width: 1280px){
         width: 415px;
@@ -162,6 +174,14 @@ export const AllQuestionsBox = styled.div`
         display: flex;
         gap: 24px;
         margin-bottom: 80px;
+    }
+
+    @media (min-width: 1024px) {
+        gap: 45px;
+    }
+
+    @media (min-width: 1180px) {
+        gap: 55px;
     }
 
     @media (min-width: 1280px){
@@ -186,10 +206,14 @@ export const TextQuestion = styled.h3`
     color: var(--text-black);
     margin-bottom: 8px;
 
+    @media (min-width: 1024px) {
+        font-size: 20px;
+        line-height: 1.33;
+        letter-spacing: -0.24px;
+    }
+
     @media (min-width: 1280px) {
-        font-family: Inter;
         font-size: 24px;
-        font-weight: 400;
         line-height: 1.33;
         letter-spacing: -0.24px;
     }
@@ -290,7 +314,27 @@ export const FonBox = styled.div`
     }
 
     @media (min-width: 1024px) {
-        width: 858px;
+        width: 880px;
+    }
+
+    @media (min-width: 1054px) {
+        width: 980px;
+    }
+
+    @media (min-width: 1124px) {
+        width: 1000px;
+    }
+
+    @media (min-width: 1180px) {
+        width: 1045px;
+    }
+
+    @media (min-width: 1220px) {
+        width: 1075px;
+    }
+    
+    @media (min-width: 1250px) {
+        width: 1098px;
     }
 
     @media (min-width: 1280px) {
