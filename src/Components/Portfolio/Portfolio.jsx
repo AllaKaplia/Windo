@@ -93,7 +93,6 @@ const Portfolio = () => {
     variableWidth: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    centerPadding: "60px",
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 2000,
@@ -163,7 +162,7 @@ const Portfolio = () => {
           .find((category) => category.title === activeCategory)
           .videos.map((video, index) => (
           <div key={index}>
-            <ReactPlayer url={video} width="100%" height="auto" controls={true} />
+            <ReactPlayer url={video} width={400} height={400} controls={true} />
           </div>
         ))
           : categories
