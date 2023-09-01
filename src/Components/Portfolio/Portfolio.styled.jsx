@@ -77,5 +77,5 @@ export const GalleryBox = styled.div`
 `;
 
 export const PhotoPortfolio = styled.img`
-    width: 510px;
+    width: 400px;
 `;
