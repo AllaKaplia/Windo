@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import serviceMobile from '../../img/discount/service-maintenance-mobile.png';
+// import serviceMobile from '../../img/discount/service-maintenance-mobile.png';
 import serviceTablet from '../../img/discount/service-maintenance-tablet.png';
 import serviceDesktop from '../../img/discount/service-maintenance-desktop.png';
 import { Field, ErrorMessage } from 'formik';
@@ -7,7 +7,7 @@ import { Field, ErrorMessage } from 'formik';
 
 export const MainBoxDiscount = styled.div`
     padding: 0 16px 60px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)), url(${serviceMobile});
+    background-image: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)), url(${serviceTablet});
     border-radius: 3px;
     background-repeat: no-repeat;
     background-size: initial;
@@ -22,12 +22,12 @@ export const MainBoxDiscount = styled.div`
     }
 
     @media (min-width: 768px) {
-        background-position: 44% 82%;
+        background-position: 44% 85%;
     }
 
     @media (min-width: 800px) {
         background-image: url(${serviceTablet});
-        background-position: 76% 82%;
+        background-position: 76% 85%;
     }
 
     @media (min-width: 812px) {
@@ -276,16 +276,16 @@ export const BoxMobile = styled.div`
 
 export const FonBox = styled.div`
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 210px;
 
     @media (min-width: 320px) {
-        width: 290px;
+        justify-content: center;
+        width: 295px;
     }
 
     @media (min-width: 360px) {
-        width: 328px;
+        width: 330px;
     }
 
     @media (min-width: 390px) {
