@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Form, Formik, Field } from 'formik';
 import emailjs from 'emailjs-com';
 import * as yup from 'yup';
+import { Element } from 'react-scroll';
 import { iconSize } from '../../constants/iconSize';
 import { PiNumberCircleOneLight, PiNumberCircleTwoLight, PiNumberCircleThreeLight } from 'react-icons/pi';
 import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, BoxNumberText, BoxNumberTextFirst, BtnDiscount, ContainerTextQuestion1, ContainerTextQuestion2, ContainerTextQuestion3, FeedbackBox, FonBox, FormDiscount, ImageFeedback, InputDiscount, LabelInput, MainBoxDiscount, MessageErr, NamesInputs, TextareaDiscount, TextFeedback, TextQuestion, TitleDiscount, TitleFeedback, WindowText } from './Discount.styled';
@@ -71,7 +72,7 @@ const Discount = () => {
     return (
         <MainBoxDiscount>
             <BoxAnchor>
-                <TitleDiscount name="discount">Як отримати знижку</TitleDiscount>
+                <Element name="discount" className="element"> <TitleDiscount>Як отримати знижку</TitleDiscount> </Element>
             </BoxAnchor>
             <BoxMobile>
                 <div>
