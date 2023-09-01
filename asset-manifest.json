@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Windo/static/css/main.f5e3ce15.css",
-    "main.js": "/Windo/static/js/main.ca7cfd0a.js",
+    "main.js": "/Windo/static/js/main.d1e0c4c7.js",
     "static/media/gallery_photo_5.png": "/Windo/static/media/gallery_photo_5.f1ff2ef66d0fc5a247b9.png",
     "static/media/gallery_photo_3.png": "/Windo/static/media/gallery_photo_3.59ce75c7e6116d6c74c5.png",
     "static/media/gallery_photo_7.png": "/Windo/static/media/gallery_photo_7.07f5518a2eed1eaad1f6.png",
@@ -16,20 +16,20 @@
     "static/media/service-maintenance-desktop.png": "/Windo/static/media/service-maintenance-desktop.407261c6be90ee9075f5.png",
     "static/media/our-company-mobile.jpg": "/Windo/static/media/our-company-mobile.c6fc35bdb8d71fbed09c.jpg",
     "static/media/our-company-tablet.jpg": "/Windo/static/media/our-company-tablet.7118828484c3ed4652a7.jpg",
-    "static/media/wds-WDS-7S.png": "/Windo/static/media/wds-WDS-7S.0e1523870f6b18c1de43.png",
-    "static/media/wds_8s.png": "/Windo/static/media/wds_8s.d71f09bb4b00a89cfbec.png",
-    "static/media/wds-WDS-5S.png": "/Windo/static/media/wds-WDS-5S.c60662e13f247fd107f8.png",
     "static/media/service-maintenance-tablet.png": "/Windo/static/media/service-maintenance-tablet.98d6c05393a55b92e250.png",
-    "static/media/wds-WDS- 6S.png": "/Windo/static/media/wds-WDS- 6S.87dddbbb33f9b3f0b87c.png",
     "static/media/rehau-zyro-image.jpg": "/Windo/static/media/rehau-zyro-image.aafd50a6784bbcbe3960.jpg",
     "static/media/rehau-brillant-design.jpg": "/Windo/static/media/rehau-brillant-design.51299765726358abaa0d.jpg",
     "static/media/rehau-euro-design-70.jpg": "/Windo/static/media/rehau-euro-design-70.31f7b91fbb82045aaed5.jpg",
+    "static/media/salamander-2.png": "/Windo/static/media/salamander-2.680ad432b4b416cbb2ea.png",
     "static/media/rehau-euro-design-60.jpg": "/Windo/static/media/rehau-euro-design-60.ef0ddbe01d4532a49759.jpg",
-    "static/media/_cream1 1.png": "/Windo/static/media/64ba65cbe3fee0b8d4008c90_cream1 1.eb79b6192719f027dd41.png",
+    "static/media/WDS-7S-1.png": "/Windo/static/media/WDS-7S-1.53a3e01febfd4d901ac6.png",
+    "static/media/WDS-8S-1.png": "/Windo/static/media/WDS-8S-1.f61e0ddf7e94dee555c5.png",
+    "static/media/WDS-5S-1.png": "/Windo/static/media/WDS-5S-1.d4190c8e506a046f48ba.png",
+    "static/media/WDS-6S-1.png": "/Windo/static/media/WDS-6S-1.5e98b309655f499e533a.png",
     "static/media/service-maintenance-mobile.png": "/Windo/static/media/service-maintenance-mobile.1d6fea635461a3305eb4.png",
-    "static/media/1449152373-removebg-preview 2.png": "/Windo/static/media/1449152373-removebg-preview 2.bf8155b24c83d6e6de32.png",
-    "static/media/_okno4p 1.png": "/Windo/static/media/64ba66590c73018fbbc45e20_okno4p 1.41cfa9b9936514e50498.png",
-    "static/media/_okno3_1 1.png": "/Windo/static/media/64ba660f106fa4f36fe11260_okno3_1 1.4c6a9d95b800d3520176.png",
+    "static/media/salamander-3.png": "/Windo/static/media/salamander-3.003496c7f783d26d6493.png",
+    "static/media/salamander-1.png": "/Windo/static/media/salamander-1.e2cd1f0b485539594ab9.png",
+    "static/media/salamander-4.png": "/Windo/static/media/salamander-4.6b5efb96c0b7b8e9ebf5.png",
     "static/media/frame-background-desktop.jpg": "/Windo/static/media/frame-background-desktop.196394a461ce06c8be6e.jpg",
     "static/media/3стулкове вікно.png": "/Windo/static/media/3стулкове вікно.edb84392a1af63ecfefe.png",
     "static/media/лоджія.png": "/Windo/static/media/лоджія.38b031339db7083cbe20.png",
@@ -43,10 +43,10 @@
     "static/media/slick.woff": "/Windo/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Windo/index.html",
     "main.f5e3ce15.css.map": "/Windo/static/css/main.f5e3ce15.css.map",
-    "main.ca7cfd0a.js.map": "/Windo/static/js/main.ca7cfd0a.js.map"
+    "main.d1e0c4c7.js.map": "/Windo/static/js/main.d1e0c4c7.js.map"
   },
   "entrypoints": [
     "static/css/main.f5e3ce15.css",
-    "static/js/main.ca7cfd0a.js"
+    "static/js/main.d1e0c4c7.js"
   ]
 }
