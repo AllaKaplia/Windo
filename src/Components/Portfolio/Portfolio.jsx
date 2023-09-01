@@ -23,11 +23,11 @@ const Portfolio = () => {
 
   const categories = [
     { title: "Відео", videos: [
-      'https://youtube.com/watch?v=GAIdZe_x0LY&si=VhnAqH8BhlA8c5IB',
-      'https://youtube.com/watch?v=unZjDkbDJJ0&si=CLHxaCgi4Gn2zYec',
-      'https://youtube.com/watch?v=oQf8qTCJDtE&si=TK39mX0iReSUQjxu',
-      'https://youtu.be/GpnrlXMRbVk?si=rB75MDI8lXpiWFun',
-      'https://youtu.be/f4WENC27MVg?si=tZhMzjji42MVJHeY'
+      "https://youtube.com/watch?v=GAIdZe_x0LY&si=VhnAqH8BhlA8c5IB",
+      "https://youtube.com/watch?v=unZjDkbDJJ0&si=CLHxaCgi4Gn2zYec",
+      "https://youtube.com/watch?v=oQf8qTCJDtE&si=TK39mX0iReSUQjxu",
+      "https://youtu.be/GpnrlXMRbVk?si=rB75MDI8lXpiWFun",
+      "https://youtu.be/f4WENC27MVg?si=tZhMzjji42MVJHeY"
     ] },
     { title: "Фото", images: [
       Portfolio1, 
