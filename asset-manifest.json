@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Windo/static/css/main.f5e3ce15.css",
-    "main.js": "/Windo/static/js/main.80c63558.js",
+    "main.js": "/Windo/static/js/main.27aec33b.js",
     "static/media/gallery_photo_5.png": "/Windo/static/media/gallery_photo_5.f1ff2ef66d0fc5a247b9.png",
     "static/media/gallery_photo_3.png": "/Windo/static/media/gallery_photo_3.59ce75c7e6116d6c74c5.png",
     "static/media/gallery_photo_7.png": "/Windo/static/media/gallery_photo_7.07f5518a2eed1eaad1f6.png",
@@ -26,7 +26,6 @@
     "static/media/WDS-8S-1.png": "/Windo/static/media/WDS-8S-1.f61e0ddf7e94dee555c5.png",
     "static/media/WDS-5S-1.png": "/Windo/static/media/WDS-5S-1.d4190c8e506a046f48ba.png",
     "static/media/WDS-6S-1.png": "/Windo/static/media/WDS-6S-1.5e98b309655f499e533a.png",
-    "static/media/service-maintenance-mobile.png": "/Windo/static/media/service-maintenance-mobile.1d6fea635461a3305eb4.png",
     "static/media/salamander-3.png": "/Windo/static/media/salamander-3.003496c7f783d26d6493.png",
     "static/media/salamander-1.png": "/Windo/static/media/salamander-1.e2cd1f0b485539594ab9.png",
     "static/media/salamander-4.png": "/Windo/static/media/salamander-4.6b5efb96c0b7b8e9ebf5.png",
@@ -43,10 +42,10 @@
     "static/media/slick.woff": "/Windo/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Windo/index.html",
     "main.f5e3ce15.css.map": "/Windo/static/css/main.f5e3ce15.css.map",
-    "main.80c63558.js.map": "/Windo/static/js/main.80c63558.js.map"
+    "main.27aec33b.js.map": "/Windo/static/js/main.27aec33b.js.map"
   },
   "entrypoints": [
     "static/css/main.f5e3ce15.css",
-    "static/js/main.80c63558.js"
+    "static/js/main.27aec33b.js"
   ]
 }
