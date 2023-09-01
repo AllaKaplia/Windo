@@ -154,7 +154,7 @@ function NavBar() {
               to="about"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-80}
               duration={500}
             >
               <DesktopLink>Про нас</DesktopLink>
@@ -166,7 +166,7 @@ function NavBar() {
               to="assortment"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-80}
               duration={500}
             >
             <DesktopLink>Профілі</DesktopLink>
@@ -178,7 +178,7 @@ function NavBar() {
               to="miscount"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-80}
               duration={500}
             >
               <DesktopLink>Прорахунок</DesktopLink>
@@ -190,7 +190,7 @@ function NavBar() {
               to="discount"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-80}
               duration={500}
             >
               <DesktopLink>Як отримати знижку?</DesktopLink>              
@@ -202,7 +202,7 @@ function NavBar() {
               to="portfolio"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-80}
               duration={500}
             >
               <DesktopLink>Виконані роботи</DesktopLink>
