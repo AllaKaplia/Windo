@@ -4,6 +4,7 @@ import makeAnimated from 'react-select/animated';
 import { Field, Form, Formik } from 'formik';
 import emailjs from 'emailjs-com';
 import * as yup from 'yup';
+import { Element } from 'react-scroll';
 import dvostulkoveSchema71 from '../../img/miscount/dvostulkove-71.png';
 import windowPhoto1 from '../../img/miscount/3стулкове вікно.png';
 import windowPhoto2 from '../../img/miscount/глухе вікно.png';
@@ -170,7 +171,7 @@ const Miscount = () => {
     return(
         <BoxMiscount>
             <BoxAnchor>
-                <TitleMiscount name="miscount">Прорахунок вартості</TitleMiscount>
+                <Element name="miscount" className="element"> <TitleMiscount>Прорахунок вартості</TitleMiscount> </Element>
             </BoxAnchor>
             <BoxButtonWindow>
                 <ButtonWindow type='button' onClick={() => handleButtonClick(windowPhoto2, 'Одностулкове')}>
