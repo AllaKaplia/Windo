@@ -88,6 +88,7 @@ const Portfolio = () => {
     className: "slider variable-width",
     dots: true,
     infinite: true,
+    centerPadding: "60px",
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,
