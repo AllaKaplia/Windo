@@ -16,11 +16,15 @@ export const ContainerHero = styled.div`
     }
     
     @media (min-width: 1280px) {
-        padding: 0 80px;
+        padding: 0 80px 40px;
+    }
+
+    @media (min-width: 1350px) {
+        padding: 0 80px 60px;
     }
 
     @media (min-width: 1440px) {
-        padding: 0 80px;
+        padding: 0 80px 60px;
     }    
 `;
 
@@ -226,17 +230,72 @@ export const ImgHeroTablet = styled.div`
 
     @media (min-width: 800px) {
         top: 2%;
-        left: 53%;
+        left: 55%;
+    }
+
+    @media (min-width: 840px) {
+        top: 2%;
+        left: 57%;
+    }
+
+    @media (min-width: 880px) {
+        top: 2%;
+        left: 58%;
     }
 
     @media (min-width: 900px) {
-        top: 1.8%;
-        left: 59%;
+        top: 2%;
+        left: 62%;
     }
 
-    @media (min-width: 1024px) {
-        top: 0.8%;
+    @media (min-width: 990px) {
+        top: 2%;
         left: 63%;
+    }
+
+    @media (min-width: 1020px) {
+        top: 1.5%;
+        left: 64%;
+    }
+
+    @media (min-width: 1050px) {
+        top: 1.5%;
+        left: 65%;
+    }
+
+    @media (min-width: 1080px) {
+        top: 1.6%;
+        left: 66%;
+    }
+
+    @media (min-width: 1110px) {
+        top: 1.7%;
+        left: 68%;
+    }
+
+    @media (min-width: 1128px) {
+        top: 1.5%;
+        left: 67%;
+    }
+
+    @media (min-width: 1145px) {
+        top: 1.4%;
+        left: 68%;
+    }
+
+    @media (min-width: 1177px) {
+        top: 1.4%;
+        left: 69%;
+    }
+
+    @media (min-width: 1230px) {
+        top: 1.4%;
+        left: 70%;
+    }
+
+    @media (min-width: 1270px) {
+        top: 1.4%;
+        left: 71%;
     }
 
     @media (min-width: 1280px) {
@@ -250,25 +309,33 @@ export const ImgHeroDesktop = styled.div`
     @media (min-width: 1280px) {
         display: block;
         position: absolute;
-        top: 37px;
-        left: 64%;
+        top: 64px;
+        left: 60%;
     }
 
     @media (min-width: 1300px) {
-        top: 22px;
+        top: 50px;
+    }
+
+    @media (min-width: 1345px) {
+        top: 35px;
+    }
+
+    @media (min-width: 1370px) {
+        top: 25px;
     }
 
     @media (min-width: 1350px) {
-        top: 7px;
+        top: 40px;
     }
 
-    @media (min-width: 1350px) {
-        top: 0px;
+    @media (min-width: 1420px) {
+        top: 32px;
     }
 
     @media (min-width: 1440px) {
-        top: 18px;
-        left: 67%;
+        top: 28px;
+        left: 63%;
     }
 `;
 
