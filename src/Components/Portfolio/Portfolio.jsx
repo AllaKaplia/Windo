@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReactPlayer from 'react-player';
+import { Element } from 'react-scroll';
 import Portfolio1 from "../../img/portfolio-photo/gallery_photo_1.png";
 import Portfolio2 from "../../img/portfolio-photo/1dsc_0856-800x600 1 1.png";
 import Portfolio3 from "../../img/portfolio-photo/gallery_photo_3.png";
@@ -144,7 +145,7 @@ const Portfolio = () => {
   return (
     <ContainerPortfolio>
       <BoxAnchor>
-        <TitlePortfolio name="portfolio">Виконані роботи</TitlePortfolio>
+        <Element name="portfolio" className="element"> <TitlePortfolio>Виконані роботи</TitlePortfolio> </Element>
       </BoxAnchor>
       <BoxButton>
         {categories.map((category) => (
