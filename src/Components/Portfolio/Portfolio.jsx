@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReactPlayer from 'react-player';
 import Portfolio1 from "../../img/portfolio-photo/gallery_photo_1.png";
-import Portfolio2 from "../../img/portfolio-photo/gallery_photo_2.png";
+import Portfolio2 from "../../img/portfolio-photo/1dsc_0856-800x600 1 1.png";
 import Portfolio3 from "../../img/portfolio-photo/gallery_photo_3.png";
 import Portfolio4 from "../../img/portfolio-photo/gallery_photo_4.png";
 import Portfolio5 from "../../img/portfolio-photo/gallery_photo_5.png";
@@ -162,14 +162,14 @@ const Portfolio = () => {
           .find((category) => category.title === activeCategory)
           .videos.map((video, index) => (
           <div key={index}>
-            <ReactPlayer url={video} width={400} height={400} controls={true} />
+            <ReactPlayer url={video} width="100%" height={300} controls={true} />
           </div>
         ))
           : categories
         .find((category) => category.title === activeCategory)
         .images.map((image, index) => (
         <div key={index}>
-          <PhotoPortfolio src={image} alt={`Portfolio ${index + 1}`} />
+          <PhotoPortfolio src={image} alt={`Portfolio ${index + 1}`} height={400} />
         </div>
       ))}
     </Slider>
