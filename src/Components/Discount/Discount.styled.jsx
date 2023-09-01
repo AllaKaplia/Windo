@@ -30,6 +30,10 @@ export const MainBoxDiscount = styled.div`
         background-position: 76% 82%;
     }
 
+    @media (min-width: 812px) {
+        background-position: 76% 85%;
+    }
+
     @media (min-width: 820px) {
         background-position: 77% 86%;
     }
