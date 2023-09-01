@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { Element } from 'react-scroll';
 import rehau60 from '../../img/rehau/rehau-euro-design-60.jpg';
 import rehau70 from '../../img/rehau/rehau-euro-design-70.jpg';
 import rehauBrilliant from '../../img/rehau/rehau-brillant-design.jpg';
@@ -100,7 +101,7 @@ const Assortment = () => {
   return (
   <BoxAssortment>
     <BoxAnchor>
-      <TitleAssortment name="assortment">Різновиди профільних систем</TitleAssortment>
+      <Element name="assortment" className="element"> <TitleAssortment>Різновиди профільних систем</TitleAssortment> </Element>
         </BoxAnchor>
         <ContainerButtons>
           {categories.map((category) => (
