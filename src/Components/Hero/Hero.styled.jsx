@@ -522,7 +522,7 @@ export const BoxSocialForm = styled.div`
     gap: 16px;
 
     @media (min-width: 320px) {
-        flex-direction: started;
+        flex-direction:  row;
     }
 `;
 
@@ -531,6 +531,7 @@ export const BigFormBox = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 45px;
+    
 
     @media (min-width: 1024px){
         margin-top: 110px;
