@@ -325,6 +325,10 @@ export const AskSize = styled(Field)`
         width: 315px;
     }
 
+    @media (min-width: 812px) {
+        width: 321px;
+    }
+
     @media (min-width: 820px) {
         width: 325px;
     }
@@ -433,6 +437,10 @@ export const Textarea = styled(Field)`
         width: 685px;
     }
 
+    @media (min-width: 812px) {
+        width: 696px;
+    }
+
     @media (min-width: 820px) {
         width: 705px;
     }
@@ -489,7 +497,7 @@ export const BtnSubmitMiscount = styled.button`
     }
 
     @media (min-width: 390px) {
-        width: 355px;
+        width: 360px;
     }
 
     @media (min-width: 393px) {
