@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Windo/static/css/main.f5e3ce15.css",
-    "main.js": "/Windo/static/js/main.d4457839.js",
+    "main.js": "/Windo/static/js/main.f41bf41f.js",
     "static/media/gallery_photo_5.png": "/Windo/static/media/gallery_photo_5.f1ff2ef66d0fc5a247b9.png",
     "static/media/gallery_photo_3.png": "/Windo/static/media/gallery_photo_3.59ce75c7e6116d6c74c5.png",
     "static/media/gallery_photo_7.png": "/Windo/static/media/gallery_photo_7.07f5518a2eed1eaad1f6.png",
@@ -12,7 +12,7 @@
     "static/media/our-company-desktop.jpg": "/Windo/static/media/our-company-desktop.9f46d571ea3d64d8b487.jpg",
     "static/media/gallery_photo_10.png": "/Windo/static/media/gallery_photo_10.c815a98576a557215256.png",
     "static/media/gallery_photo_1.png": "/Windo/static/media/gallery_photo_1.a4ae989f27ee3a5fc0a1.png",
-    "static/media/gallery_photo_2.png": "/Windo/static/media/gallery_photo_2.dcf03d6a964c4c727af9.png",
+    "static/media/1dsc_0856-800x600 1 1.png": "/Windo/static/media/1dsc_0856-800x600 1 1.95bc3c1e8848a8940b41.png",
     "static/media/service-maintenance-desktop.png": "/Windo/static/media/service-maintenance-desktop.407261c6be90ee9075f5.png",
     "static/media/our-company-mobile.jpg": "/Windo/static/media/our-company-mobile.c6fc35bdb8d71fbed09c.jpg",
     "static/media/our-company-tablet.jpg": "/Windo/static/media/our-company-tablet.7118828484c3ed4652a7.jpg",
@@ -43,10 +43,10 @@
     "static/media/slick.woff": "/Windo/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Windo/index.html",
     "main.f5e3ce15.css.map": "/Windo/static/css/main.f5e3ce15.css.map",
-    "main.d4457839.js.map": "/Windo/static/js/main.d4457839.js.map"
+    "main.f41bf41f.js.map": "/Windo/static/js/main.f41bf41f.js.map"
   },
   "entrypoints": [
     "static/css/main.f5e3ce15.css",
-    "static/js/main.d4457839.js"
+    "static/js/main.f41bf41f.js"
   ]
 }
