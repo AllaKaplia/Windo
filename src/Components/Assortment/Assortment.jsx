@@ -6,14 +6,14 @@ import rehau60 from '../../img/rehau/rehau-euro-design-60.jpg';
 import rehau70 from '../../img/rehau/rehau-euro-design-70.jpg';
 import rehauBrilliant from '../../img/rehau/rehau-brillant-design.jpg';
 import rehauSynego from '../../img/rehau/rehau-zyro-image.jpg';
-import wds5S from '../../img/wds/wds-WDS-5S.png';
-import wds6S from '../../img/wds/wds-WDS- 6S.png';
-import wds7S from '../../img/wds/wds-WDS-7S.png';
-import wds8S from '../../img/wds/wds_8s.png';
-import BluEvolution73 from '../../img/salamander/1449152373-removebg-preview 2.png';
-import Streamline76 from '../../img/salamander/64ba65cbe3fee0b8d4008c90_cream1 1.png';
-import BluEvolution82 from '../../img/salamander/64ba660f106fa4f36fe11260_okno3_1 1.png';
-import BluEvolution92 from '../../img/salamander/64ba66590c73018fbbc45e20_okno4p 1.png';
+import wds5S from '../../img/wds/WDS-5S-1.png';
+import wds6S from '../../img/wds/WDS-6S-1.png';
+import wds7S from '../../img/wds/WDS-7S-1.png';
+import wds8S from '../../img/wds/WDS-8S-1.png';
+import BluEvolution73 from '../../img/salamander/salamander-1.png';
+import Streamline76 from '../../img/salamander/salamander-2.png';
+import BluEvolution82 from '../../img/salamander/salamander-3.png';
+import BluEvolution92 from '../../img/salamander/salamander-4.png';
 import { BoxAnchor, BoxAssortment, BoxImagesSlider, BtnAssortment, ContainerButtons, ImagesSlickSlide, NameProduct, TitleAssortment } from './Assortment.styled';
 
 
