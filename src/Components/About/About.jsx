@@ -3,12 +3,13 @@ import aboutTablet from '../../img/img-our-company/our-company-tablet.jpg';
 import aboutDesktop from '../../img/img-our-company/our-company-desktop.jpg';
 import { RxExternalLink } from 'react-icons/rx';
 import { iconSize } from '../../constants/iconSize';
+import { Element } from 'react-scroll';
 import { AllDetailsBox, BoxAbout, BoxAnchor, BoxDescriptionDesk, BoxLinkAbout, BoxTabletDesktop, ContainerBack, ContainerCompany, ContainerText, DescriptionText, DescriptionTextTablet, DetailsAboutBox, DetailsDescription, DetailText, DetailTitle, ImageDesktop, ImageMobile, ImageTablet, InfoBoxMobil, LinkAbout, LinkAboutText, TitleAbout, WordBack } from './About.styled';
 
 const About = () => {
     return (
         <BoxAbout>
-            <BoxAnchor><TitleAbout name="about">Про нас</TitleAbout></BoxAnchor>
+            <BoxAnchor><Element name="about" className="element"><TitleAbout>Про нас</TitleAbout></Element></BoxAnchor>
             <BoxTabletDesktop>
                 <ContainerCompany>
                     <div>
