@@ -156,7 +156,6 @@ function NavBar() {
               smooth={true}
               offset={-70}
               duration={500}
-              onClick={toggleModal}
             >
               <DesktopLink>Про нас</DesktopLink>
             </Link>
@@ -169,7 +168,6 @@ function NavBar() {
               smooth={true}
               offset={-70}
               duration={500}
-              onClick={toggleModal}
             >
             <DesktopLink>Профілі</DesktopLink>
             </Link>
@@ -182,7 +180,6 @@ function NavBar() {
               smooth={true}
               offset={-70}
               duration={500}
-              onClick={toggleModal}
             >
               <DesktopLink>Прорахунок</DesktopLink>
             </Link>
@@ -195,7 +192,6 @@ function NavBar() {
               smooth={true}
               offset={-70}
               duration={500}
-              onClick={toggleModal}
             >
               <DesktopLink>Як отримати знижку?</DesktopLink>              
             </Link>
@@ -208,7 +204,6 @@ function NavBar() {
               smooth={true}
               offset={-70}
               duration={500}
-              onClick={toggleModal}
             >
               <DesktopLink>Виконані роботи</DesktopLink>
             </Link>
