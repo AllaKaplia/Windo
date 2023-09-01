@@ -341,6 +341,10 @@ export const FonBox = styled.div`
         width: 1140px;
     }
 
+    @media (min-width: 1335px) {
+        width: 1190px;
+    }
+
     @media (min-width: 1440px) {
         width: 1240px;
     }
