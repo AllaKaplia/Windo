@@ -76,7 +76,7 @@ function NavBar() {
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  offset={-70}
                   duration={500}
                   onClick={toggleModal}
                 >
@@ -88,7 +88,7 @@ function NavBar() {
                   to="assortment"
                   spy={true}
                   smooth={true}
-                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  offset={-70}
                   duration={500}
                   onClick={toggleModal}>
                   <MobilLink>Профільні системи</MobilLink>
@@ -99,7 +99,7 @@ function NavBar() {
                   to="miscount"
                   spy={true}
                   smooth={true}
-                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  offset={-70}
                   duration={500}
                   onClick={toggleModal}>
                     <MobilLink>Прорахунок вартості</MobilLink>
@@ -110,7 +110,7 @@ function NavBar() {
                   to="discount"
                   spy={true}
                   smooth={true}
-                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  offset={-70}
                   duration={500}
                   onClick={toggleModal}>
                     <MobilLink>Як отримати знижку?</MobilLink>
@@ -121,7 +121,7 @@ function NavBar() {
                   to="portfolio"
                   spy={true}
                   smooth={true}
-                  offset={-70} // Оффсет для коригування позиції прокрутки
+                  offset={-70}
                   duration={500}
                   onClick={toggleModal}>
                   <MobilLink>Виконані роботи</MobilLink>
@@ -154,7 +154,7 @@ function NavBar() {
               to="about"
               spy={true}
               smooth={true}
-              offset={-70} // Оффсет для коригування позиції прокрутки
+              offset={-70}
               duration={500}
               onClick={toggleModal}
             >
@@ -167,7 +167,7 @@ function NavBar() {
               to="assortment"
               spy={true}
               smooth={true}
-              offset={-70} // Оффсет для коригування позиції прокрутки
+              offset={-70}
               duration={500}
               onClick={toggleModal}
             >
@@ -180,7 +180,7 @@ function NavBar() {
               to="miscount"
               spy={true}
               smooth={true}
-              offset={-70} // Оффсет для коригування позиції прокрутки
+              offset={-70}
               duration={500}
               onClick={toggleModal}
             >
@@ -193,7 +193,7 @@ function NavBar() {
               to="discount"
               spy={true}
               smooth={true}
-              offset={-70} // Оффсет для коригування позиції прокрутки
+              offset={-70}
               duration={500}
               onClick={toggleModal}
             >
@@ -206,7 +206,7 @@ function NavBar() {
               to="portfolio"
               spy={true}
               smooth={true}
-              offset={-70} // Оффсет для коригування позиції прокрутки
+              offset={-70}
               duration={500}
               onClick={toggleModal}
             >
