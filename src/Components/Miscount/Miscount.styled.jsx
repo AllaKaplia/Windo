@@ -183,7 +183,7 @@ export const SchemaImagesSmall = styled.img`
 
 export const NameSchema = styled.p`
     font-family: Inter;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
     line-height: 1.42;
     letter-spacing: 0.21px;
