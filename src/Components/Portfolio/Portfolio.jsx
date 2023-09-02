@@ -21,6 +21,8 @@ import { iconSize } from "../../constants/iconSize";
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Фото");
   const [activeIndex, setActiveIndex] = useState(1);
+  const [activeVideoIndex, setActiveVideoIndex] = useState(-1);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const categories = [
     { title: "Відео", videos: [
@@ -43,6 +45,16 @@ const Portfolio = () => {
       Portfolio10
     ] },
   ];
+
+  const handleCategoryClick = (category, index) => {
+    // Зупинка відео, якщо воно відтворюється
+    if (isVideoPlaying) {
+      setIsVideoPlaying(false);
+    }
+  
+    setActiveCategory(category);
+    setActiveIndex(index);
+  };
 
   function SampleNextArrow(props) {
       const { className, style, onClick } = props;
@@ -137,11 +149,6 @@ const Portfolio = () => {
     ],
   };
 
-  const handleCategoryClick = (category, index) => {
-    setActiveCategory(category);
-    setActiveIndex(index);
-  };
-
   return (
     <ContainerPortfolio>
       <BoxAnchor>
@@ -164,7 +171,14 @@ const Portfolio = () => {
           .find((category) => category.title === activeCategory)
           .videos.map((video, index) => (
           <div key={index}>
-            <ReactPlayer url={video} width="100%" height={300} controls={true} />
+            <ReactPlayer url={video} width="100%" height={300} controls={true}
+              playing={index === activeVideoIndex && isVideoPlaying}
+              onPlay={() => {
+                setActiveVideoIndex(index);
+                setIsVideoPlaying(true);
+              }}
+              onPause={() => setIsVideoPlaying(false)} 
+            loading={index === activeIndex ? 'auto' : 'lazy'}/>
           </div>
         ))
           : categories
