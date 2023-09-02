@@ -25,13 +25,13 @@ export const Navigation = styled.header`
 
     @media (min-width: 688px){
         gap: 0;
-        padding: 17px 40px;
+        padding: 0 40px;
     }
 
     @media (min-width: 1280px) {
         justify-content: center;
         align-items: center;
-        padding: 20px 45px;
+        padding: 0 45px;
     }
 
     @media (min-width: 1440px) {
@@ -143,7 +143,11 @@ export const DesktopBox = styled.div`
 
     
     @media (min-width: 1154px) {
-        gap: 0;
+        gap: 10px;
+    }
+
+    @media (min-width: 1280px) {
+        gap: 8px;
     }
 `;
 
@@ -168,7 +172,7 @@ export const DesktopList = styled.ul`
     }
 `;
 
-export const DesktopLink = styled.a`
+export const DesktopLink = styled.p`
     font-family: Inter;
     font-size: 14px;
     line-height: 1.4;
