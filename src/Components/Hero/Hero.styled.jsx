@@ -37,6 +37,10 @@ export const ContainerHero = styled.div`
     
     @media (min-width: 1600px) {
         padding: 0 140px 60px;
+    }
+
+    @media (min-width: 1920px) {
+        padding: 0 305px 90px;
     } 
 `;
 
@@ -163,6 +167,10 @@ export const BoxHeroText = styled.div`
         margin-bottom: 40px;
         width: 690px;
     }
+
+    @media (min-width: 1920px) {
+        width: 900px;
+    }
 `;
 
 export const HeroText = styled.p`
@@ -184,6 +192,10 @@ export const HeroText = styled.p`
     @media (min-width: 768px) {
         font-size: 17px;
         color: var(--text-black);
+    }
+
+    @media (min-width: 1920px) {
+        font-size: 30px;
     }
 `;
 
@@ -236,6 +248,11 @@ export const BoxContext = styled.div`
         display: block;
         padding-top: 32px;
         padding-bottom: 32px;
+    }
+
+    @media (min-width: 1920px) {
+        padding-top: 55px;
+        padding-bottom: 55px;
     }
 `;
 
@@ -347,6 +364,10 @@ export const ImgHeroDesktop = styled.div`
 
     @media (min-width: 1620px) {
         left: 68%;
+    }
+
+    @media (min-width: 1920px) {
+        top: 81px;
     }
 `;
 
