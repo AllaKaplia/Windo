@@ -162,7 +162,7 @@ export const ContainerTextQuestion3 = styled.div`
     }
 
     @media (min-width: 1280px){
-        width: 415px;
+        width: 406px;
     }
 `;
 
