@@ -92,6 +92,22 @@ export const BoxSocContact = styled.div`
         gap: 8px;
     }
 
+    @media (min-width: 820px) {
+        gap: 24px;
+    }
+
+    @media (min-width: 900px) {
+        gap: 40px;
+    }
+
+    @media (min-width: 1024px) {
+        gap: 85px;
+    }
+
+    @media (min-width: 1280px) {
+        gap: 140px;
+    }
+
     @media (min-width: 1440px) {
         gap: 32px;
     }
