@@ -11,6 +11,10 @@ export const BoxAssortment = styled.div`
     @media (min-width: 1280px) {
         padding: 0 80px 60px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 0 290px 60px;
+    }
 `;
 
 export const TitleAssortment = styled.a`
