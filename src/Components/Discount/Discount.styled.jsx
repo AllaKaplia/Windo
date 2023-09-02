@@ -173,6 +173,10 @@ export const AllQuestionsBox = styled.div`
     @media (min-width: 768px) {
         display: flex;
         gap: 24px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 912px) {
         margin-bottom: 80px;
     }
 
@@ -347,6 +351,10 @@ export const FonBox = styled.div`
 
     @media (min-width: 1440px) {
         width: 1240px;
+    }
+
+    @media (min-width: 1500px) {
+        width: 1360px;
     }
 `;
 
