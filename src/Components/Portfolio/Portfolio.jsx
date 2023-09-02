@@ -171,14 +171,16 @@ const Portfolio = () => {
           .find((category) => category.title === activeCategory)
           .videos.map((video, index) => (
           <div key={index}>
-            <ReactPlayer url={video} width="100%" height={300} controls={true}
+            <ReactPlayer url={video} width="100%" height={200} controls={true}
               playing={index === activeVideoIndex && isVideoPlaying}
               onPlay={() => {
                 setActiveVideoIndex(index);
                 setIsVideoPlaying(true);
               }}
               onPause={() => setIsVideoPlaying(false)} 
-            loading={index === activeIndex ? 'auto' : 'lazy'}/>
+              preload="auto" 
+              loading={index === activeIndex ? 'auto' : 'lazy'}
+            />
           </div>
         ))
           : categories
