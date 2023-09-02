@@ -12,6 +12,10 @@ export const BoxAbout = styled.div`
         padding-right: 80px;
     }
 
+    @media (min-width: 1920px) {
+        padding-left: 290px;
+        padding-right: 290px;
+    }
 `;
 
 export const BoxAnchor = styled.div`
