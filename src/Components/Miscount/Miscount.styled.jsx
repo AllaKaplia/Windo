@@ -11,6 +11,10 @@ export const BoxMiscount = styled.div`
     @media (min-width: 1280px){
         padding: 0 100px 60px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 0 290px 60px;
+    }
 `;
 
 export const BoxAnchor = styled.div`
