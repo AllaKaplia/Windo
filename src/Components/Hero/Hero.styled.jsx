@@ -16,7 +16,7 @@ export const ContainerHero = styled.div`
     }
     
     @media (min-width: 1280px) {
-        padding: 0 80px 40px;
+        padding: 0 80px 70px;
     }
 
     @media (min-width: 1350px) {
@@ -63,6 +63,7 @@ export const HeroTitle = styled.h1`
     }
 
     @media (min-width: 768px) {
+        font-family: Montserrat;
         font-size: 27px;
         font-weight: 500;
         line-height: 1.14;
@@ -70,9 +71,12 @@ export const HeroTitle = styled.h1`
         text-align: start;
     }
 
+    @media (min-width: 1024) {
+        font-size: 30px;
+    }
+
     @media (min-width: 1280px) {
         margin-bottom: 16px;
-        font-family: Montserrat;
         font-size: 48px;
         font-weight: 500;
         line-height: 1.5;
@@ -104,12 +108,14 @@ export const HeroBrandText = styled.h2`
         text-align: start;
     }
 
+    @media (min-width: 768px) {
+        font-size: 22px;
+    }
+
     @media (min-width: 1280px) {
         margin-bottom: 24px;
         font-family: Montserrat;
         font-size: 36px;
-        font-weight: 500;
-        line-height: 1.5;
     }
 `;
 
@@ -142,12 +148,15 @@ export const BoxHeroText = styled.div`
     }
 
     @media (min-width: 768px) {
-        margin-bottom: 24px;
         width: 329px;
     }
 
+    @media (min-width: 912px) {
+        width: 415px;
+    }
+
     @media (min-width: 1024px) {
-        width: 440px;
+        width: 550px;
     }
 
     @media (min-width: 1280px) {
@@ -236,77 +245,51 @@ export const ImgHeroTablet = styled.div`
     @media (min-width: 688px) {
         display: block;
         position: absolute;
-        top: 1.7%;
+        top: 0.8%;
         left: 52%;
     }
 
     @media (min-width: 800px) {
-        top: 2%;
         left: 55%;
     }
 
     @media (min-width: 840px) {
-        top: 2%;
         left: 57%;
     }
 
     @media (min-width: 880px) {
-        top: 2%;
         left: 58%;
     }
 
     @media (min-width: 900px) {
-        top: 2%;
         left: 62%;
     }
 
     @media (min-width: 990px) {
-        top: 2%;
         left: 63%;
     }
 
     @media (min-width: 1020px) {
-        top: 1.5%;
-        left: 64%;
-    }
-
-    @media (min-width: 1050px) {
-        top: 1.5%;
-        left: 65%;
-    }
-
-    @media (min-width: 1080px) {
-        top: 1.6%;
         left: 66%;
     }
 
-    @media (min-width: 1110px) {
-        top: 1.7%;
-        left: 68%;
-    }
-
-    @media (min-width: 1128px) {
-        top: 1.5%;
+    @media (min-width: 1050px) {
         left: 67%;
     }
 
-    @media (min-width: 1145px) {
-        top: 1.4%;
+    @media (min-width: 1080px) {
         left: 68%;
     }
 
-    @media (min-width: 1177px) {
-        top: 1.4%;
+    @media (min-width: 1110px) {
         left: 69%;
     }
 
-    @media (min-width: 1230px) {
-        top: 1.4%;
+    @media (min-width: 1128px) {
         left: 70%;
     }
 
-    @media (min-width: 1270px) {
-        top: 1.4%;
+    @media (min-width: 1200px) {
         left: 71%;
     }
 
@@ -322,7 +305,7 @@ export const ImgHeroDesktop = styled.div`
         display: block;
         position: absolute;
         top: 64px;
-        left: 60%;
+        left: 61%;
     }
 
     @media (min-width: 1300px) {
