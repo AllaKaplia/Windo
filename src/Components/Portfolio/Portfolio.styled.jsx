@@ -12,6 +12,10 @@ export const ContainerPortfolio = styled.div`
     @media (min-width: 1440px) {
         padding: 0 100px 40px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 0 290px 60px;
+    }
 `;
 
 export const BoxAnchor = styled.div`
