@@ -13,6 +13,10 @@ export const ContainerFooter = styled.div`
     @media (min-width: 1440px) {
         padding: 0 80px 8px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 0 290px 60px;
+    }
 `;
 
 export const LogoFooter = styled.img`
