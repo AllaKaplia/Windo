@@ -43,6 +43,10 @@ export const MainBoxDiscount = styled.div`
         padding: 0 80px 60px;
         background-position: 50% 87%;
     }
+
+    @media (min-width: 1920px) {
+        padding: 0 290px 60px;
+    }
 `;
 
 export const TitleDiscount = styled.a`
