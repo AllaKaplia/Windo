@@ -143,7 +143,6 @@ export const SchemaImage = styled.img`
 
     @media (min-width: 640px) {
         height: 83px;
-        width: 60px;
     }
 
     @media (min-width: 768px) {
@@ -174,6 +173,7 @@ export const SchemaImagesSmall = styled.img`
 
     @media (min-width: 768px) {
         height: 102px;
+        width: 45px;
     }
 
     @media (min-width: 1280px){
