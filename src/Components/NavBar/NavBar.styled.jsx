@@ -37,6 +37,10 @@ export const Navigation = styled.header`
     @media (min-width: 1440px) {
         padding: 0 80px;
     }
+
+    @media (min-width: 1920px) {
+        padding: 0 135px;
+    }
 `;
 
 export const MobilBox = styled.div`
