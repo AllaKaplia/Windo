@@ -94,8 +94,13 @@ export const TitleAdvantages = styled.h3`
 
     @media (min-width: 1280px) {
         width: 193px;
-        font-size: 20px;
+        font-size: 21px;
         line-height: 1.5;
+    }
+
+    @media (min-width: 1440px) {
+        width: 200px;
+        font-size: 22px;
     }
 `;
 
