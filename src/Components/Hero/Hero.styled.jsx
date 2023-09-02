@@ -24,8 +24,20 @@ export const ContainerHero = styled.div`
     }
 
     @media (min-width: 1440px) {
-        padding: 0 80px 60px;
-    }    
+        padding: 0 100px 60px;
+    }
+    
+    @media (min-width: 1500px) {
+        padding: 0 110px 60px;
+    }
+    
+    @media (min-width: 1550px) {
+        padding: 0 120px 60px;
+    }
+    
+    @media (min-width: 1600px) {
+        padding: 0 140px 60px;
+    } 
 `;
 
 // height: 598px;
@@ -336,6 +348,22 @@ export const ImgHeroDesktop = styled.div`
     @media (min-width: 1440px) {
         top: 28px;
         left: 63%;
+    }
+
+    @media (min-width: 1470px) {
+        left: 65%;
+    }
+
+    @media (min-width: 1540px) {
+        left: 66%;
+    }
+
+    @media (min-width: 1590px) {
+        left: 67%;
+    }
+
+    @media (min-width: 1620px) {
+        left: 68%;
     }
 `;
 
