@@ -297,15 +297,27 @@ export const AskSize = styled(Field)`
         width: 125px;
     }
 
+    @media (min-width: 370px) {
+        width: 130px;
+    }
+
     @media (min-width: 375px) {
         width: 132px;
+    }
+
+    @media (min-width: 380px) {
+        width: 135px;
     }
     
     @media (min-width: 390px) {
         width: 140px;
     }
 
-    @media (min-width: 412px) {
+    @media (min-width: 400px) {
+        width: 145px;
+    }
+
+    @media (min-width: 410px) {
         width: 153px;
     }
 
@@ -488,16 +500,20 @@ export const Textarea = styled(Field)`
         width: 295px;
     }
 
-    @media (min-width: 375px) {
-        width: 309px;
+    @media (min-width: 370px) {
+        width: 310px;
     }
 
     @media (min-width: 390px) {
         width: 324px;
     }
 
-    @media (min-width: 412px) {
-        width: 347px;
+    @media (min-width: 400px) {
+        width: 336px;
+    }
+
+    @media (min-width: 410px) {
+        width: 348px;
     }
 
     @media (min-width: 540px) {
@@ -592,6 +608,10 @@ export const BtnSubmitMiscount = styled.button`
         width: 328px;
     }
 
+    @media (min-width: 370px) {
+        width: 343px;
+    }
+
     @media (min width: 375px) {
         width: 351px;
     }
@@ -604,8 +624,12 @@ export const BtnSubmitMiscount = styled.button`
         width: 361px;
     }
 
-    @media (min-width: 412px) {
-        width: 380px;
+    @media (min-width: 400px) {
+        width: 371px;
+    }
+
+    @media (min-width: 410px) {
+        width: 383px;
     }
 
     @media (min-width: 768px){
