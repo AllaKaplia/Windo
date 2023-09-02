@@ -182,6 +182,7 @@ export const DesktopLink = styled.p`
     line-height: 1.4;
     letter-spacing: 0.21px;
     color: var(--text-black);
+    cursor: pointer;
 
     @media (min-width: 1280px){
         font-size: 16px;
