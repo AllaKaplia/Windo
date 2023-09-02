@@ -48,6 +48,10 @@ export const ListAdvantages = styled.ul`
     @media (min-width: 1280px) {
         gap: 10px;
     }
+
+    @media (min-width: 1920px) {
+        gap: 20px;
+    }
 `;
 
 export const ItemAdvantages = styled.li`
@@ -102,6 +106,11 @@ export const TitleAdvantages = styled.h3`
         width: 200px;
         font-size: 22px;
     }
+
+    @media (min-width: 1920px) {
+        width: 225px;
+        font-size: 28px;
+    }
 `;
 
 export const ImagesAdvantages = styled.img`
@@ -116,5 +125,10 @@ export const ImagesAdvantages = styled.img`
     @media (min-width: 1280px) {
         width: 64px;
         height: 64px;   
+    }
+
+    @media (min-width: 1920px) {
+        width: 85px;
+        height: 85px;   
     }
 `;
