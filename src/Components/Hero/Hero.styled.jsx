@@ -346,7 +346,7 @@ export const ImgHeroDesktop = styled.div`
     }
 
     @media (min-width: 1440px) {
-        top: 28px;
+        top: 26px;
         left: 63%;
     }
 
