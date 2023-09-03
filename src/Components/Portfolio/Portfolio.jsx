@@ -47,7 +47,6 @@ const Portfolio = () => {
   ];
 
   const handleCategoryClick = (category, index) => {
-    // Зупинка відео, якщо воно відтворюється
     if (isVideoPlaying) {
       setIsVideoPlaying(false);
     }
@@ -97,7 +96,7 @@ const Portfolio = () => {
     );
   }
 
-  const settings = {
+  const photoSettings  = {
     className: "slider variable-width",
     dots: true,
     infinite: true,
@@ -149,49 +148,104 @@ const Portfolio = () => {
     ],
   };
 
+  const videoSettings = {
+    dots: true,
+    lazyLoad: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 2,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerMode: true,
+          variableWidth: false,
+          slidesToScroll: 1,
+          infinite: true,
+          nextArrow: false,
+          prevArrow: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          nextArrow: false,
+          prevArrow: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          variableWidth: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          nextArrow: false,
+          prevArrow: false,
+        },
+      },
+    ],
+  };
+
   return (
     <ContainerPortfolio>
       <BoxAnchor>
-        <Element name="portfolio" className="element"> <TitlePortfolio>Виконані роботи</TitlePortfolio> </Element>
+        <Element name="portfolio" className="element">
+          <TitlePortfolio>Виконані роботи</TitlePortfolio>
+        </Element>
       </BoxAnchor>
       <BoxButton>
         {categories.map((category) => (
           <BtnPortfolio
-          key={category.title}
-          type="button"
-          className={category.title === activeCategory ? "active" : ""}
-          onClick={() => handleCategoryClick(category.title, activeIndex)}>
+            key={category.title}
+            type="button"
+            className={category.title === activeCategory ? "active" : ""}
+            onClick={() => handleCategoryClick(category.title, activeIndex)}
+          >
             {category.title}
-        </BtnPortfolio>
+          </BtnPortfolio>
         ))}
       </BoxButton>
-    <Slider {...settings}>
-      {activeCategory === "Відео"
-          ? categories
-          .find((category) => category.title === activeCategory)
-          .videos.map((video, index) => (
-          <div key={index}>
-            <ReactPlayer url={video} width="100%" height={200} controls={true}
-              playing={index === activeVideoIndex && isVideoPlaying}
-              onPlay={() => {
-                setActiveVideoIndex(index);
-                setIsVideoPlaying(true);
-              }}
-              onPause={() => setIsVideoPlaying(false)} 
-              preload="auto" 
-              loading={index === activeIndex ? 'auto' : 'lazy'}
-            />
-          </div>
-        ))
-          : categories
-        .find((category) => category.title === activeCategory)
-        .images.map((image, index) => (
-        <div key={index}>
-          <PhotoPortfolio src={image} alt={`Portfolio ${index + 1}`} height={400} />
-        </div>
-      ))}
-    </Slider>
-  </ContainerPortfolio>
-)};
+      {activeCategory === "Фото" ? (
+        <Slider {...photoSettings}>
+          {categories.find((category) => category.title === activeCategory).images.map((image, index) => (
+            <div key={index}>
+              <PhotoPortfolio src={image} alt={`Portfolio ${index + 1}`} height={450} />
+            </div>
+          ))}
+        </Slider>
+      ) : (
+        <Slider {...videoSettings}>
+          {categories.find((category) => category.title === activeCategory).videos.map((video, index) => (
+            <div key={index}>
+              <ReactPlayer
+                url={video}
+                width="100%"
+                height={450} 
+                controls={true}
+                playing={index === activeVideoIndex && isVideoPlaying}
+                onPlay={() => {
+                  setActiveVideoIndex(index);
+                  setIsVideoPlaying(true);
+                }}
+                onPause={() => setIsVideoPlaying(false)}
+                preload="auto"
+                loading={index === activeIndex ? "auto" : "lazy"}
+              />
+            </div>
+          ))}
+        </Slider>
+      )}
+    </ContainerPortfolio>
+  );
+};
 
 export default Portfolio;
