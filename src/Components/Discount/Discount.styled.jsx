@@ -505,7 +505,6 @@ export const FormDiscount = styled.div`
         height: 420px;
         border-radius: 16px;
         background: rgba(0, 0, 0, 0.20);
-        backdrop-filter: blur(12.5px);
     }
 ;`
 
