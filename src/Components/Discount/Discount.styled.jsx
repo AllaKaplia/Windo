@@ -69,6 +69,33 @@ export const TitleDiscount = styled.a`
         letter-spacing: -1px;
     }
     
+    @media (min-width: 1024px) {
+        &::before {
+            content: '';
+            height: 0.5px;
+            background-color: #c4c4c4;
+            display: block;
+            position: absolute;
+            top: 70px;
+            left: -180px;
+            width: 800px;
+        }
+    }
+
+    @media (min-width: 1150px) {
+        
+        &::before{
+            content: '';
+            height: 0.5px;
+            background-color: #c4c4c4;
+            display: block;
+            position: absolute;
+            top: 70px;
+            left: -245px;
+            width: 960px;
+        }
+    }
+
     @media (min-width: 1280px) {
         &::before {
             content: '';
@@ -81,7 +108,7 @@ export const TitleDiscount = styled.a`
             width: 1099px;
         }
     }
-    
+
     @media (min-width: 1440px){
         &::before {
             content: '';
@@ -293,7 +320,7 @@ export const FonBox = styled.div`
     }
 
     @media (min-width: 360px) {
-        width: 330px;
+        width: 348px;
     }
 
     @media (min-width: 390px) {
@@ -330,11 +357,7 @@ export const FonBox = styled.div`
     }
 
     @media (min-width: 1124px) {
-        width: 1000px;
-    }
-
-    @media (min-width: 1180px) {
-        width: 1045px;
+        width: 1050px;
     }
 
     @media (min-width: 1220px) {
@@ -474,12 +497,12 @@ export const BtnDiscount = styled.button`
 export const FormDiscount = styled.div`
 
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 474px;
-        height: 398px;
+        width: 450px;
+        height: 420px;
         border-radius: 16px;
         background: rgba(0, 0, 0, 0.20);
         backdrop-filter: blur(12.5px);
