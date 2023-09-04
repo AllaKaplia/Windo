@@ -59,7 +59,6 @@ const Hero = () => {
 
     const handleSubmit = async (values, { resetForm }) => {
         try {
-          console.log(values);
           setIsLoading(true);
       
           const response = await emailjs.send(
