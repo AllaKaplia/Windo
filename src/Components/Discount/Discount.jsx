@@ -40,9 +40,8 @@ const Discount = () => {
 
     const handleFormSubmit = async (values, { resetForm }) => {
         try {
-            console.log(values);
-
             setIsLoading(true);
+            
             const response = await emailjs.send(
                 'service_q5k4yhe',
                 'template_u5527g8',
