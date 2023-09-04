@@ -13,6 +13,7 @@ import backgroundDesktop from '../../img/frame-background-desktop.jpg';
 import FeedbackModal from '../FeedbackModal/FeedbackModal';
 import Logo from '../../img/Logo-Windo.png';
 import { toast } from "react-toastify";
+import Loader from "Components/Loader";
 
 
 const schema = yup.object().shape({
@@ -35,6 +36,7 @@ const Hero = () => {
     const [showModal, setShowModal] = useState(false);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
 
     const toggleModal = () => {
@@ -58,6 +60,7 @@ const Hero = () => {
     const handleSubmit = async (values, { resetForm }) => {
         try {
           console.log(values);
+          setIsLoading(true);
       
           const response = await emailjs.send(
             'service_q5k4yhe',
@@ -76,6 +79,9 @@ const Hero = () => {
         } catch (error) {
           toast.error('Error sending email:', error);
         }
+
+        setIsLoading(false);
+        resetForm();
     };
 
 
@@ -137,6 +143,7 @@ const Hero = () => {
                             </ContainerForForm>
                         </Form>
                     </Formik>
+                    {isLoading && <Loader />}
                 </BigFormBox>
             </ModalMenu>
             <FeedbackModal isOpen={isFeedbackModalOpen} contentLabel="Get a discount">
