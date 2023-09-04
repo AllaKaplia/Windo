@@ -10,6 +10,7 @@ import { AllQuestionsBox, AnswerText, AnswerTextDesktop, BoxAnchor, BoxMobile, B
 import Logo from '../../img/Logo-Windo.png';
 import FeedbackModal from 'Components/FeedbackModal';
 import { toast } from 'react-toastify';
+import Loader from 'Components/Loader';
 
 
 const schema = yup.object().shape({
@@ -17,7 +18,7 @@ const schema = yup.object().shape({
       .string()
       .matches(/^([a-zA-Zа-яА-ЯґҐєЄіІїЇ' -]*[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+[' -]*){1,}$/, 'Name is invalid')
       .required('Name is required'),
-    phone: yup
+    number: yup
       .string()
       .matches(/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/, 'Phone number is invalid')
       .required('Phone number is required'),
@@ -29,17 +30,19 @@ const schema = yup.object().shape({
 
 const initialValues = {
     name: '',
-    phone: '',
+    number: '',
     textareaValue: '',
 }
 
 const Discount = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false); 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false); 
 
     const handleFormSubmit = async (values, { resetForm }) => {
         try {
             console.log(values);
 
+            setIsLoading(true);
             const response = await emailjs.send(
                 'service_q5k4yhe',
                 'template_u5527g8',
@@ -54,6 +57,9 @@ const Discount = () => {
         } catch (error) {
             toast.error('Error sending email:', error);
         }
+
+        setIsLoading(false);
+        resetForm();
     }
 
 
@@ -127,8 +133,8 @@ const Discount = () => {
                             </LabelInput>
                             <LabelInput>
                                 <NamesInputs>Номер телефону</NamesInputs>
-                                <InputDiscount type="text" name='phone' placeholder="Введіть номер"/>
-                                <MessageErr name="phone" component="div" />
+                                <InputDiscount type="text" name='number' placeholder="Введіть номер"/>
+                                <MessageErr name="number" component="div" />
                             </LabelInput>
                             <WindowText>
                                 <NamesInputs htmlFor="textareaValue">Додаткова інформація</NamesInputs>
@@ -143,6 +149,7 @@ const Discount = () => {
                         </Form>
                     </FormDiscount>
                 </Formik>
+                {isLoading && <Loader />}
             </FonBox>
             <FeedbackModal isOpen={isModalOpen} contentLabel="Get a discount">
                 <FeedbackBox>
