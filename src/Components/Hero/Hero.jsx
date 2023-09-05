@@ -62,10 +62,10 @@ const Hero = () => {
           setIsLoading(true);
       
           const response = await emailjs.send(
-            'service_q5k4yhe',
-            'template_u5527g8',
+            'service_jbxdkxg',
+            'template_eee9w4e',
             values,
-            'xIE7PdFcVSv6LE-4F'
+            'CkeKoYLQpAvNETsQz'
           );
       
           console.log('Email sent:', JSON.stringify(response));
