@@ -135,7 +135,7 @@ const Miscount = () => {
                 setIsLoading(true);
                 const response = await emailjs.send(
                     'service_jbxdkxg',
-                    'template_qgbj5g3',
+                    'template_bjh6aqi',
                     allFormData,
                     'CkeKoYLQpAvNETsQz'
                 );
