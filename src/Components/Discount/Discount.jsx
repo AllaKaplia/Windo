@@ -24,7 +24,6 @@ const schema = yup.object().shape({
       .required('Phone number is required'),
     textareaValue: yup
       .string()
-      .required('Additional information is required')
       .max(200, 'Additional information should not exceed 200 characters')
 });
 
