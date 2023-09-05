@@ -134,10 +134,10 @@ const Miscount = () => {
             try {
                 setIsLoading(true);
                 const response = await emailjs.send(
-                    'service_q5k4yhe',
+                    'service_jbxdkxg',
                     'template_qgbj5g3',
                     allFormData,
-                    'xIE7PdFcVSv6LE-4F'
+                    'CkeKoYLQpAvNETsQz'
                 );
               
                 console.log('Email sent:', JSON.stringify(response));
